@@ -37,3 +37,12 @@ header a:hover {
     
     header { width:500px; }
 }
+
+@media screen and (max-width:450px) {
+
+    header { width:280px; font-size:25px; }
+
+    header span { font-size:23px; }
+
+    header a { font-size:13px; }
+} 
