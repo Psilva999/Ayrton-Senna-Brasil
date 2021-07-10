@@ -17,9 +17,9 @@
 
     input:checked ~ ul { display:block; }
 
-    ul { display:none; }
+    .menu ul { display:none; }
 
-    li, a { 
+    .menu li, a { 
         box-sizing:border-box; 
         display:block; 
         width:100%; 
