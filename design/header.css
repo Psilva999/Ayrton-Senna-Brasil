@@ -1,0 +1,39 @@
+@charset 'UTF-8';
+
+/* Configuração do header */
+header {
+    position:absolute;
+    top:130px;
+    left:0;
+    width:790px;
+    padding:10px;
+    z-index:1000;
+    font-size:45px;
+}
+
+header span { font-size:30px; }
+
+header a {
+    background-color:yellow;
+    display:block;
+    margin-top:70px;
+    width:170px;
+    padding:10px;
+    font-size:23px;
+    text-decoration:none;
+    color:black;
+    letter-spacing:1px; 
+    transition:.3s;
+}
+
+header a:hover {
+    width:195px;
+    letter-spacing:3px;
+}
+
+
+/* media para ajustar o header para dispositivos menores */
+@media screen and (max-width:1130px) {
+    
+    header { width:500px; }
+}

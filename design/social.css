@@ -1,0 +1,27 @@
+@charset 'UTF-8';
+
+.social {
+   position:absolute;
+   bottom:0;
+   right:0;
+}
+
+.social ul {
+   list-style:none;
+}
+
+.social li { 
+   display:inline-block; 
+   margin:9px;
+}
+
+.social a img {
+   transform:scale(.7);
+   transition:.3s;
+}
+
+.social a:hover img {
+   transform:scale(.7) translateY(-8px);
+}
+
+.social img { width:25px; height:25px; }

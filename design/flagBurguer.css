@@ -1,0 +1,28 @@
+@charset 'UTF-8';
+
+/* Menu burguer quando o dispositivo for menor */
+#flagMenu, label { display:none; }
+
+@media screen and (max-width:800px) {
+
+    .menu { width:10%; }
+
+    label {
+        display:inline-block;
+        font-size:35px;
+        font-style:1.2em;
+        padding:9px;
+        cursor:pointer;
+    }
+
+    input:checked ~ ul { display:block; }
+
+    ul { display:none; }
+
+    li, a { 
+        box-sizing:border-box; 
+        display:block; 
+        width:100%; 
+        margin-left:0px; 
+    }
+}
