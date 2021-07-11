@@ -7,13 +7,13 @@ function paraMexe() {
    if (video.paused) {
       video.play()
 
-      rolaVideo.innerHTML = '&#x23F8;'
+      rolaVideo.innerHTML = '&#x1F534;'
    }
 
    else if (video.play) {
       video.pause()
 
-      rolaVideo.innerHTML = '&#x25B6;'
+      rolaVideo.innerHTML = '&#x1F7E2;'
    }
 }
 
@@ -25,12 +25,12 @@ function som() {
    if (video.muted) {
       video.muted = false
 
-      audio.innerHTML = '&#x1F3A7;'
+      audio.innerHTML = '&#x1F50A;'
    }
 
    else {
       video.muted = true
 
-      audio.innerHTML = '&#x1F507;'
+      audio.innerHTML = '&#x1F508;'
    }
 }
