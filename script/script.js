@@ -1,8 +1,8 @@
 function paraMexe() {
    //Coloco a variável fora e não funciona
-   let video = document.querySelector('#videoSenna')
-
+   let video = document.querySelector ('#videoSenna')
    let rolaVideo = document.querySelector ('#alteraVideo')
+   let audio = document.querySelector ('#alteraSom')
 
    if (video.paused) {
       video.play()
@@ -14,12 +14,13 @@ function paraMexe() {
       video.pause()
 
       rolaVideo.innerHTML = 'Play'
+      audio.innerHTML = '&#x1F508;'
    }
 }
 
 function som() {
-   let video = document.querySelector('#videoSenna')
-   let rolaVideo = document.querySelector('#alteraVideo')
+   let video = document.querySelector ('#videoSenna')
+   let rolaVideo = document.querySelector ('#alteraVideo')
    let audio = document.querySelector ('#alteraSom')
 
    if (video.muted && rolaVideo.innerHTML == 'Pause') {
