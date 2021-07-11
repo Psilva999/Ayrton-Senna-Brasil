@@ -3,14 +3,14 @@
 /*Alterações no vídeo de fundo*/
 .playSound {
    position:absolute;
-   bottom:70px;
-   right:60px;
+   bottom:200px;
+   right:20px;
 }
 
 .playSound button {
    background-color:#F2F2F2;
    border-radius:5px;
-   padding:3px;
+   padding:5px;
    margin:5px;
    font-size:16px;
    cursor:pointer;

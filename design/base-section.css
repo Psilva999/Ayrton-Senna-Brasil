@@ -23,9 +23,3 @@ section {
     z-index:2;
     color:#F2F2F2;
 }
-
-/* Padrão */
-span, .doc {
-    display:block;
-    margin-top:30px;
-}

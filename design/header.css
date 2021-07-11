@@ -3,7 +3,7 @@
 /* Configuração do header */
 header {
     position:absolute;
-    top:30px;
+    top:20px;
     left:0;
     width:790px;
     padding:10px;
@@ -11,7 +11,11 @@ header {
     font-size:40px;
 }
 
+/* Padrão */
+span, .doc { display:block; }
+
 header span { 
+    margin-top:20px;
     width:300px;
     font-size:30px; 
 }
@@ -19,6 +23,7 @@ header span {
 .doc {
     background-color:#F2F2F2;
     border-radius:7px;
+    margin-top:30px;
     width:150px;
     padding:10px;
     font-size:20px;
