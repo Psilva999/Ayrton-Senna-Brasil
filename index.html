@@ -9,10 +9,11 @@
     <script src="script/script.js"></script>
 
     <link rel="stylesheet" href="design/base-section.css">
-    <link rel="stylesheet" href="design/menu.css">
+    <link rel="stylesheet" href="design/button.css">
 
-    <link rel="stylesheet" href="design/flagBurguer.css">
     <link rel="stylesheet" href="design/header.css">
+    <link rel="stylesheet" href="design/menu.css">
+    <link rel="stylesheet" href="design/flagBurguer.css">
     
     <link rel="stylesheet" href="design/video.css">
     <link rel="stylesheet" href="design/social.css">
@@ -22,8 +23,7 @@
 
 <body>
    <!--Vídeo de background-->
-   <video src="midias/videos/LapOfLife.mp4" muted loop autoplay></video>
-
+   <video id="videoSenna" src="midias/videos/LapOfLife.mp4" muted loop autoplay></video>
 
    <!--section com o conteúdo da página-->
    <section>
@@ -65,8 +65,15 @@
             <li>
                <a href="https://www.youtube.com/user/sennavive" target="_blank">Vídeos</a> </li>
          </ul>
-
       </nav>
+
+      <!--Botão de pause/play e som no vídeo-->
+      <div class="playSound">
+         <button id="alteraVideo" onclick="paraMexe()">&#x23F8;</button>
+
+         <br>
+         <button id="alteraSom" onclick="som()">&#x1F3A7;</button>
+      </div>
    </section>
 
 </body>
