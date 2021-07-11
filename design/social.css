@@ -1,11 +1,11 @@
 @charset 'UTF-8';
 
-.social ul {
+.social {
+   display:none;
    list-style:none;
 }
 
 .social li { 
-   display:inline-block; 
    margin:5px;
 }
 

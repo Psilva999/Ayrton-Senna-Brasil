@@ -2,16 +2,16 @@
 
 /*Alterações no vídeo de fundo*/
 .playSound {
-   border-radius:10px;
    position:absolute;
    bottom:70px;
    right:60px;
-   padding:3px;
 }
 
 .playSound button {
-   background-color:rgba(0,0,0,.1);
-   margin:15px;
-   font-size:15px;
+   background-color:#F2F2F2;
+   border-radius:5px;
+   padding:3px;
+   margin:5px;
+   font-size:16px;
    cursor:pointer;
 }

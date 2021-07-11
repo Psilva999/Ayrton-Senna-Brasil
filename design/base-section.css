@@ -25,7 +25,7 @@ section {
 }
 
 /* Padrão */
-span, .doc, .social {
+span, .doc {
     display:block;
     margin-top:30px;
 }

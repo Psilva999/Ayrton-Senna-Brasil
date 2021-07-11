@@ -7,27 +7,27 @@ function paraMexe() {
    if (video.paused) {
       video.play()
 
-      rolaVideo.innerHTML = '&#x1F534;'
+      rolaVideo.innerHTML = 'Pause'
    }
 
    else if (video.play) {
       video.pause()
 
-      rolaVideo.innerHTML = '&#x1F7E2;'
+      rolaVideo.innerHTML = 'Play'
    }
 }
 
 function som() {
    let video = document.querySelector('#videoSenna')
-
+   let rolaVideo = document.querySelector('#alteraVideo')
    let audio = document.querySelector ('#alteraSom')
 
-   if (video.muted) {
+   if (video.muted && rolaVideo.innerHTML == 'Pause') {
       video.muted = false
 
       audio.innerHTML = '&#x1F50A;'
    }
-
+   
    else {
       video.muted = true
 
