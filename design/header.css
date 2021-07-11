@@ -3,46 +3,61 @@
 /* Configuração do header */
 header {
     position:absolute;
-    top:130px;
+    top:30px;
     left:0;
     width:790px;
     padding:10px;
     z-index:1000;
-    font-size:45px;
+    font-size:40px;
 }
 
-header span { font-size:30px; }
+header span { 
+    width:300px;
+    font-size:30px; 
+}
 
-header a {
+.doc {
     background-color:yellow;
-    display:block;
-    margin-top:70px;
-    width:170px;
+    border-radius:7px;
+    width:150px;
     padding:10px;
-    font-size:23px;
+    font-size:20px;
     text-decoration:none;
     color:black;
     letter-spacing:1px; 
     transition:.3s;
 }
 
-header a:hover {
-    width:195px;
-    letter-spacing:3px;
+.doc:hover {
+    width:162px;
+    letter-spacing:2px;
 }
 
 
-/* media para ajustar o header para dispositivos menores */
+/* media para ajustar o header para dispositivos menores. Preciso melhorar
+na transição */
 @media screen and (max-width:1130px) {
     
     header { width:500px; }
+
+    header span { width:270px; }
+}
+
+@media screen and (max-width:700px) { 
+
+    header { width:350px; font-size:30px; }
+
+    header span { width:210px; font-size:23px; }
 }
 
 @media screen and (max-width:450px) {
 
-    header { width:280px; font-size:25px; }
+    header { width:260px; font-size:20px; }
 
-    header span { font-size:23px; }
+    header span { width:170px; font-size:17px; }
 
-    header a { font-size:13px; }
+    .doc { width:133px; font-size:17px; }
+
+    .doc:hover { width:145px; }
 } 
+

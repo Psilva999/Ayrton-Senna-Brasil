@@ -13,8 +13,6 @@
 body { background-color:black; }
 
 section {
-    background:f3d1ab;
-    mix-blend-mode: overlay;
     position:absolute;
     right:0;
     width:100%;
@@ -24,4 +22,10 @@ section {
     justify-content:space-between;
     z-index:2;
     color:#F2F2F2;
+}
+
+/* Padrão */
+span, .doc, .social {
+    display:block;
+    margin-top:30px;
 }
