@@ -8,6 +8,7 @@ function paraMexe() {
       video.play()
 
       rolaVideo.innerHTML = 'Pause'
+      video.muted = true
    }
 
    else if (video.play) {
