@@ -25,6 +25,7 @@ span {
    background-color:#F2F2F2;
    border-radius:7px;
    margin-top:25px;
+   margin-left:0;
    width:150px;
    padding:10px;
    font-size:20px;
@@ -75,8 +76,8 @@ nav a:hover {
 @media screen and (max-width:700px) { 
 
    header { 
-      width:350px; 
-      font-size:30px; 
+      width:320px; 
+      font-size:27px; 
    }
 
    header span { 
@@ -85,7 +86,6 @@ nav a:hover {
    }
 
    .doc {
-      margin-left:0;
       width:133px;
       font-size:17px;
    }

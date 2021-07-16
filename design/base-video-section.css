@@ -26,7 +26,7 @@ body { background-color:black; }
 /* Posição dos botões */
 div {
    position:absolute;
-   bottom:180px;
+   bottom:20px;
    right:20px;
 }
 
