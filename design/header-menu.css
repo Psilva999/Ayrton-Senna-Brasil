@@ -8,7 +8,7 @@ header {
    width:790px;
    padding:10px;
    z-index:1000;
-   font-size:38px;
+   font-size:30px;
    user-select:none;
 }
 
@@ -17,8 +17,8 @@ span, .doc { display:block; }
 
 span { 
    margin-top:20px;
-   width:300px;
-   font-size:30px; 
+   width:240px;
+   font-size:25px; 
 }
 
 .doc {
@@ -38,28 +38,6 @@ span {
    width:162px;
    letter-spacing:2px;
 }
-
-/* Redes sociais */
-header ul {
-   margin:12px;
-   list-style:none;
-}
-
-header li { 
-   display:inline-block;
-   margin:2px;
-}
-
-header a img {
-   transform:scale(.7);
-   transition:.1s;
-}
-
-header a:hover img {
-   transform:scale(.7) translateY(-8px);
-}
-
-header img { width:25px; height:25px; }
 
 /* Menu */
 nav { 
@@ -89,9 +67,9 @@ nav a:hover {
 /* @media para adaptar a diferentes dispositivos */
 @media screen and (max-width:1130px) {
     
-   header { width:470px; }
+   header { width:380px; }
 
-   header span { width:270px; }
+   header span { width:230px; }
 }
 
 @media screen and (max-width:700px) { 
@@ -104,6 +82,16 @@ nav a:hover {
    header span { 
       width:210px; 
       font-size:23px; 
+   }
+
+   .doc {
+      margin-left:0;
+      width:133px;
+      font-size:17px;
+   }
+
+   .doc:hover {
+      width:145px;
    }
 
    nav { width:10%; }
@@ -130,11 +118,11 @@ nav a:hover {
       box-sizing:border-box; 
       display:block; 
       width:100%; 
-      margin:5px; 
+      margin:12px; 
    }
 
    nav a {
-      font-size:18px;
+      font-size:15px;
       color:black;
    }
 
@@ -143,6 +131,8 @@ nav a:hover {
       margin-top:7px;
       padding:5px;
       font-size:10.5px;
+      text-align:center;
+      user-select:none;
    }
 
    input:checked ~ ul { display:block; }
@@ -161,9 +151,9 @@ nav a:hover {
    }
 
    .doc { 
-      width:133px; 
-      font-size:17px; 
+      width:109px; 
+      font-size:13px; 
    }
 
-   .doc:hover { width:145px; }
+   .doc:hover { width:122px; }
 } 
