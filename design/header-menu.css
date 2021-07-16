@@ -1,0 +1,169 @@
+@charset 'UTF-8';
+
+/* Configuração do header */
+header {
+   position:absolute;
+   top:20px;
+   left:0;
+   width:790px;
+   padding:10px;
+   z-index:1000;
+   font-size:38px;
+   user-select:none;
+}
+
+/* Padrão */
+span, .doc { display:block; }
+
+span { 
+   margin-top:20px;
+   width:300px;
+   font-size:30px; 
+}
+
+.doc {
+   background-color:#F2F2F2;
+   border-radius:7px;
+   margin-top:25px;
+   width:150px;
+   padding:10px;
+   font-size:20px;
+   text-decoration:none;
+   color:black;
+   letter-spacing:1px; 
+   transition:.3s;
+}
+
+.doc:hover {
+   width:162px;
+   letter-spacing:2px;
+}
+
+/* Redes sociais */
+header ul {
+   margin:12px;
+   list-style:none;
+}
+
+header li { 
+   display:inline-block;
+   margin:2px;
+}
+
+header a img {
+   transform:scale(.7);
+   transition:.1s;
+}
+
+header a:hover img {
+   transform:scale(.7) translateY(-8px);
+}
+
+header img { width:25px; height:25px; }
+
+/* Menu */
+nav { 
+   position:absolute;
+   top:30px;
+   right:30px;
+}
+
+input, label, q { display:none; }
+
+nav li {  
+   display:inline-block;
+   margin:3px; 
+   font-size:20px; 
+}
+
+nav a { 
+   text-decoration:none; 
+   text-transform:uppercase; 
+   color:#F2F2F2; 
+}
+
+nav a:hover {
+   text-decoration:underline;
+}
+
+/* @media para adaptar a diferentes dispositivos */
+@media screen and (max-width:1130px) {
+    
+   header { width:470px; }
+
+   header span { width:270px; }
+}
+
+@media screen and (max-width:700px) { 
+
+   header { 
+      width:350px; 
+      font-size:30px; 
+   }
+
+   header span { 
+      width:210px; 
+      font-size:23px; 
+   }
+
+   nav { width:10%; }
+
+   label {
+      display:inline-block;
+      padding:9px;
+      cursor:pointer;
+      user-select:none;
+      font-size:30px;
+      font-style:1.2em;
+   }
+
+   nav ul { 
+      background-color:#F2F2F2;
+      border-radius:5px;
+      position:absolute;
+      right:10px;
+      padding:2px;
+      display:none;
+   }
+
+   nav li, a { 
+      box-sizing:border-box; 
+      display:block; 
+      width:100%; 
+      margin:5px; 
+   }
+
+   nav a {
+      font-size:18px;
+      color:black;
+   }
+
+   q {
+      display:block;
+      margin-top:7px;
+      padding:5px;
+      font-size:10.5px;
+   }
+
+   input:checked ~ ul { display:block; }
+}
+
+@media screen and (max-width:450px) {
+
+   header { 
+      width:260px; 
+      font-size:20px; 
+   }
+
+   header span { 
+      width:170px; 
+      font-size:17px; 
+   }
+
+   .doc { 
+      width:133px; 
+      font-size:17px; 
+   }
+
+   .doc:hover { width:145px; }
+} 

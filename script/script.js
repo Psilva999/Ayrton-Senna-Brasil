@@ -1,8 +1,8 @@
-function paraMexe() {
-   //Coloco a variável fora e não funciona
-   let video = document.querySelector ('#videoSenna')
-   let rolaVideo = document.querySelector ('#alteraVideo')
-   let audio = document.querySelector ('#alteraSom')
+function player() {
+   //Coloquei a variável fora e não funcionou
+   let video = document.querySelector ('#video')
+   let rolaVideo = document.querySelector ('#pause-play')
+   let audio = document.querySelector ('#som')
 
    if (video.paused) {
       video.play()
@@ -19,17 +19,17 @@ function paraMexe() {
    }
 }
 
-function som() {
-   let video = document.querySelector ('#videoSenna')
-   let rolaVideo = document.querySelector ('#alteraVideo')
-   let audio = document.querySelector ('#alteraSom')
+function sound() {
+   let video = document.querySelector ('#video')
+   let rolaVideo = document.querySelector ('#pause-play')
+   let audio = document.querySelector ('#som')
 
    if (video.muted && rolaVideo.innerHTML == 'Pause') {
       video.muted = false
 
       audio.innerHTML = '&#x1F50A;'
    }
-   
+
    else {
       video.muted = true
 
