@@ -15,7 +15,7 @@ function player() {
       video.pause()
 
       rolaVideo.innerHTML = 'Play'
-      audio.innerHTML = '&#x1F508;'
+      audio.innerHTML = '<img src="https://img.icons8.com/material-rounded/18/000000/mute.png"/>'
    }
 }
 
@@ -27,12 +27,12 @@ function sound() {
    if (video.muted && rolaVideo.innerHTML == 'Pause') {
       video.muted = false
 
-      audio.innerHTML = '&#x1F50A;'
+      audio.innerHTML = '<img src="https://img.icons8.com/material-rounded/18/000000/room-sound.png"/>'
    }
 
    else {
       video.muted = true
 
-      audio.innerHTML = '&#x1F508;'
+      audio.innerHTML = '<img src="https://img.icons8.com/material-rounded/18/000000/mute.png"/>'
    }
 }

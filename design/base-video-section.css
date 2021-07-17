@@ -34,9 +34,25 @@ button {
    background-color:#F2F2F2;
    border-radius:5px;
    padding:5px;
-   margin:5px;
+   margin:4px;
    font-size:16px;
    cursor:pointer;
+}
+
+#pause-play {
+   width:60px;
+}
+
+#som {
+   position:relative;
+   top:2px;
+   width:35px;
+   height:31px;
+   padding:4px;
+}
+
+#som img {
+   margin-top:2px;
 }
 
 /* Definições da section | min-height - define a altura minima do elemento | vh é a relação de 1% da altura da janela de visualização | justify-content:space-between; - alinha os itens quando não é utilizado todo espaço disponível na horizontal, no caso com um espaço entre eles | z-index - define a ordem do maior para o menor elemento de acordo com sua posição e display */
