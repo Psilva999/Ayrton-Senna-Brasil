@@ -1,6 +1,6 @@
 @charset 'UTF-8';
 
-/* Configuração do header */
+/* Configuração do header | user-select:none; - impede que o usuário selecione o texto */
 header {
    position:absolute;
    top:20px;

@@ -1,7 +1,7 @@
 @charset 'UTF-8';
 @import url('https://fonts.googleapis.com/css2?family=Basic&display=swap');
 
-/* Configurações da página principal */
+/* Configurações da página principal | box-sizing:border-box; - preenche toda a largura, altura e borda da página | border, margin e padding para preencher totalmente o site */
 * { 
    box-sizing:border-box;
    border:0;
@@ -12,7 +12,7 @@
 
 body { background-color:black; }
 
-/* Vídeo de fundo */
+/* Vídeo de fundo | object-fit:cover; - definir como o vídeo será redimensionado na página, no caso ela mantém suas proporções e pode ser cortada para caber na página */
 #video {
    position:absolute;
    top:0;
@@ -39,7 +39,7 @@ button {
    cursor:pointer;
 }
 
-/*  */
+/* Definições da section | min-height - define a altura minima do elemento | vh é a relação de 1% da altura da janela de visualização | justify-content:space-between; - alinha os itens quando não é utilizado todo espaço disponível na horizontal, no caso com um espaço entre eles | z-index - define a ordem do maior para o menor elemento de acordo com sua posição e display */
 section {
    position:absolute;
    height:100%;
