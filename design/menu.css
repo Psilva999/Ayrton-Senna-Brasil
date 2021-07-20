@@ -29,13 +29,13 @@ nav {
    width:25px;
 }
 
-/* Lista */
+/* Conteúdo do menu */
 .lista {
    background:#F2F2F2;
    border-radius:20px;
    position:absolute;
    display:flex;
-   width:25vw;
+   width:26vw;
    height:50vh;
    top:6vh;
    right:0;
@@ -72,6 +72,7 @@ q {
    font-size:15px;
 }
 
+/* Animação do navbar */
 @keyframes navLinkFade {
 
    from {
@@ -91,37 +92,41 @@ q {
    opacity:1;
 }
 
-/* Para diferentes dispositivos */
+/* Responsabilidade do menu */
 @media (max-width:900px) {
-   .lista {
-      width:26vw;
-   }
-}
-
-/* Para diferentes dispositivos */
-@media (max-width:800px) {
    .lista {
       width:27vw;
    }
 }
 
-/* Para diferentes dispositivos */
-@media (max-width:730px) {
+
+@media (max-width:800px) {
    .lista {
       width:30vw;
    }
 }
 
-/* Para diferentes dispositivos */
-@media (max-width:660px) {
+
+@media (max-width:730px) {
    .lista {
       width:33vw;
    }
 }
 
-/* Para diferentes dispositivos */
+@media (max-width:660px) {
+   .lista {
+      width:36vw;
+   }
+}
+
 @media (max-width:610px) {
    .lista {
       width:39vw;
+   }
+}
+
+@media (mar-width:480px) {
+   .lista {
+      width:42vw;
    }
 }

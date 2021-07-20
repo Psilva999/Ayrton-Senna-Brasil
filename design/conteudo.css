@@ -39,7 +39,7 @@ p {
 }
 
 
-/* @media para adaptar a diferentes dispositivos */
+/* Responsabilidade do conteúdo */
 @media screen and (max-width:900px) { 
 
    h1 { 

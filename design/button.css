@@ -1,8 +1,6 @@
 @charset 'UTF-8';
 
-/* Vídeo de fundo | object-fit:cover; - definir como o vídeo será redimensionado na página, no caso ela mantém suas proporções e pode ser cortada para caber na página */
-
-/* Posição dos botões */
+/* Botões fixos na parte inferior da tela */
 .botoes {
    background-color:#F2F2F2;
    border-radius:2px;
