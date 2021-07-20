@@ -1,0 +1,71 @@
+@charset 'UTF-8';
+
+.conteudo {
+   position:absolute;
+   left:20px;
+   top:10px;
+}
+
+.conteudo h1, p {
+   margin-bottom:20px;
+}
+
+h1 {
+   font-size:38px;
+}
+
+p {
+   letter-spacing:1px;
+   width:240px;
+   font-size:23px;
+}
+
+.doc {
+   background-color:#F2F2F2;
+   display:block;
+   margin-top:30px;
+   border-radius:5px;
+   width:133px;
+   padding:9px;
+   color:black;
+   font-size:17px;
+   letter-spacing:1px;
+   transition:.3s;
+}
+
+.doc:hover {
+   width:143px;
+   letter-spacing:2px;
+}
+
+
+/* @media para adaptar a diferentes dispositivos */
+@media screen and (max-width:900px) { 
+
+   h1 { 
+      width:270px; 
+      font-size:35px; 
+   }
+
+   p { 
+      width:210px; 
+      font-size:20px; 
+   }
+
+   .doc {
+      width:119px;
+      font-size:15px;
+   }
+
+   .doc:hover {
+      width:131px;
+   }
+}
+
+@media screen and (max-width:490px) { 
+
+   h1 { 
+      width:240px; 
+      font-size:30px; 
+   }
+}

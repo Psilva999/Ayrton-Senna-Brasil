@@ -5,8 +5,11 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta charset="UTF-8">
 
-   <link rel="stylesheet" href="design/base-video-section.css">
-   <link rel="stylesheet" href="design/header-menu.css">
+   <link rel="stylesheet" href="design/principal.css">
+   <link rel="stylesheet" href="design/conteudo.css">
+   
+   <link rel="stylesheet" href="design/menu.css">
+   <link rel="stylesheet" href="design/button.css">
 
    <link rel="shortcut icon" type="image/x-icon" href="media/senna.ico">
    <script src="script/script.js"></script>
@@ -14,46 +17,102 @@
 </head>
 
 <body>
-   <!--Vídeo de background-->
+   <!--Vídeo de fundo-->
    <video id="video" src="https://player.vimeo.com/external/573444914.sd.mp4?s=a3cf82ae0a4f8fb49e6838f6435d65e0eca2bd41&profile_id=164&oauth2_token_id=57447761" muted loop autoplay></video>
 
+   <section>
+      <!--Menu-->
+      <nav>
+         <div class="navbar">
+            <div class="line1"></div>
+            <div class="line2"></div>
+         </div>
+   
+         <ul class="lista">
+            <li>
+               <a
+                  href="https://www.amazon.com.br/Ayrton-Senna-Lenda-Toda-Velocidade/dp/8526013718/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=ayrton+senna&qid=1626014849&sr=8-1">História</a>
+            </li>
+   
+            <li>
+               <a href="https://www.youtube.com/user/sennavive">Vídeos</a>
+            </li>
+   
+            <li>
+               <a href="">Contato</a>
+            </li>
+   
+            <!--Citação-->
+            <q>I just try to learn about my self</q>
+         </ul>
+   
+      </nav>
+   
+      <script> //Animação do navbar
+         class navbar {
+            constructor(barras, listas, ligados) {
+               this.barras = document.querySelector(barras)
+               this.listas = document.querySelector(listas)
+
+               this.ligados = document.querySelectorAll(ligados)
+               this.activeClass = 'active'
+
+               this.handleClick = this.handleClick.bind(this)
+            }
+
+            animados() {
+               this.ligados.forEach((link, index) => {
+                  link.style.animation
+                     ? (link.style.animation = '')
+                     : (link.style.animation = `navLinkFade 0.7s ease forwards ${index / 7 + 0.5}s`)
+               })
+            }
+
+            handleClick() {
+               this.listas.classList.toggle(this.activeClass)
+               this.barras.classList.toggle(this.activeClass)
+
+               this.animados()
+            }
+
+            addClickEvent() {
+               this.barras.addEventListener('click', this.handleClick)
+            }
+
+            init() {
+               if (this.barras) {
+                  this.addClickEvent()
+               }
+
+               return this
+            }
+         }
+
+         const responsivo = new navbar(
+            '.navbar',
+            '.lista',
+            '.lista li')
+
+         responsivo.init()
+      </script>
+   
+      <!--Conteúdo da página-->
+      <div class="conteudo">
+         <h1>AYRTON SENNA DO BRASIL</h1>
+   
+         <p>Homenagem ao melhor piloto da história da Formula 1</p>
+   
+         <a class="doc" href="https://www.youtube.com/watch?v=N_rfVHspV_4">DRIVE TO WIN</a>
+      </div>
+   </section>
+
    <!--Botões de pause e som-->
-   <div>
+   <div class="botoes">
       <button id="pause-play" onclick="player()">Pause</button>
    
       <button id="som" onclick="sound()">
          <img src="https://img.icons8.com/material-rounded/18/000000/mute.png" /> </button>
    </div>
-
-   <!--section com o conteúdo da página-->
-   <section>
-      <header> <h1>AYRTON SENNA DO BRASIL</h1>
-      
-         <span>Homenagem ao melhor piloto da história da Formula 1</span>
-
-         <a class="doc" href="https://www.youtube.com/watch?v=N_rfVHspV_4">DRIVE TO WIN</a>
-      </header>
-   </section>
-
-   <!--Menu-->
-   <nav>
-      <label for="flag-menu">
-      <img src="https://img.icons8.com/ios-filled/35/ffffff/mclaren.png"/> <label>
-      <input type="checkbox" id="flag-menu" name="flag-menu">
-   
-      <ul>
-         <li>
-            <a href="https://www.amazon.com.br/Ayrton-Senna-Lenda-Toda-Velocidade/dp/8526013718/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=ayrton+senna&qid=1626014849&sr=8-1">História</a>
-         </li>
-   
-         <li>
-            <a href="https://www.youtube.com/user/sennavive">Vídeos</a> </li>
-         
-         <!--Citação-->
-         <q>I just try to learn about my self</q>
-         
-      </ul>
-   </nav>
 
 </body>
 </html>

@@ -1,0 +1,33 @@
+@charset 'UTF-8';
+@import url('https://fonts.googleapis.com/css2?family=Basic&display=swap');
+
+* { 
+   box-sizing:border-box;
+   border:0;
+   margin:0;
+   padding:0;
+   color:#F2F2F2;
+   font-family:'Basic', sans-serif;
+   user-select:none;
+   letter-spacing:3px;
+}
+
+body { 
+   background-color:black;
+   overflow-x:hidden;
+}
+
+a {
+   text-decoration:none;
+}
+
+/* Vídeo de fundo */
+video {
+   position:absolute;
+   top:0;
+   left:0;
+   width:100%;
+   height:100%;
+   object-fit:cover;
+   opacity:0.5;
+}
