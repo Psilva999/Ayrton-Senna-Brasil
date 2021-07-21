@@ -34,7 +34,7 @@ nav {
    border-radius:20px;
    position:absolute;
    display:none;
-   width:25vw;
+   width:15vw;
    top:6vh;
    right:0;
    flex-direction:column;
@@ -45,7 +45,7 @@ nav {
 }
 
 .lista li {
-   margin:30px;
+   margin:15px;
    opacity:1;
 }
 
@@ -65,7 +65,7 @@ q {
    text-align:center;
    padding:10px;
    color:black;
-   font-size:11px;
+   font-size:10px;
 }
 
 /* Animação do navbar */

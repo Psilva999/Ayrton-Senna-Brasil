@@ -1,7 +1,7 @@
 @charset 'UTF-8';
 
 /* Responsabilidade do conteúdo */
-@media screen and (max-width:1000px) { 
+@media (max-width:1150px) { 
 
    h1 { 
       width:270px; 
@@ -13,18 +13,21 @@
    }
 
    .lista {
-      width:27vw;
-   }
-
-   q {
-      font-size:10px;
+      width:18vw;
    }
 }
 
-@media (max-width:500px) {
+@media (max-width:950px) {
+
+   .lista {
+      width:25vw;
+   }
+}
+
+@media (max-width:490px) {
    h1 {
       width:240px;
-      font-size:30px;
+      font-size:25px;
    }
 
    p {
@@ -42,6 +45,6 @@
    }
 
    .lista {
-      width:30vw;
+      width:28vw;
    }
 }
