@@ -3,29 +3,23 @@
 nav {
    position:absolute;
    right:0;
-   top:25px;
+   top:15px;
 }
 
 /* Ajustes do navbar */
 .navbar {
    display:block;
    cursor:pointer;
-   margin-top:-10px;
+   margin-top:-17px;
 }
 
 .navbar div {
    background-color:#F2F2F2;
    border-radius:5px;
+   width:30px;
    height:2px;
    margin:9px;
-}
-
-.line1 {
-  width:35px;
-}
-
-.line2 {
-   width:25px;
+   transition:.2s;
 }
 
 /* Conteúdo do menu */
@@ -34,18 +28,18 @@ nav {
    border-radius:20px;
    position:absolute;
    display:none;
-   width:15vw;
-   top:6vh;
+   width:28vw;
+   top:7vh;
    right:0;
    flex-direction:column;
    align-items:center;
    list-style:none;
-   font-size:13px;
+   font-size:15px;
    text-transform:uppercase;
 }
 
 .lista li {
-   margin:15px;
+   margin:23px;
    opacity:1;
 }
 
@@ -65,7 +59,7 @@ q {
    text-align:center;
    padding:10px;
    color:black;
-   font-size:10px;
+   font-size:11px;
 }
 
 /* Animação do navbar */
@@ -81,11 +75,15 @@ q {
 } 
 
 .navbar.active .line1 {
-   opacity:0;
+   transform:rotate(-44deg) translate(-8px, 9px);
 }
 
 .navbar.active .line2 {
-   opacity:1;
+   opacity:0;
+}
+
+.navbar.active .line3 {
+   transform:rotate(44deg) translate(-6px, -7px);
 }
 
 .navbar.active ~ .lista {

@@ -3,21 +3,18 @@
 .conteudo {
    position:absolute;
    left:20px;
-   top:10px;
-}
-
-.conteudo h1, p {
-   margin-bottom:20px;
+   top:0px;
 }
 
 h1 {
-   font-size:40px;
+   margin-bottom:10px;
+   font-size:50px;
 }
 
 p {
    letter-spacing:1px;
-   width:220px;
-   font-size:22px;
+   width:270px;
+   font-size:26px;
 }
 
 .doc {
@@ -25,16 +22,16 @@ p {
    display:block;
    margin-top:20px;
    border-radius:5px;
-   width:120px;
+   width:132px;
    padding:9px;
    color:black;
-   font-size:15px;
+   font-size:17px;
    letter-spacing:1px;
    transition:.3s;
 }
 
 .doc:hover {
-   width:132px;
+   width:144px;
    letter-spacing:2px;
 }
 

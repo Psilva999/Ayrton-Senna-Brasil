@@ -1,50 +1,44 @@
 @charset 'UTF-8';
 
 /* Responsabilidade do conteúdo */
-@media (max-width:1150px) { 
+@media (max-width:1100px) { 
 
    h1 { 
-      width:270px; 
-      font-size:35px;
+      width:340px; 
+      font-size:40px;
    }
 
    p {
+      width:210px;
       font-size:20px;
    }
 
    .lista {
-      width:18vw;
+      width:35vw;
    }
 }
 
-@media (max-width:950px) {
-
-   .lista {
-      width:25vw;
-   }
-}
-
-@media (max-width:490px) {
+@media (max-width:500px) {
    h1 {
       width:240px;
-      font-size:25px;
+      font-size:31px;
    }
 
    p {
-      width:180px;
-      font-size:17px;
+      width:185px;
+      font-size:18px;
    }
 
    .doc {
-      width:95px;
-      font-size:11px;
+      width:107px;
+      font-size:13px;
    }
 
    .doc:hover {
-      width:107px;
+      width:119px;
    }
 
    .lista {
-      width:28vw;
+      width:40vw;
    }
 }
