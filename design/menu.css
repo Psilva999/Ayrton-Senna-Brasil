@@ -18,7 +18,6 @@ nav {
    border-radius:5px;
    height:2px;
    margin:9px;
-   transition:.3s;
 }
 
 .line1 {
@@ -34,21 +33,19 @@ nav {
    background:#F2F2F2;
    border-radius:20px;
    position:absolute;
-   display:flex;
-   width:26vw;
-   height:50vh;
+   display:none;
+   width:25vw;
    top:6vh;
    right:0;
    flex-direction:column;
    align-items:center;
-   justify-content:space-around;
-   transition:transform .25s ease-in;
    list-style:none;
-   font-size:16px;
+   font-size:13px;
+   text-transform:uppercase;
 }
 
 .lista li {
-   margin:28px;
+   margin:30px;
    opacity:1;
 }
 
@@ -68,7 +65,7 @@ q {
    text-align:center;
    padding:10px;
    color:black;
-   font-size:15px;
+   font-size:11px;
 }
 
 /* Animação do navbar */
@@ -91,41 +88,6 @@ q {
    opacity:1;
 }
 
-/* Responsabilidade do menu */
-@media (max-width:900px) {
-   .lista {
-      width:27vw;
-   }
-}
-
-
-@media (max-width:800px) {
-   .lista {
-      width:30vw;
-   }
-}
-
-
-@media (max-width:730px) {
-   .lista {
-      width:33vw;
-   }
-}
-
-@media (max-width:660px) {
-   .lista {
-      width:36vw;
-   }
-}
-
-@media (max-width:610px) {
-   .lista {
-      width:39vw;
-   }
-}
-
-@media (mar-width:480px) {
-   .lista {
-      width:42vw;
-   }
+.navbar.active ~ .lista {
+   display:flex;
 }

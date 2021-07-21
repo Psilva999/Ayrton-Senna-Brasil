@@ -1,0 +1,47 @@
+@charset 'UTF-8';
+
+/* Responsabilidade do conteúdo */
+@media screen and (max-width:1000px) { 
+
+   h1 { 
+      width:270px; 
+      font-size:35px;
+   }
+
+   p {
+      font-size:20px;
+   }
+
+   .lista {
+      width:27vw;
+   }
+
+   q {
+      font-size:10px;
+   }
+}
+
+@media (max-width:500px) {
+   h1 {
+      width:240px;
+      font-size:30px;
+   }
+
+   p {
+      width:180px;
+      font-size:17px;
+   }
+
+   .doc {
+      width:95px;
+      font-size:11px;
+   }
+
+   .doc:hover {
+      width:107px;
+   }
+
+   .lista {
+      width:30vw;
+   }
+}
