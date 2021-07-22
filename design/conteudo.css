@@ -1,5 +1,11 @@
 @charset 'UTF-8';
 
+section {
+   position:absolute;
+   width:100%;
+   height:100%;
+}
+
 .conteudo {
    position:absolute;
    left:10px;
@@ -34,5 +40,3 @@ p {
    width:144px;
    letter-spacing:2px;
 }
-
-
