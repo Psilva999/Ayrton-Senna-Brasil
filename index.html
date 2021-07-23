@@ -10,10 +10,10 @@
    <link rel="stylesheet" href="design/menu.css">
 
    <link rel="stylesheet" href="design/response.css">
-   <link rel="stylesheet" href="design/button.css">
+   <link rel="stylesheet" href="design/player.css">
 
    <link rel="shortcut icon" type="image/x-icon" href="media/senna.ico">
-   <script src="script/script.js"></script>
+   <!-- <script src="script/script.js"></script> -->
    <title>Ayrton Senna</title>
 </head>
 
@@ -107,12 +107,49 @@
          <a class="doc" href="https://www.youtube.com/watch?v=N_rfVHspV_4">DRIVE TO WIN</a>
       </div>
 
-      <!--Botões de pause e som-->
-      <div class="botoes">
-         <button id="play-paused" onclick="player()">&#x23F8;</button>
+      <!--Player and sound-->
+      <div class="player-sound">
+      
+         <div id="player">
+            <div class="pause active">
+               <div class="line line_1"></div>
+               <div class="line line_2"></div>
+            </div>
+      
+            <div class="play">
+               <div class="line line_1"></div>
+               <div class="line line_2"></div>
+               <div class="line line_3"></div>
+            </div>
+         </div>
 
-         <button id="sound" onclick="sound()">Som </button>
+         <div id="sound"></div>
       </div>
+
+      <script> //Algoritmo para a animação do player funcionar
+         var pause = document.querySelector ('.pause')
+         var play = document.querySelector ('.play')
+
+         var video = document.querySelector ('#video')
+         var mudaPlayer = document.querySelector('#player')
+
+         mudaPlayer.addEventListener ('click', () => {
+            if (play.classList.contains ('active')) {
+               video.play()
+
+               play.classList.remove ('active')
+               pause.classList.add ('active')
+            }
+
+            else if (pause.classList.contains ('active')) {
+               video.pause()
+               
+               pause.classList.remove ('active')
+               play.classList.add ('active')
+            }
+         })
+
+      </script>
    </section>
 
 </body>

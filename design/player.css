@@ -1,0 +1,70 @@
+@charset 'UTF-8';
+
+.player-sound, #player, .pause, .play {
+   display:flex;
+   justify-content:left;
+   align-items:center;
+}
+
+.player-sound {
+   background-color:#F2F2F2;
+   border-radius:15px;
+   position:absolute;
+   bottom:30px;
+   width:250px;
+   height:50px;
+   padding:5px;
+   opacity:.7;
+}
+
+#player {
+   border-radius:50%;
+   position:relative;
+   width:50px;
+   height:50px;
+   left:0px;
+   cursor:pointer;
+}
+
+.pause, .play {
+   position:absolute;
+   width:100%;
+   height:100%;
+}
+
+.line{
+   background:black;
+   border-radius:10px;
+   position:absolute;
+   width:2px;
+   box-shadow:0px 0px 1px black;
+}
+
+.pause.active .line_1 {  
+   height:35%;
+   margin:25% 0;
+   left:36%;
+}
+
+.pause.active .line_2 {
+   height:35%;
+   margin:25% 0;
+   right:36%;
+}
+
+.play.active .line_1 {
+   left:36%;
+   height:35%;
+}
+
+.play.active .line_2 {
+   left:135%;
+   height:35%;
+   transform:rotate(-119deg) translateY(-39px) translateX(17px);
+}
+
+.play.active .line_3 {
+   left:135%;
+   height:35%;
+   transform:rotate(119deg) translateY(39px) translateX(17px);
+}
