@@ -1,38 +1,38 @@
 function player() {
    //Coloquei a variável fora e não funcionou
    let video = document.querySelector ('#video')
-   let rolaVideo = document.querySelector ('#pause-play')
-   let audio = document.querySelector ('#som')
+   let tocaVideo = document.querySelector ('#play-paused')
+   let audio = document.querySelector ('#sound')
 
    if (video.paused) {
       video.play()
 
-      rolaVideo.innerHTML = 'Pause'
+      tocaVideo.innerHTML = '&#x23F8;'
       video.muted = true
    }
 
    else if (video.play) {
       video.pause()
 
-      rolaVideo.innerHTML = 'Play'
-      audio.innerHTML = 'No sound'
+      tocaVideo.innerHTML = '&#xFE0F;'
+      audio.innerHTML = ''
    }
 }
 
 function sound() {
    let video = document.querySelector ('#video')
-   let rolaVideo = document.querySelector ('#pause-play')
-   let audio = document.querySelector ('#som')
+   let tocaVideo = document.querySelector ('#play')
+   let audio = document.querySelector ('#sound')
 
-   if (video.muted && rolaVideo.innerHTML == 'Pause') {
+   if (video.muted && tocaVideo.innerHTML == '&#x23F8;') {
       video.muted = false
 
-      audio.innerHTML = 'Som'
+      audio.innerHTML = ''
    }
 
    else {
       video.muted = true
 
-      audio.innerHTML = 'No sound'
+      audio.innerHTML = ''
    }
 }
