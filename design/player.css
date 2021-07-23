@@ -13,11 +13,11 @@
    position:absolute;
    left:40%;
    right:40%;
-   bottom:50px;
+   bottom:70px;
    width:250px;
    height:50px;
    padding:5px;
-   opacity:.7;
+   opacity:.6;
 }
 
 #player {
@@ -91,7 +91,7 @@
 
 @media (max-width:490px) {
    .player-sound {
-      left:20%;
-      right:20%;
+      left:10%;
+      right:10%;
    }
 }
