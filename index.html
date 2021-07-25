@@ -21,7 +21,7 @@
 
 <body>
    <!--Vídeo de fundo-->
-   <video id="video" class="audio" src="https://player.vimeo.com/external/573444914.sd.mp4?s=a3cf82ae0a4f8fb49e6838f6435d65e0eca2bd41&profile_id=164&oauth2_token_id=57447761" muted loop autoplay></video>
+   <video id="video" src="https://player.vimeo.com/external/573444914.sd.mp4?s=a3cf82ae0a4f8fb49e6838f6435d65e0eca2bd41&profile_id=164&oauth2_token_id=57447761" muted loop autoplay></video>
 
    <section>
       <!--Menu-->
@@ -123,31 +123,6 @@
                <div class="line line_2"></div>
                <div class="line line_3"></div>
             </div>
-
-            <script>
-               var video = document.querySelector ('#video')
-
-               var pause = document.querySelector ('.pause')
-               var play = document.querySelector ('.play')
-               var mudaPlayer = document.querySelector ('#player')
-
-               mudaPlayer.addEventListener('click', () => {
-
-                  if (play.classList.contains('active')) {
-                     video.play()
-
-                     play.classList.remove('active')
-                     pause.classList.add('active')
-                  }
-
-                  else if (pause.classList.contains('active')) {
-                     video.pause()
-
-                     pause.classList.remove('active')
-                     play.classList.add('active')
-                  }
-               })
-            </script>
          </div>
 
          <div id='sound-muted'>
@@ -165,36 +140,11 @@
                <div></div>
                <div class="corte"></div>
             </div>
-
-            <script>
-               var mudaSom = document.querySelector('#sound-muted')
-               var sound = document.querySelector('.sound')
-               var muted = document.querySelector ('.muted')
-
-               var audioVideo = document.querySelector ('.audio')
-
-               mudaSom.addEventListener('click', () => {
-
-                  if (muted.classList.contains('active') & audioVideo.muted) {
-
-                     audioVideo.muted = false
-
-                     muted.classList.remove('active')
-                     sound.classList.add('active')
-                  }
-
-                  else {
-                     audioVideo.muted = true
-
-                     sound.classList.remove('active')
-                     muted.classList.add('active')
-                  }
-               })
-            </script>
          </div>
 
+         <!--Algoritmo que faz o player funcionar-->
+         <script src="script/audio.js"></script>
       </div>
-
    </section>
 
 </body>
