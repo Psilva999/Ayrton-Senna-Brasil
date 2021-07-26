@@ -76,3 +76,14 @@
    height:35%;
    transform:rotate(120deg) translateY(28px) translateX(11.6px);
 }
+
+.player-sound a, sup {
+   color:black;
+}
+
+.player-sound a {
+   position:relative;
+   left:20px;
+   font-size:14px;
+   letter-spacing:3px;
+}
