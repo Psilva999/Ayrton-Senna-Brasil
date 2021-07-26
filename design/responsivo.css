@@ -20,13 +20,13 @@
 
    /* Conteúdo */
    h1 {
-      width:280px;
-      font-size:35px;
+      width:244px;
+      font-size:30px;
    }
 
    p {
-      width:200px;
-      font-size:20px;
+      width:182px;
+      font-size:18px;
    }
 
    /* Lista */
@@ -51,7 +51,7 @@
 
    /* Animação do navbar */
    .navbar.active .line1 {
-      transform:rotate(-48deg) translate(-5px, 5px);
+      transform:rotate(-48deg) translate(-4px, 4px);
    }
 
    .navbar.active .line2 {
@@ -59,10 +59,10 @@
    }
 
    .navbar.active .line3 {
-      transform:rotate(48deg) translate(-7px, -7px);
+      transform:rotate(48deg) translate(-8.5px, -8.5px);
    }
 
    .lista {
-      width:40vw;
+      width:45vw;
    }
 }
