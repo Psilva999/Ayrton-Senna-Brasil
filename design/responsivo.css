@@ -2,38 +2,16 @@
 
 @media (max-width:1000px) {
    h1 { 
-      width:340px; 
-      font-size:40px;
+      width:290px; 
+      font-size:37px;
    }
 
-   p {
-      width:210px;
+   article {
+      width:265px;
       font-size:20px;
    }
 
-   .lista {
-      width:31vw;
-   }
-}
-
-@media (max-width:650px) {
-
-   /* Conteúdo */
-   h1 {
-      width:244px;
-      font-size:30px;
-   }
-
-   p {
-      width:182px;
-      font-size:18px;
-   }
-
-   /* Lista */
-   nav {
-      top:0px;
-   }
-
+   /* Menu */
    .navbar div {
       height:2px;
       margin:7px;
@@ -47,6 +25,10 @@
 
    .line2 {
       width:32px;
+   }
+
+   .lista {
+      width:31vw;
    }
 
    /* Animação do navbar */
@@ -63,6 +45,23 @@
    }
 
    .lista {
-      width:45vw;
+      width:40vw;
+   }
+}
+
+@media (max-width:500px) {
+      /* Conteúdo */
+   h1 {
+      width:250px;
+      font-size:30px;
+   }
+
+   p {
+      width:200px;
+      font-size:18px;
+   }
+
+   .lista {
+      width:60vw;
    }
 }

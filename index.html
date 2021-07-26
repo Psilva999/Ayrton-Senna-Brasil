@@ -22,6 +22,12 @@
    <video id="video" src="https://player.vimeo.com/external/573444914.sd.mp4?s=a3cf82ae0a4f8fb49e6838f6435d65e0eca2bd41&profile_id=164&oauth2_token_id=57447761" muted loop autoplay></video>
 
    <section>
+      <!--Conteúdo da página-->
+      <header> <h1>AYRTON SENNA DO BRASIL</h1>
+
+         <p>Homenagem ao melhor piloto da história da Formula 1</p>
+      </header>
+
       <!--Menu-->
       <nav>
          <div class="navbar">
@@ -29,85 +35,37 @@
             <div class="line2"></div>
             <div class="line3"></div>
          </div>
-   
+      
          <ul class="lista">
             <li>
-               <a href="#">Desafio</a> </li>
-
+               <a href="#">Desafio</a>
+            </li>
+      
             <li>
-               <a href="#">Vídeos</a> </li>
-
+               <a href="#">Vídeos</a>
+            </li>
+      
             <li>
-               <a href="#">Imagens</a> </li>
-
+               <a href="#">Imagens</a>
+            </li>
+      
             <li>
-               <a href="#">Livros</a> </li>
-
+               <a href="#">Livros</a>
+            </li>
+      
             <li>
-               <a href="#">Frases</a> </li>
-
+               <a href="#">Frases</a>
+            </li>
+      
             <li>
-               <a href="#">Bastidores</a> </li>
-   
+               <a href="#">Bastidores</a>
+            </li>
+      
             <!--Citação-->
             <q>I just try to learn about my self</q>
          </ul>
+         <script src="script/menu.js"></script>
       </nav>
-   
-      <script> //Animação do navbar
-         class navbar {
-            constructor(barras, listas, ligados) {
-               this.barras = document.querySelector(barras)
-               this.listas = document.querySelector(listas)
-
-               this.ligados = document.querySelectorAll(ligados)
-               this.activeClass = 'active'
-
-               this.handleClick = this.handleClick.bind(this)
-            }
-
-            animados() {
-               this.ligados.forEach((link, index) => {
-                  link.style.animation
-                     ? (link.style.animation = '')
-                     : (link.style.animation = `navLinkFade 0.7s ease forwards ${index / 7 + 0.5}s`)
-               })
-            }
-
-            handleClick() {
-               this.listas.classList.toggle(this.activeClass)
-               this.barras.classList.toggle(this.activeClass)
-
-               this.animados()
-            }
-
-            addClickEvent() {
-               this.barras.addEventListener('click', this.handleClick)
-            }
-
-            init() {
-               if (this.barras) {
-                  this.addClickEvent()
-               }
-
-               return this
-            }
-         }
-
-         const responsivo = new navbar(
-            '.navbar',
-            '.lista',
-            '.lista li')
-
-         responsivo.init()
-      </script>
-   
-      <!--Conteúdo da página-->
-      <div class="conteudo">
-         <h1>AYRTON SENNA DO BRASIL</h1>
-   
-         <p>Homenagem ao melhor piloto da história da Formula 1</p>
-      </div>
 
       <!--Player and sound-->
       <div class="player-sound">
