@@ -51,10 +51,11 @@ nav {
    background:#F2F2F2;
    border-radius:10px;
    display:none;
-   width:25vw;
+   width:22vw;
    position:absolute;
    top:6vh;
    right:10px;
+   padding:5px;
    flex-direction:column;
    list-style:none;
    align-items:center;
@@ -84,10 +85,40 @@ nav {
    color:black;
 }
 
-q {
-   text-align:center;
-   padding:10px;
+/* Citação */
+.aprendendo {
+   width:170px;
+   height:36px;
+   cursor:pointer;
+}
+
+textarea {
+   background-color:#F2F2F2;
+   border-radius:5px;
+   width:170px;
+   padding:2px;
    color:black;
-   font-size:11px;
+   font-size:13px;
+   text-align:center;
    letter-spacing:2px;
+   opacity:.7;
+   resize:none;
+   cursor:pointer;
+}
+
+textarea:focus {
+   outline:0;
+}
+
+.aprendendo img {
+   position:relative;
+   left:150px;
+   bottom:20px;
+   width:17px;
+   height:17px;
+   opacity:.7;
+}
+
+.aprendendo textarea:hover, img:hover {
+   opacity:1;
 }

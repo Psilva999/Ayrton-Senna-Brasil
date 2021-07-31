@@ -27,10 +27,6 @@
       width:32px;
    }
 
-   .lista {
-      width:31vw;
-   }
-
    /* Animação do navbar */
    .navbar.active .line1 {
       transform:rotate(-48deg) translate(-4px, 4px);
@@ -45,7 +41,7 @@
    }
 
    .lista {
-      width:40vw;
+      width:35vw;
       font-size:14px;
    }
 }
