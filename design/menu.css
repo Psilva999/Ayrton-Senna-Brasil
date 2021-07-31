@@ -47,6 +47,7 @@ nav {
 }
 
 /* Conteúdo do menu */
+
 .lista {
    background:#F2F2F2;
    border-radius:10px;
@@ -72,7 +73,7 @@ nav {
    border-radius:5px;
    text-align:center;
    width:75%;
-   margin:5px;
+   margin:6px;
    padding:9px;
    cursor:pointer;
 }
@@ -83,6 +84,17 @@ nav {
 
 .lista a {
    color:black;
+}
+
+/* Indica que o usuário está naquela página */
+#selecionado {
+   border:none;
+   color:black;  
+}
+
+#selecionado:hover {
+   background-color:#F2F2F2;
+   cursor:auto;
 }
 
 /* Citação */
