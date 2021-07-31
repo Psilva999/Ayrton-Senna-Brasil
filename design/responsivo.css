@@ -46,6 +46,7 @@
 
    .lista {
       width:40vw;
+      font-size:14px;
    }
 }
 
@@ -62,6 +63,7 @@
    }
 
    .lista {
-      width:70vw;
+      width:60vw;
+      font-size:13px;
    }
 }
