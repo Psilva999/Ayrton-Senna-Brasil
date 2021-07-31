@@ -90,6 +90,11 @@ nav {
    width:170px;
    height:36px;
    cursor:pointer;
+   opacity:.7;
+}
+
+.aprendendo:hover {
+   opacity:1;
 }
 
 textarea {
@@ -101,7 +106,6 @@ textarea {
    font-size:13px;
    text-align:center;
    letter-spacing:2px;
-   opacity:.7;
    resize:none;
    cursor:pointer;
 }
@@ -116,9 +120,4 @@ textarea:focus {
    bottom:20px;
    width:17px;
    height:17px;
-   opacity:.7;
-}
-
-.aprendendo textarea:hover, img:hover {
-   opacity:1;
 }
