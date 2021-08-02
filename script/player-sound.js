@@ -1,3 +1,4 @@
+//Algoritmo do player
 var mudaPlayer = document.querySelector ('#player')
 var pause = document.querySelector ('.pause')
 var play = document.querySelector ('.play')
@@ -48,3 +49,25 @@ mudaSom.addEventListener('click', () => {
       muted.classList.add('active')
    }
 })
+
+//Tempo
+var mostraTempoDoVideo = document.querySelector('.minutos')
+let time = 0 * 60
+
+setInterval(updateCount ,1000)
+function updateCount() {
+   const contaMinutos = Math.floor(time / 60)
+   let contaSegundos = Math.floor(time % 60)
+
+   if (pause.classList.contains('active')) {
+      if (contaSegundos >= 0 && contaSegundos <= 9) {
+         mostraTempoDoVideo.innerHTML = `0${contaMinutos}:0${contaSegundos}`
+      }
+
+      else if (contaSegundos >= 10 && contaSegundos <= 59) {
+         mostraTempoDoVideo.innerHTML = `0${contaMinutos}:${contaSegundos}`
+      }
+
+      time++
+   }
+}

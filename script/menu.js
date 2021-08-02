@@ -1,13 +1,11 @@
-
 // Animação do navbar
 class navbar {
    constructor(barras, listas, ligados) {
       this.barras = document.querySelector(barras)
       this.listas = document.querySelector(listas)
-
       this.ligados = document.querySelectorAll(ligados)
-      this.activeClass = 'active'
 
+      this.activeClass = 'active'
       this.handleClick = this.handleClick.bind(this)
    }
 
