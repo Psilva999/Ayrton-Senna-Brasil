@@ -50,7 +50,7 @@ mudaSom.addEventListener('click', () => {
    }
 })
 
-//Cont
+//Momento em que o vídeo está
 var mostraTempoDoVideo = document.querySelector('.contando')
 var mostraTempoTotalVideo = document.querySelector('.total')
 
@@ -68,7 +68,7 @@ var mostraTempoTotalVideo = document.querySelector('.total')
       }
    })
 
-//Duração do vídeo
+//Duração total do vídeo
 var i = setInterval(function() {
    if (video.readyState > 0) {
       var minutos = parseInt(video.duration / 60, 10)

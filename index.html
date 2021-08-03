@@ -35,10 +35,10 @@
             <div class="line2"></div>
             <div class="line3"></div>
          </div>
-      
+
          <ul class="lista">
             <li id="selecionado">Home</li>
-      
+
             <li>
                <a href="index/historia.html">História</a>
             </li>
@@ -46,19 +46,19 @@
             <li>
                <a href="index/videos.html">Vídeos</a>
             </li>
-      
+
             <li>
                <a href="index/imagens.html">Imagens</a>
             </li>
-      
+
             <li>
                <a href="index/livros.html">Livros</a>
             </li>
-      
+
             <li>
                <a href="index/frases.html">Frases</a>
             </li>
-      
+
             <li>
                <a href="index/desafio.html">Desafio</a>
             </li>
@@ -66,12 +66,12 @@
             <li>
                <a href="index/bastidores.html">Bastidores</a>
             </li>
-      
+
             <!--Citação-->
             <div class="aprendendo">
                <textarea id="fraseCopiada" cols="15" rows="2" readonly>"I just try to learn about my self"</textarea>
 
-               <img src="media/copy.svg" alt="Imagem indisponível" id="imagemIndicando">               
+               <img src="media/copy.svg" alt="Imagem indisponível" id="imagemIndicando">
             </div>
             <script src="script/clipboard.js"></script>
 
@@ -79,15 +79,39 @@
       </nav>
       <script src="script/menu.js"></script>
 
+      <!-- Botão de compartilhar -->
+      <button type="button" class="compartilhar">
+         <img src="media/share.svg" alt="imagem indisponível">
+
+         <script>
+            var ativaNavbar = document.querySelector('.navbar')
+            var mandaSite = document.querySelector('.compartilhar')
+
+            ativaNavbar.addEventListener('click', () => {
+               if (ativaNavbar.classList.contains('active')) {
+                  mandaSite.style.opacity = '0'
+
+                  mandaSite.style.cursor = 'auto'
+               }
+
+               else {
+                  mandaSite.style.opacity = '.6'
+
+                  mandaSite.style.cursor = 'pointer'
+               }
+            })
+         </script>
+      </button>
+
       <!--Player and sound-->
       <div class="player-sound">
-      
+
          <div id="player">
             <div class="pause active">
                <div class="line line_1"></div>
                <div class="line line_2"></div>
             </div>
-      
+
             <div class="play">
                <div class="line line_1"></div>
                <div class="line line_2"></div>
@@ -102,7 +126,7 @@
                <div></div>
                <div></div>
             </div>
-            
+
             <div class="muted active">
                <div></div>
                <div></div>
@@ -120,7 +144,7 @@
          <!--Algoritmo que faz o player funcionar-->
          <script src="script/player-sound.js"></script>
 
-         <a href="https://www.youtube.com/watch?v=n9qZu7h5ys0">Lap of Life 
+         <a href="https://www.youtube.com/watch?v=n9qZu7h5ys0">Lap of Life
             <img src="media/external-link.svg"> </a>
       </div>
    </section>
