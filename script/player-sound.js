@@ -50,35 +50,31 @@ mudaSom.addEventListener('click', () => {
    }
 })
 
-//Tempo
+//Cont
 var mostraTempoDoVideo = document.querySelector('.contando')
-let time = 0 * 60
+var mostraTempoTotalVideo = document.querySelector('.total')
 
-setInterval(updateCount ,1000)
-function updateCount() {
-   const contaMinutos = Math.floor(time / 60)
-   let contaSegundos = Math.floor(time % 60)
+   video.addEventListener('timeupdate', function () {
 
-   if (pause.classList.contains('active')) {
-      let totalMinutos = 6
-      let totalSegundos = 38
-
-      if (contaSegundos >= 0 && contaSegundos <= 9) {
-         mostraTempoDoVideo.innerHTML = `0${contaMinutos}:0${contaSegundos}`
+      var mudaMinutos = Math.floor(video.currentTime / 60,10)
+      var mudaSegundos = Math.floor(video.currentTime % 60)
+      
+      if (mudaSegundos >= 0 && mudaSegundos < 10) {
+         mostraTempoDoVideo.innerHTML = `0${mudaMinutos}:0${mudaSegundos}`
       }
 
-      else if (contaSegundos >= 10 && contaSegundos <= 59) {
-         mostraTempoDoVideo.innerHTML = `0${contaMinutos}:${contaSegundos}`
+      else {
+         mostraTempoDoVideo.innerHTML = `0${mudaMinutos}:${mudaSegundos}`
       }
+   })
 
-      else if (contaSegundos == totalSegundos && contaMinutos == totalMinutos) {
+//Duração do vídeo
+var i = setInterval(function() {
+   if (video.readyState > 0) {
+      var minutos = parseInt(video.duration / 60, 10)
+      var segundos = (video.duration % 60).toFixed(0)
 
-         contaSegundos -= totalSegundos
-         contaMinutos -= totalMinutos
-
-         time++
-      }
-
-      time++
+      mostraTempoTotalVideo.innerHTML = `/0${minutos}:${segundos}`
+      clearInterval(i)
    }
-}
+}, 200)

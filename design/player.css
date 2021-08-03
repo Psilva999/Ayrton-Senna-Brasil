@@ -71,6 +71,7 @@
    transform:rotate(120deg) translateY(28px) translateX(11.6px);
 }
 
+/* Duração do vídeo */
 .player-sound #tempo, .contando, .total, a, sup {
    position:relative;
    color:black;
@@ -85,7 +86,7 @@
    width:89px;
    padding:2px;
    display:flex;
-   left:10px;
+   left:5px;
 }
 
 .contando {
@@ -93,11 +94,13 @@
 }
 
 .total {
-   right:2px;
+   top:.3px;
+   right:0px;
 }
 
+/* Citação */
 .player-sound a {
-   left:15px;
+   left:10px;
    font-size:11px;
    letter-spacing:2px;
 }
