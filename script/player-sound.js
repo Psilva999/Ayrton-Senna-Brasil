@@ -51,7 +51,7 @@ mudaSom.addEventListener('click', () => {
 })
 
 //Tempo
-var mostraTempoDoVideo = document.querySelector('.minutos')
+var mostraTempoDoVideo = document.querySelector('.contando')
 let time = 0 * 60
 
 setInterval(updateCount ,1000)
@@ -60,12 +60,23 @@ function updateCount() {
    let contaSegundos = Math.floor(time % 60)
 
    if (pause.classList.contains('active')) {
+      let totalMinutos = 6
+      let totalSegundos = 38
+
       if (contaSegundos >= 0 && contaSegundos <= 9) {
          mostraTempoDoVideo.innerHTML = `0${contaMinutos}:0${contaSegundos}`
       }
 
       else if (contaSegundos >= 10 && contaSegundos <= 59) {
          mostraTempoDoVideo.innerHTML = `0${contaMinutos}:${contaSegundos}`
+      }
+
+      else if (contaSegundos == totalSegundos && contaMinutos == totalMinutos) {
+
+         contaSegundos -= totalSegundos
+         contaMinutos -= totalMinutos
+
+         time++
       }
 
       time++

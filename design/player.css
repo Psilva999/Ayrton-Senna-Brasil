@@ -71,25 +71,29 @@
    transform:rotate(120deg) translateY(28px) translateX(11.6px);
 }
 
-.minutos, .total {
-   letter-spacing:2px;
+.player-sound #tempo, .contando, .total, a, sup {
+   position:relative;
+   color:black;
 }
 
-.minutos {
-   width:45px;
-   left:12px;
+#tempo, .contando, .total {
+   letter-spacing:2px;
    font-size:12px;
+}
+
+#tempo {
+   width:89px;
+   padding:2px;
+   display:flex;
+   left:10px;
+}
+
+.contando {
+   width:60px;
 }
 
 .total {
-   top:.5px;
-   left:5px;
-   font-size:12px;
-}
-
-.player-sound .minutos, .total, a, sup {
-   position:relative;
-   color:black;
+   right:2px;
 }
 
 .player-sound a {
