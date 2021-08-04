@@ -72,7 +72,7 @@
 }
 
 /* Duração do vídeo */
-.player-sound #tempo, .contando, .total, a, sup {
+.player-sound #tempo, .contando, .separa, .total, a, sup {
    position:relative;
    color:black;
 }
@@ -89,16 +89,11 @@
    left:5px;
 }
 
-.contando, .total {
-   bottom:0px;
-}
-
 .contando {
    width:37px;
 }
 
 .total {
-   top:.1px;
    right:1px;
 }
 

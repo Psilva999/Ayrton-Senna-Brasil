@@ -74,7 +74,7 @@ var i = setInterval(function() {
       var minutos = parseInt(video.duration / 60, 10)
       var segundos = (video.duration % 60).toFixed(0)
 
-      mostraTempoTotalVideo.innerHTML = `/0${minutos}:${segundos}`
+      mostraTempoTotalVideo.innerHTML = `0${minutos}:${segundos}`
       clearInterval(i)
    }
 }, 200)
