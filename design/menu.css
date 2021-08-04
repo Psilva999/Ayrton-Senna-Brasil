@@ -9,6 +9,7 @@ nav {
 .navbar {
    display:block;
    cursor:pointer;
+   top:1px;
 }
 
 .navbar div {

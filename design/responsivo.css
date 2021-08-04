@@ -37,22 +37,22 @@
       /* Menu */
    .navbar div {
       height:2px;
-      margin:6px;
+      margin:8px;
    }
 
    .line1, .line3 {
-      width:19px;
+      width:22px;
       position:relative;
-      left:8px;
+      left:7.5px;
    }
 
    .line2 {
-      width:27px;
+      width:30px;
    }
 
    /* Animação do navbar */
    .navbar.active .line1 {
-      transform:rotate(-45deg) translate(-3px, 3px);
+      transform:rotate(-45deg) translate(-6px, 6px);
    }
 
    .navbar.active .line2 {
