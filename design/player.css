@@ -83,19 +83,22 @@
 }
 
 #tempo {
-   width:89px;
+   width:90px;
    padding:2px;
    display:flex;
    left:5px;
 }
 
+.contando, .total {
+   bottom:0px;
+}
+
 .contando {
-   width:60px;
+   width:37px;
 }
 
 .total {
-   top:0px;
-   right:0px;
+   left:1px;
 }
 
 /* Citação */

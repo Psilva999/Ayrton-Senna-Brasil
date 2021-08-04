@@ -91,21 +91,23 @@
             mandaSite.style.cursor = 'pointer'
 
             ativaNavbar.addEventListener('click', () => {
-
-               if (window.innerHeight < 600) {
+               if (window.innerHeight < 620) {
 
                   if (ativaNavbar.classList.contains('active')) {
                      mandaSite.style.opacity = '0'
 
                      mandaSite.style.cursor = 'auto'
                   }
-
                   else {
                      mandaSite.style.opacity = '.6'
 
                      mandaSite.style.cursor = 'pointer'
                   }
+               }
 
+               else {
+                  mandaSite.style.opacity = '.6'
+                  mandaSite.style.cursor = 'pointer'
                }
             })
          </script>
@@ -156,6 +158,13 @@
             <img src="media/external-link.svg"> </a>
       </div>
    </section>
+
+   <!-- <div class="vaiCompartilhar">
+
+      <article>
+         <img src="media/" alt="Imagem Indisponível">
+      </article>
+   </div> -->
 
 </body>
 </html>

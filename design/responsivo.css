@@ -11,35 +11,6 @@
       font-size:20px;
    }
 
-   /* Menu */
-   .navbar div {
-      height:2px;
-      margin:7px;
-   }
-
-   .line1, .line3 {
-      width:25px;
-      position:relative;
-      left:3.3px;
-   }
-
-   .line2 {
-      width:32px;
-   }
-
-   /* Animação do navbar */
-   .navbar.active .line1 {
-      transform:rotate(-48deg) translate(-4px, 4px);
-   }
-
-   .navbar.active .line2 {
-      opacity:0;
-   }
-
-   .navbar.active .line3 {
-      transform:rotate(48deg) translate(-8.5px, -8.5px);
-   }
-
    .lista {
       width:35vw;
       font-size:14px;
@@ -61,5 +32,34 @@
    .lista {
       width:60vw;
       font-size:13px;
+   }
+
+      /* Menu */
+   .navbar div {
+      height:2px;
+      margin:6px;
+   }
+
+   .line1, .line3 {
+      width:19px;
+      position:relative;
+      left:8px;
+   }
+
+   .line2 {
+      width:27px;
+   }
+
+   /* Animação do navbar */
+   .navbar.active .line1 {
+      transform:rotate(-45deg) translate(-3px, 3px);
+   }
+
+   .navbar.active .line2 {
+      opacity:0;
+   }
+
+   .navbar.active .line3 {
+      transform:rotate(45deg) translate(-8px, -8px);
    }
 }
