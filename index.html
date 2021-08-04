@@ -87,17 +87,25 @@
             var ativaNavbar = document.querySelector('.navbar')
             var mandaSite = document.querySelector('.compartilhar')
 
+            mandaSite.style.opacity = '.6'
+            mandaSite.style.cursor = 'pointer'
+
             ativaNavbar.addEventListener('click', () => {
-               if (ativaNavbar.classList.contains('active')) {
-                  mandaSite.style.opacity = '0'
 
-                  mandaSite.style.cursor = 'auto'
-               }
+               if (window.innerHeight < 600) {
 
-               else {
-                  mandaSite.style.opacity = '.6'
+                  if (ativaNavbar.classList.contains('active')) {
+                     mandaSite.style.opacity = '0'
 
-                  mandaSite.style.cursor = 'pointer'
+                     mandaSite.style.cursor = 'auto'
+                  }
+
+                  else {
+                     mandaSite.style.opacity = '.6'
+
+                     mandaSite.style.cursor = 'pointer'
+                  }
+
                }
             })
          </script>

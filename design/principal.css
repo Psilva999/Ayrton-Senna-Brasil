@@ -58,10 +58,8 @@ p {
    bottom:100px;
    right:10px;
    padding:5px;
-   opacity:.6;
    display:flex;
    align-items:center;
-   cursor:pointer;
 }
 
 .compartilhar img {
