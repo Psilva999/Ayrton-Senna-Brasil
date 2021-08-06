@@ -15,16 +15,16 @@ copiarFrase.addEventListener('click', function (event) {
    copiaMuda.imagem.src = 'media/check.svg'
 
    //Apagar indicador de copy
-   var time = 0 * 60
+   var time = 1 * 60
    setInterval(apagarIndicadorDeCopy, 1000)
 
    function apagarIndicadorDeCopy() {
       var segundos = time % 60
 
-      time++
-
-      if (segundos == 1) {
+      time--
+      if (segundos >= 59) {
          copiaMuda.imagem.src = 'media/copy.svg'
       }
+      
    }
 })

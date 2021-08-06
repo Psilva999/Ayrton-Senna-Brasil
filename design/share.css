@@ -98,18 +98,3 @@ input:focus {
    width:15px;
    height:15px;
 }
-
-.copiado {
-   visibility:hidden;
-   background:rgb(102, 101, 101);
-   border-radius:5px;
-   position:absolute;
-   left:127px;
-   top:320px;
-   padding:9px;
-   color:#F2F2F2;
-   font-size:11px;
-   opacity:.9;
-   letter-spacing:2px;
-   text-transform:uppercase;
-}

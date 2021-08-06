@@ -43,15 +43,3 @@ const responsivo = new navbar(
    '.lista li')
 
 responsivo.init()
-
-//Para fechar o menu clicando fora
-var menu = {
-   clicaNavbar: document.querySelector('.navbar'),
-   fechaClicandoFora: document.querySelector('.fechaMenu'),
-
-
-}
-
-menu.clicaNavbar.addEventListener ('click', () => {
-   menu.fechaClicandoFora.style.visibility = 'visible'
-})

@@ -45,7 +45,6 @@ compartilha.addEventListener('click', () => {
 //Fecha no X
 fechaLinks.addEventListener('click', () => {
    mostraLinks.style.visibility = 'hidden'
-   indicaQueCopiou.style.visibility = 'hidden'
 
    fechaPorFora.style.visibility = 'hidden'
 })
@@ -53,7 +52,6 @@ fechaLinks.addEventListener('click', () => {
 //Fecha clicando fora
 fechaPorFora.addEventListener('click', () => {
    mostraLinks.style.visibility = 'hidden'
-   indicaQueCopiou.style.visibility = 'hidden'
 
    fechaPorFora.style.visibility = 'hidden'
 })
@@ -62,7 +60,7 @@ fechaPorFora.addEventListener('click', () => {
 copiarLink.addEventListener('click', () => {
    var copiaPor = {
       link: document.querySelector('#link'),
-      indicaQueCopiou: document.querySelector('.copiado'),
+      indicaQueCopiou: document.querySelector('#imagem'),
    }
 
    event.preventDefault()
@@ -71,20 +69,19 @@ copiarLink.addEventListener('click', () => {
    copiaPor.link.setSelectionRange(0, 9999)
    document.execCommand("copy") //Não encontrei um substituto
 
-   copiaPor.indicaQueCopiou.style.visibility = 'visible'
+   copiaPor.indicaQueCopiou.src = 'media/check.svg'
 
    //Apagar indicador de copy
-   var time = 0 * 60
+   var time = 1 * 60
    setInterval(apagarIndicadorDeCopy, 1000)
 
    function apagarIndicadorDeCopy() {
       var segundos = time % 60
 
-      time++
-
-      if (segundos == 1) {
-         copiaPor.indicaQueCopiou.style.visibility = 'hidden'
+      time--
+      if (segundos >= 59) {
+         copiaPor.indicaQueCopiou.src = 'media/copy.svg'
       }
-   }
 
+   }
 })
