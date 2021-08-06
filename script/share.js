@@ -3,7 +3,7 @@ var ativaNavbar = document.querySelector('.navbar')
 var mandaSite = document.querySelector('.share')
 
 ativaNavbar.addEventListener('click', () => {
-   if (window.innerHeight < 720) {
+   if (window.innerHeight < 520) {
 
       if (ativaNavbar.classList.contains('active')) {
          mandaSite.style.opacity = '0'

@@ -4,7 +4,7 @@
    visibility:hidden;
 }
 
-/* Quando o usuário clicar no compartilhar */
+/* Quando o usuário clicar no botão */
 .link.active {
    background-color:#F2F2F2;
    border-radius:5px;
@@ -104,7 +104,7 @@ input:focus {
    background:rgb(102, 101, 101);
    border-radius:5px;
    position:absolute;
-   left:135px;
+   left:127px;
    top:320px;
    padding:9px;
    color:#F2F2F2;
