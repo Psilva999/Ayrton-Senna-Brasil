@@ -7,6 +7,8 @@
 
    <link rel="stylesheet" href="design/principal.css">
    <link rel="stylesheet" href="design/menu.css">
+   
+   <link rel="stylesheet" href="design/share.css">
    <link rel="stylesheet" href="design/responsivo.css">
 
    <link rel="stylesheet" href="design/player.css">
@@ -79,38 +81,9 @@
       </nav>
       <script src="script/menu.js"></script>
 
-      <!-- Botão de compartilhar -->
-      <button type="button" class="compartilhar">
+      <!--Botão de compartilhar-->
+      <button type="button" class="share">
          <img src="media/share.svg" alt="imagem indisponível">
-
-         <script>
-            var ativaNavbar = document.querySelector('.navbar')
-            var mandaSite = document.querySelector('.compartilhar')
-
-            mandaSite.style.opacity = '.6'
-            mandaSite.style.cursor = 'pointer'
-
-            ativaNavbar.addEventListener('click', () => {
-               if (window.innerHeight < 620) {
-
-                  if (ativaNavbar.classList.contains('active')) {
-                     mandaSite.style.opacity = '0'
-
-                     mandaSite.style.cursor = 'auto'
-                  }
-                  else {
-                     mandaSite.style.opacity = '.6'
-
-                     mandaSite.style.cursor = 'pointer'
-                  }
-               }
-
-               else {
-                  mandaSite.style.opacity = '.6'
-                  mandaSite.style.cursor = 'pointer'
-               }
-            })
-         </script>
       </button>
 
       <!--Player and sound-->
@@ -160,12 +133,27 @@
       </div>
    </section>
 
-   <!-- <div class="vaiCompartilhar">
-
-      <article>
-         <img src="media/" alt="Imagem Indisponível">
-      </article>
-   </div> -->
+   <!--Compartilhar o link do site-->
+   <div class="fechaTudo"></div>
+   
+   <div class="link active">
+      <div class="fecha">X</div>
+   
+      <h1>Aponte sua câmera para o QR Code ou copie o link</h1>
+   
+      <img src="media/qrcode_psilva999.github.io.png" id="qrcode" alt="Imagem Indisponível">
+   
+      <div class="copiarLink">
+         <input type="text" id="link" value="https://psilva999.github.io/Ayrton-Senna-Brasil/" readonly>
+   
+         <button id="botao">
+            <img src="media/copy.svg" alt="Imagem indisponível">
+         </button>
+      </div>
+   
+      <div class="copiado">Copied</div>
+      <script src="script/share.js"></script>
+   </div>
 
 </body>
 </html>
