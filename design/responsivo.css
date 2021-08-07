@@ -19,37 +19,32 @@
 
 @media (max-width:700px) {
    /*Share ativado*/
-   .link.active {
+   .container.active {
       width:280px;
       height:260px;
    }
 
-   .link.active h1 {
+   .container.active h1 {
       font-size:14px;
       width:220px;
    }
 
-   .link.active #qrcode {
+   .container.active #qrcode {
       top:-2px;
       left:63px;
       width:130px;
       height:130px;
    }
 
-   .link.active .copiarLink {
+   .container.active .copiarLink {
       width:260px;
       top:9px;
       right:5px;
    }
 
-   .link.active input {
+   .container.active input {
       width:220px;
       font-size:12px;
-   }
-
-   .copiado {
-      top:265px;
-      left:110px;
    }
 }
 
