@@ -53,6 +53,14 @@
    }
 }
 
+/*Caso o dispositivo seja colocado no modo auto-rotate*/
+@media (max-height:450px) {
+   /*Share ativado*/
+   .link.active {
+      top:0%;
+   }
+}
+
 @media (max-width:590px) {
       /* Conteúdo */
    h1 {

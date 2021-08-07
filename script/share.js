@@ -1,11 +1,3 @@
-//Esconder o botão de compartilhar caso o menu seja aberto
-var ativaNavbar = document.querySelector('.navbar')
-var cobreSite = document.querySelector('.share')
-
-ativaNavbar.addEventListener('click', () => {
-   cobreSite.style.visibility = 'visible'
-})
-
 //Mostra os links
 var compartilha = document.querySelector('.share')
 var mostraLinks = document.querySelector('.link')
