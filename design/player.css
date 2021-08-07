@@ -3,7 +3,7 @@
 /* Container */
 .player-sound, #player, .pause, .play {
    display:flex;
-   justify-content:left;
+   justify-content:space-between;
    align-items:center;
 }
 
@@ -86,7 +86,6 @@
    width:90px;
    padding:2px;
    display:flex;
-   left:5px;
 }
 
 .contando {
@@ -97,9 +96,8 @@
    right:1px;
 }
 
-/* Citação */
+/* Fonte do vídeo */
 .player-sound a {
-   left:10px;
    font-size:11px;
    letter-spacing:2px;
 }
@@ -108,4 +106,19 @@
    position:relative;
    bottom:5px;
    right:5px;
+}
+
+/* Legenda */
+.legenda {
+   border:1px solid black;
+   border-radius:10px;
+   cursor:pointer;
+   position:relative;
+   bottom:1px;
+   color:black;
+   padding:4px;
+   font-size:13px;
+   text-align:center;
+   width:40px;
+   opacity:1;
 }
