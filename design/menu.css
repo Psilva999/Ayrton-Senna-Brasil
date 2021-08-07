@@ -45,8 +45,13 @@ nav {
    transform:rotate(45deg) translate(-11px, -11px);
 }
 
-.navbar.active ~ .lista {
-   display:flex;
+/* Fecha o menu clicando fora */
+.fechaMenu {
+   background-color:rgba(0,0,0,.3);
+   position:fixed;
+   height:100vh;
+   width:100vw;
+   display:none;
 }
 
 /* Conteúdo do menu */

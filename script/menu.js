@@ -43,3 +43,31 @@ const responsivo = new navbar(
    '.lista li')
 
 responsivo.init()
+
+
+//Fechar o menu quando clicar do lado de fora
+var controlaMenuPor = {
+   navbar: document.querySelector('.navbar'),
+   clicaFora: document.querySelector('.fechaMenu'),
+   lista: document.querySelector('.lista')
+}
+
+controlaMenuPor.navbar.addEventListener('click', () => {
+   if (controlaMenuPor.navbar.classList.contains('active')) {
+
+      controlaMenuPor.clicaFora.style.display = 'block'
+      controlaMenuPor.lista.style.display = 'flex'
+   }
+
+   else {
+      controlaMenuPor.clicaFora.style.display = 'none'
+      controlaMenuPor.lista.style.display = 'none'
+   }
+})
+
+controlaMenuPor.clicaFora.addEventListener('click', () => {
+   controlaMenuPor.lista.style.display = 'none'
+   controlaMenuPor.clicaFora.style.display = 'none'
+
+   controlaMenuPor.navbar.classList.remove('active')
+})
