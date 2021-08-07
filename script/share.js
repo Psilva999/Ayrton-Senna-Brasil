@@ -30,8 +30,9 @@ mexeNo.fechaLinks.addEventListener('click', () => {
 //Fecha clicando fora
 mexeNo.fechaPorFora.addEventListener('click', () => {
    mexeNo.container.style.display = 'none'
-
    mexeNo.fechaPorFora.style.display = 'none'
+
+   mexeNo.indicaQueCopiou.src = 'media/copy.svg'
 })
 
 //Copia links

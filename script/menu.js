@@ -49,7 +49,9 @@ responsivo.init()
 var controlaMenuPor = {
    navbar: document.querySelector('.navbar'),
    clicaFora: document.querySelector('.fechaMenu'),
-   lista: document.querySelector('.lista')
+   lista: document.querySelector('.lista'),
+
+   imagemOriginal: document.querySelector('#imagemIndicando')
 }
 
 //Deixa o botão de compartilhar escondido quando o navbar for ativado
@@ -69,6 +71,7 @@ controlaMenuPor.navbar.addEventListener('click', () => {
       controlaMenuPor.lista.style.display = 'none'
 
       compartilha.style.display = 'flex'
+      controlaMenuPor.imagemOriginal.src = 'media/copy.svg'
    }
 })
 
@@ -78,4 +81,5 @@ controlaMenuPor.clicaFora.addEventListener('click', () => {
 
    controlaMenuPor.navbar.classList.remove('active')
    compartilha.style.display = 'flex'
+   controlaMenuPor.imagemOriginal.src = 'media/copy.svg'
 })
