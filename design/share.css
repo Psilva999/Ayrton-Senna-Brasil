@@ -1,11 +1,11 @@
 @charset 'UTF-8';
 
-.link {
-   visibility:hidden;
+.container {
+   display:none;
 }
 
 /* Quando o usuário clicar no botão */
-.link.active {
+.container.active {
    background-color:#F2F2F2;
    border-radius:5px;
    box-shadow:0px 0px 0px 2px black;
@@ -16,15 +16,15 @@
    padding:15px;
 }
 
-.fechaTudo {
+.fechaContainer {
    background-color:rgba(0,0,0,.3);
    position:fixed;
    height:100vh;
    width:100vw;
-   visibility:hidden;
+   display:none;
 }
 
-.link.active .fecha {
+.container.active .fecha {
    position:absolute;
    right:0px;
    top:-2px;
@@ -35,11 +35,11 @@
    text-align:center;
 }
 
-.link.active .fecha:hover {
+.container.active .fecha:hover {
    opacity:1;
 }
 
-.link.active h1 {
+.container.active h1 {
    position:relative;
    left:15px;
    width:250px;
@@ -50,7 +50,7 @@
    letter-spacing:2px;
 }
 
-.link.active #qrcode {
+.container.active #qrcode {
    border:1px solid rgba(0,0,0,.8);
    box-shadow:1px 1px 2px rgba(0,0,0,.7);
    position:relative;
@@ -60,7 +60,7 @@
    height:160px;
 }
 
-.link.active .copiarLink {
+.container.active .copiarLink {
    box-shadow:1px 1px 3px rgba(0,0,0,.7);
    background-color:#F2F2F2;
    border-radius:5px;
@@ -72,11 +72,11 @@
    opacity:.9;
 }
 
-.link.active .copiarLink:hover {
+.container.active .copiarLink:hover {
    opacity:1;
 }
 
-.link.active input, button {
+.container.active input, button {
    padding:5px;
    color:black;
    font-size:12px;
@@ -84,7 +84,7 @@
    letter-spacing:1px;
 }
 
-.link.active input {
+.container.active input {
    border:1px solid rgba(0,0,0,.4);
    border-radius:5px;
    resize:none;
@@ -95,7 +95,7 @@ input:focus {
    outline:0;
 }
 
-.link.active button img {
+.container.active button img {
    width:15px;
    height:15px;
 }

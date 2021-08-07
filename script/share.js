@@ -1,50 +1,49 @@
-//Mostra os links
-var compartilha = document.querySelector('.share')
-var mostraLinks = document.querySelector('.link')
+var mexeNo = {
+   //Mostra os links
+   compartilha: document.querySelector('.share'),
+   container: document.querySelector('.container'),
 
-//Copiar
-var copiarLink = document.querySelector('.copiarLink')
-var indicaQueCopiou = document.querySelector('.copiado')
+   //Copiar
+   copiarLink: document.querySelector('.copiarLink'),
+   linkDoSite: document.querySelector('#link'),
+   indicaQueCopiou: document.querySelector('#imagem'),
 
-//Fechar
-var fechaPorFora = document.querySelector('.fechaTudo')
-var fechaLinks = document.querySelector('.fecha')
+   //Fechar
+   fechaPorFora: document.querySelector('.fechaContainer'),
+   fechaLinks: document.querySelector('.fecha')
+}
 
 //Abre quando clica
-compartilha.addEventListener('click', () => {
-   mostraLinks.style.visibility = 'visible'
+mexeNo.compartilha.addEventListener('click', () => {
+   mexeNo.container.style.display = 'block'
 
-   fechaPorFora.style.visibility = 'visible'
+   mexeNo.fechaPorFora.style.display = 'block'
 })
 
 //Fecha no X
-fechaLinks.addEventListener('click', () => {
-   mostraLinks.style.visibility = 'hidden'
+mexeNo.fechaLinks.addEventListener('click', () => {
+   mexeNo.container.style.display = 'none'
 
-   fechaPorFora.style.visibility = 'hidden'
+   mexeNo.fechaPorFora.style.display = 'none'
 })
 
 //Fecha clicando fora
-fechaPorFora.addEventListener('click', () => {
-   mostraLinks.style.visibility = 'hidden'
+mexeNo.fechaPorFora.addEventListener('click', () => {
+   mexeNo.container.style.display = 'none'
 
-   fechaPorFora.style.visibility = 'hidden'
+   mexeNo.fechaPorFora.style.display = 'none'
 })
 
 //Copia links
-copiarLink.addEventListener('click', () => {
-   var copiaPor = {
-      link: document.querySelector('#link'),
-      indicaQueCopiou: document.querySelector('#imagem'),
-   }
+mexeNo.copiarLink.addEventListener('click', () => {
 
    event.preventDefault()
-   copiaPor.link.select()
+   mexeNo.linkDoSite.select()
 
-   copiaPor.link.setSelectionRange(0, 9999)
+   mexeNo.linkDoSite.setSelectionRange(0, 9999)
    document.execCommand("copy") //Não encontrei um substituto
 
-   copiaPor.indicaQueCopiou.src = 'media/check.svg'
+   mexeNo.indicaQueCopiou.src = 'media/check.svg'
 
    //Apagar indicador de copy
    var time = 1 * 60
@@ -55,7 +54,7 @@ copiarLink.addEventListener('click', () => {
 
       time--
       if (segundos >= 59) {
-         copiaPor.indicaQueCopiou.src = 'media/copy.svg'
+         mexeNo.indicaQueCopiou.src = 'media/copy.svg'
       }
 
    }

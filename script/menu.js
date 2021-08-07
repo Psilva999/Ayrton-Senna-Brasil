@@ -52,16 +52,23 @@ var controlaMenuPor = {
    lista: document.querySelector('.lista')
 }
 
+//Deixa o botão de compartilhar escondido quando o navbar for ativado
+var compartilha = document.querySelector('.share')
+
 controlaMenuPor.navbar.addEventListener('click', () => {
    if (controlaMenuPor.navbar.classList.contains('active')) {
 
       controlaMenuPor.clicaFora.style.display = 'block'
       controlaMenuPor.lista.style.display = 'flex'
+
+      compartilha.style.display = 'none'
    }
 
    else {
       controlaMenuPor.clicaFora.style.display = 'none'
       controlaMenuPor.lista.style.display = 'none'
+
+      compartilha.style.display = 'flex'
    }
 })
 
@@ -70,4 +77,5 @@ controlaMenuPor.clicaFora.addEventListener('click', () => {
    controlaMenuPor.clicaFora.style.display = 'none'
 
    controlaMenuPor.navbar.classList.remove('active')
+   compartilha.style.display = 'flex'
 })

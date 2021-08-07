@@ -62,6 +62,7 @@ p {
    align-items:center;
    opacity:.6;
    cursor:pointer;
+   display:flex;
 }
 
 .share img {

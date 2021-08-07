@@ -56,7 +56,7 @@
 /*Caso o dispositivo seja colocado no modo auto-rotate*/
 @media (max-height:450px) {
    /*Share ativado*/
-   .link.active {
+   .container.active {
       top:1%;
    }
 }
