@@ -141,8 +141,8 @@
    display:flex;
 }
 
-@media (max-width:400px) {
+@media (max-width:390px) {
    .player-sound {
-      width:90vw;
+      width:100vw;
    }
 }
