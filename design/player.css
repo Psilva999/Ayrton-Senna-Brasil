@@ -11,7 +11,7 @@
    background-color:#F2F2F2;
    border-radius:5px;
    position:absolute;
-   bottom:15px;
+   bottom:5px;
    width:350px;
    height:40px;
    opacity:.7;
@@ -113,6 +113,7 @@
 /* Legenda */
 .legenda {
    border:1px solid black;
+   border-bottom:3px solid black;
    border-radius:10px;
    cursor:pointer;
    position:relative;
@@ -128,15 +129,20 @@
 }
 
 .conteudo-legenda.active {
-   background:#F2F2F2;
    border-radius:5px;
    position:absolute;
-   bottom:70px;
+   bottom:60px;
    text-align:center;
-   opacity:.8;
+   opacity:.7;
    font-size:15px;
    padding:5px;
    color:black;
    letter-spacing:2px;
    display:flex;
+}
+
+@media (max-width:500px) {
+   .player-sound {
+      width:70vw;
+   }
 }
