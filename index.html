@@ -48,6 +48,10 @@
             </li>
 
             <li>
+               <a href="index/estatisticas.html">Estatísticas</a>
+            </li>
+
+            <li>
                <a href="index/videos.html">Vídeos</a>
             </li>
 
@@ -56,11 +60,11 @@
             </li>
 
             <li>
-               <a href="index/livros.html">Livros</a>
+               <a href="index/frases.html">Frases</a>
             </li>
 
             <li>
-               <a href="index/frases.html">Frases</a>
+               <a href="index/doc-livros.html">Livros e documentários</a>
             </li>
 
             <li>
@@ -88,55 +92,62 @@
       </button>
 
       <script src="script/menu.js"></script>
-
-      <!--Player and sound-->
-      <div class="player-sound">
-
-         <div id="player">
-            <div class="pause active">
-               <div class="line line_1"></div>
-               <div class="line line_2"></div>
-            </div>
-
-            <div class="play">
-               <div class="line line_1"></div>
-               <div class="line line_2"></div>
-               <div class="line line_3"></div>
-            </div>
-         </div>
-
-         <div id='sound-muted'>
-            <div class="sound">
-               <div></div>
-               <div></div>
-               <div></div>
-               <div></div>
-            </div>
-
-            <div class="muted active">
-               <div></div>
-               <div></div>
-               <div></div>
-               <div></div>
-               <div class="corte"></div>
-            </div>
-         </div>
-
-         <div id="tempo">
-            <div class="contando"></div>
-            <div class="separa">/</div>
-            <div class="total"></div>
-         </div>
-
-         <!--Algoritmo que faz o player funcionar-->
-         <script src="script/player-sound.js"></script>
-
-         <a href="https://www.youtube.com/watch?v=n9qZu7h5ys0">Lap of Life
-            <img src="media/external-link.svg"> </a>
-
-         <div class="legenda">AbC</div>
-      </div>
    </section>
+
+   <!--Player and sound-->
+   <div class="player-sound">
+   
+      <div id="player">
+         <div class="pause active">
+            <div class="line line_1"></div>
+            <div class="line line_2"></div>
+         </div>
+   
+         <div class="play">
+            <div class="line line_1"></div>
+            <div class="line line_2"></div>
+            <div class="line line_3"></div>
+         </div>
+      </div>
+   
+      <div id='sound-muted'>
+         <div class="sound">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+         </div>
+   
+         <div class="muted active">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div class="corte"></div>
+         </div>
+      </div>
+   
+      <div id="tempo">
+         <div class="contando"></div>
+         <div class="separa">/</div>
+         <div class="total"></div>
+      </div>
+   
+      <!--Algoritmo que faz o player funcionar-->
+      <script src="script/player-sound.js"></script>
+      
+      <!--Fonte do vídeo editado-->
+      <a href="https://www.youtube.com/watch?v=n9qZu7h5ys0">Lap of Life
+         <img src="media/external-link.svg"> </a>
+      
+      <div class="legenda">AbC</div>
+   </div>
+
+   <!--Conteúdo da legenda-->
+   <div class="conteudo-legenda active">
+      Eu corro destinado a vencer</div>
+      
+   <script src="script/legenda.js"></script>
 
    <!--Compartilhar o link do site-->
    <div class="fechaContainer"></div>

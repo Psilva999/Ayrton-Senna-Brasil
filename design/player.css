@@ -12,7 +12,7 @@
    border-radius:5px;
    position:absolute;
    bottom:15px;
-   width:100vw;
+   width:350px;
    height:40px;
    opacity:.7;
 }
@@ -85,6 +85,7 @@
 #tempo {
    width:90px;
    padding:2px;
+   right:10px;
    display:flex;
 }
 
@@ -100,6 +101,7 @@
 .player-sound a {
    font-size:11px;
    letter-spacing:2px;
+   right:21px;
 }
 
 .player-sound img {
@@ -120,5 +122,21 @@
    font-size:13px;
    text-align:center;
    width:40px;
-   opacity:1;
+   opacity:.8;
+   right:5px;
+   user-select:none;
+}
+
+.conteudo-legenda.active {
+   background:#F2F2F2;
+   border-radius:5px;
+   position:absolute;
+   bottom:70px;
+   text-align:center;
+   opacity:.8;
+   font-size:15px;
+   padding:5px;
+   color:black;
+   letter-spacing:2px;
+   display:flex;
 }

@@ -10,6 +10,7 @@
    padding:5px;
    cursor:pointer;
    transform:rotate(180deg);
+   right:22px;
 }
 
 .muted.active > div {
