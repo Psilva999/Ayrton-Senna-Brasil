@@ -20,28 +20,24 @@
 </head>
 
 <body>
-   <!--Vídeo de fundo-->
    <video id="video" src="https://player.vimeo.com/external/573444914.sd.mp4?s=a3cf82ae0a4f8fb49e6838f6435d65e0eca2bd41&profile_id=164&oauth2_token_id=57447761" muted loop autoplay></video>
 
    <section>
-      <!--Conteúdo da página-->
       <header> <h1>AYRTON SENNA DO BRASIL</h1>
 
          <p>Homenagem ao melhor piloto da história da Formula 1</p>
       </header>
 
-      <!--Menu-->
       <div class="fechaMenu"></div>
+      <nav id="simples-menu">
+         <button id="btn-mobile" aria-label="Abrir Menu" aria-haspopup="true" aria-controls="lista" aria-expanded="false">  
+            <span id="burguer"></span>
+         </button>
 
-      <nav>
-         <div class="navbar">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-         </div>
-
-         <ul class="lista">
-            <li id="selecionado">Home</li>
+         <ul class="lista" role="menu">
+            <li>
+               <a href="#">Home</a>
+            </li>
 
             <li>
                <a href="index/historia.html">História</a>
@@ -71,18 +67,15 @@
                <a href="index/bastidores.html">Bastidores</a>
             </li>
 
-            <!--Citação-->
             <div class="aprendendo">
                <textarea id="fraseCopiada" cols="15" rows="2" readonly>"I just try to learn about my self"</textarea>
 
                <img src="media/copy.svg" alt="Imagem indisponível" id="imagemIndicando">
             </div>
-            <script src="script/clipboard.js"></script>
 
          </ul>
       </nav>
 
-      <!--Botão de compartilhar-->
       <button type="button" class="share">
          <img src="media/share.svg" alt="imagem indisponível">
       </button>
@@ -90,9 +83,7 @@
       <script src="script/menu.js"></script>
    </section>
 
-   <!--Player and sound-->
    <div class="player-sound">
-   
       <div id="player">
          <div class="pause active">
             <div class="line line_1"></div>
@@ -128,28 +119,21 @@
          <div class="separa">/</div>
          <div class="total"></div>
       </div>
-   
-      <!--Algoritmo que faz o player funcionar-->
-      <script src="script/player-sound.js"></script>
+      <script src="script/player.js"></script>
       
-      <!--Fonte do vídeo editado-->
       <a href="https://www.youtube.com/watch?v=n9qZu7h5ys0">Lap of Life
          <img src="media/external-link.svg"> </a>
       
       <div class="legenda">AbC</div>
    </div>
 
-   <!--Conteúdo da legenda-->
    <div class="conteudo-legenda active"></div>
-      
-   <script src="script/legenda.js"></script>
+   <script src="script/subtitle.js"></script>
 
-   <!--Compartilhar o link do site-->
    <div class="fechaContainer"></div>
-   
    <div class="container active">
+
       <div class="fecha">X</div>
-   
       <h1>Aponte sua câmera para o QR Code ou copie o link</h1>
    
       <img src="media/qrcode_psilva999.github.io.png" id="qrcode" alt="Imagem Indisponível">

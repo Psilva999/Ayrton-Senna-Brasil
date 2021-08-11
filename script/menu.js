@@ -1,85 +1,84 @@
-// Animação do navbar
-class navbar {
-   constructor(barras, listas, ligados) {
-      this.barras = document.querySelector(barras)
-      this.listas = document.querySelector(listas)
-      this.ligados = document.querySelectorAll(ligados)
-
-      this.activeClass = 'active'
-      this.handleClick = this.handleClick.bind(this)
-   }
-
-   animados() {
-      this.ligados.forEach((link, index) => {
-         link.style.animation
-            ? (link.style.animation = '')
-            : (link.style.animation = `navLinkFade 0.7s ease forwards ${index / 7 + 0.5}s`)
-      })
-   }
-
-   handleClick() {
-      this.listas.classList.toggle(this.activeClass)
-      this.barras.classList.toggle(this.activeClass)
-
-      this.animados()
-   }
-
-   addClickEvent() {
-      this.barras.addEventListener('click', this.handleClick)
-   }
-
-   init() {
-      if (this.barras) {
-         this.addClickEvent()
-      }
-
-      return this
-   }
-}
-
-const responsivo = new navbar(
-   '.navbar',
-   '.lista',
-   '.lista li')
-
-responsivo.init()
-
-
-//Fechar o menu quando clicar do lado de fora
 var controlaMenuPor = {
-   navbar: document.querySelector('.navbar'),
+   burguer: document.querySelector('#simples-menu'),
    clicaFora: document.querySelector('.fechaMenu'),
    lista: document.querySelector('.lista'),
 
    imagemOriginal: document.querySelector('#imagemIndicando')
 }
 
-//Deixa o botão de compartilhar escondido quando o navbar for ativado
-var compartilha = document.querySelector('.share')
+function toggleMenu(event) {
+   if (event.type === 'touchstart') event.preventDefault()
+   controlaMenuPor.burguer.classList.toggle('active')
 
-controlaMenuPor.navbar.addEventListener('click', () => {
-   if (controlaMenuPor.navbar.classList.contains('active')) {
+   const active = controlaMenuPor.burguer.classList.contains('active')
+   event.currentTarget.setAttribute('aria-expanded', active)
 
-      controlaMenuPor.clicaFora.style.display = 'block'
-      controlaMenuPor.lista.style.display = 'flex'
-
-      compartilha.style.display = 'none'
+   if (active) {
+      event.currentTarget.setAttribute('aria-label', 'Fechar Menu')
    }
 
    else {
-      controlaMenuPor.clicaFora.style.display = 'none'
-      controlaMenuPor.lista.style.display = 'none'
-
-      compartilha.style.display = 'flex'
-      controlaMenuPor.imagemOriginal.src = 'media/copy.svg'
+      event.currentTarget.setAttribute('aria-label', 'Abrir Menu')
    }
-})
+}
+controlaMenuPor.burguer.addEventListener('click', toggleMenu)
+controlaMenuPor.burguer.addEventListener('touchstart', toggleMenu)
 
-controlaMenuPor.clicaFora.addEventListener('click', () => {
-   controlaMenuPor.lista.style.display = 'none'
-   controlaMenuPor.clicaFora.style.display = 'none'
+// var compartilha = document.querySelector('.share')
 
-   controlaMenuPor.navbar.classList.remove('active')
-   compartilha.style.display = 'flex'
-   controlaMenuPor.imagemOriginal.src = 'media/copy.svg'
-})
+// controlaMenuPor.burguer.addEventListener('click', () => {
+//    if (controlaMenuPor.burguer.classList.contains('active')) {
+
+//       controlaMenuPor.clicaFora.style.display = 'block'
+//       controlaMenuPor.lista.style.display = 'flex'
+
+//       compartilha.style.display = 'none'
+//    }
+
+//    else {
+//       controlaMenuPor.clicaFora.style.display = 'none'
+//       controlaMenuPor.lista.style.display = 'none'
+
+//       compartilha.style.display = 'flex'
+//       controlaMenuPor.imagemOriginal.src = 'media/copy.svg'
+//    }
+// })
+
+// controlaMenuPor.clicaFora.addEventListener('click', () => {
+//    controlaMenuPor.lista.style.display = 'none'
+//    controlaMenuPor.clicaFora.style.display = 'none'
+
+//    controlaMenuPor.burguer.classList.remove('active')
+//    compartilha.style.display = 'flex'
+//    controlaMenuPor.imagemOriginal.src = 'media/copy.svg'
+// })
+
+// var copiarFrase = document.querySelector('.aprendendo')
+
+// copiarFrase.addEventListener('click', function (event) {
+//    var copiaMuda = {
+//       frase: document.querySelector('#fraseCopiada'),
+//       imagem: document.querySelector('#imagemIndicando')
+//    }
+
+//    event.preventDefault()
+
+//    copiaMuda.frase.select()
+//    copiaMuda.frase.setSelectionRange(0, 9999)
+//    document.execCommand("copy") //Não encontrei um substituto
+
+//    copiaMuda.imagem.src = 'media/check.svg'
+
+//    var time = 1 * 60
+//    setInterval(apagarIndicadorDeCopy, 1000)
+
+//    function apagarIndicadorDeCopy() {
+//       var segundos = time % 60
+
+//       time--
+//       if (segundos >= 59) {
+//          copiaMuda.imagem.src = 'media/copy.svg'
+//       }
+
+//    }
+// })

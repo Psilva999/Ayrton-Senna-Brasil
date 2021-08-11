@@ -11,9 +11,8 @@
       font-size:20px;
    }
 
-   .lista {
-      width:35vw;
-      font-size:14px;
+   #simples-menu.active, .lista {
+      width:40vw;
    }
 }
 
@@ -49,7 +48,7 @@
 }
 
 @media (max-width:590px) {
-   /* Conteúdo */
+
    h1 {
       width:250px;
       font-size:30px;
@@ -60,44 +59,13 @@
       font-size:18px;
    }
 
-   .lista {
-      width:60vw;
-      font-size:13px;
-   }
-
-      /* Menu */
-   .navbar div {
-      height:2px;
-      margin:8px;
-   }
-
-   .line1, .line3 {
-      width:22px;
-      position:relative;
-      left:7.5px;
-   }
-
-   .line2 {
-      width:30px;
-   }
-
-   /* Animação do navbar */
-   .navbar.active .line1 {
-      transform:rotate(-45deg) translate(-6px, 6px);
-   }
-
-   .navbar.active .line2 {
-      opacity:0;
-   }
-
-   .navbar.active .line3 {
-      transform:rotate(45deg) translate(-8px, -8px);
+   #simples-menu.active, .lista {
+      width:75vw;
    }
 }
 
-/*Caso o dispositivo seja colocado no modo auto-rotate*/
 @media (max-height:450px) {
-   /*Share ativado*/
+   
    .container.active {
       top:1%;
    }
