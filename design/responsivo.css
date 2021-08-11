@@ -59,8 +59,43 @@
       font-size:18px;
    }
 
+   #simples-menu {
+      width:32px;
+   }
+
+   #burguer {
+      width:21px;
+      left:3px;
+   }
+
+   #burguer::before {
+      width:28px;
+      right:12px;
+      right:7px;
+   }
+
+   #burguer::after, #burguer::before {
+      margin-top:7px;
+   }
+
    #simples-menu.active, .lista {
       width:75vw;
+   }
+
+   #simples-menu.active #burguer::before {
+      transform:rotate(131deg);
+      left:1px;
+   }
+
+   #simples-menu.active #burguer::after {
+      transform:rotate(-131deg);
+      left:1px;   
+      top:-.65em;
+   }
+
+   .share img {
+      width:19px;
+      height:19px;
    }
 }
 

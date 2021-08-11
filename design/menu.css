@@ -12,7 +12,8 @@
    border-radius:3px;
    position:absolute;
    top:3px;
-   right:0;
+   right:1px;
+   width:45px;
    box-sizing:border-box;
    display:flex;
    align-items:center;
@@ -28,15 +29,21 @@
 
 #burguer {
    border-top:2px solid;
+   position:relative;
    display:block;
-   width:28px;
+   width:23px;
+   left:6px;
+}
+
+#burguer::before {
+   width:35px;
+   right:12px;
 }
 
 #burguer::after, #burguer::before {
    position:relative;
    content:'';
    display:block;
-   width:28px;
    height:2px;
    margin-top:8px;
    background:currentColor;
@@ -52,17 +59,10 @@
 
 #simples-menu.active #btn-mobile {
    position:absolute;
-   right:1px;
+   top:0.2px;
+   right:0.5px;
    width:32px;
    border-radius:5px;
-}
-
-#simples-menu.active #burguer::before {
-   background:black;
-}
-
-#simples-menu.active #burguer::after {
-   background:black;
 }
 
 #simples-menu.active #burguer {
@@ -70,22 +70,25 @@
 }
 
 #simples-menu.active #burguer::before {
-   border-radius:25px;
-   transform:rotate(130deg);
+   background:black;
+   transform:rotate(131deg);
    width:23px;
+   top:1px;
+   right:5px;
 }
 
 #simples-menu.active #burguer::after {
-   border-radius:25px;
-   transform:rotate(-127deg);
-   top:-10px;
+   background:black;
+   transform:rotate(-131deg);
    width:23px;
+   top: -.80em;
+   right:5px;
 }
 
 #simples-menu.active .lista {
    visibility:visible;
    overflow-y:auto;
-   height:85vh;
+   height:80vh;
 }
 
 .lista {
@@ -108,14 +111,13 @@
    border-bottom:2px solid rgba(0,0,0,.05);
    display:block;
    padding:.1rem 0;
-   margin:1.9rem 1rem;
+   margin:1.8rem 1rem;
    letter-spacing:2px;
    font-size:15px;
 }
 
 .aprendendo {
    position:relative;
-   top:10px;
    text-align:center;
 }
 
