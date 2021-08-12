@@ -76,6 +76,7 @@
    background:black;
    transform:rotate(131deg);
    width:23px;
+   height:2px;
    top:-1px;
    right:6px;
 }
@@ -84,14 +85,15 @@
    background:black;
    transform:rotate(-131deg);
    width:23px;
-   top:-13px;
+   height:2px;
+   top:-12px;
    right:6px;
 }
 
 #simples-menu.active .lista {
    visibility:visible;
    overflow-y:auto;
-   height:95vh;
+   height:94vh;
 }
 
 .lista {
@@ -113,7 +115,7 @@
    border-bottom:2px solid rgba(0,0,0,.05);
    display:block;
    padding:.1rem 0;
-   margin:2.8rem 1rem;
+   margin:2.3rem 1rem;
    letter-spacing:2px;
    font-size:15px;
 }

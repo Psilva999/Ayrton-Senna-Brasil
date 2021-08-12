@@ -94,7 +94,7 @@
    #simples-menu.active #burguer::after {
       transform:rotate(-132deg);
       right:1px;   
-      top:-9.8px;
+      top:-9px;
    }
 }
 
