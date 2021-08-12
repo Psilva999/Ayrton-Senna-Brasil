@@ -103,4 +103,8 @@
    .container.active {
       top:1%;
    }
+
+   #simples-menu.active .lista {
+      height:80vh;
+   }
 }
