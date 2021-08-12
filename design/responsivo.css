@@ -84,6 +84,7 @@
 
    #simples-menu.active, .lista {
       width:75vw;
+      height:82vh;
    }
 
    #simples-menu.active #burguer::before {

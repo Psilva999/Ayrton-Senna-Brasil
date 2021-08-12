@@ -91,7 +91,7 @@
 #simples-menu.active .lista {
    visibility:visible;
    overflow-y:auto;
-   height:78vh;
+   height:75vh;
 }
 
 .lista {
@@ -120,6 +120,7 @@
 
 .aprendendo {
    position:relative;
+   bottom:15px;
    text-align:center;
 }
 
