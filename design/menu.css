@@ -91,7 +91,7 @@
 #simples-menu.active .lista {
    visibility:visible;
    overflow-y:auto;
-   height:75vh;
+   height:95vh;
 }
 
 .lista {
@@ -113,7 +113,7 @@
    border-bottom:2px solid rgba(0,0,0,.05);
    display:block;
    padding:.1rem 0;
-   margin:1.7rem 1rem;
+   margin:2.8rem 1rem;
    letter-spacing:2px;
    font-size:15px;
 }
