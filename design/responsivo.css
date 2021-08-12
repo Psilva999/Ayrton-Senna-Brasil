@@ -84,7 +84,6 @@
 
    #simples-menu.active, .lista {
       width:75vw;
-      height:82vh;
    }
 
    #simples-menu.active #burguer::before {
@@ -93,9 +92,9 @@
    }
 
    #simples-menu.active #burguer::after {
-      transform:rotate(-131deg);
+      transform:rotate(-132deg);
       right:1px;   
-      top:-9.79px;
+      top:-9.8px;
    }
 }
 
