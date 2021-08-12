@@ -28,7 +28,8 @@
 }
 
 #burguer {
-   border-top:2px solid;
+   border-top:3px solid;
+   border-radius:2px;
    position:relative;
    display:block;
    width:23px;
@@ -42,10 +43,11 @@
 
 #burguer::after, #burguer::before {
    position:relative;
+   border-radius:2px;
    content:'';
    display:block;
-   height:2px;
-   margin-top:8px;
+   height:3px;
+   margin-top:9px;
    background:currentColor;
 }
 
@@ -63,6 +65,7 @@
    right:0.5px;
    width:32px;
    border-radius:5px;
+   opacity:.7;
 }
 
 #simples-menu.active #burguer {
@@ -73,35 +76,34 @@
    background:black;
    transform:rotate(131deg);
    width:23px;
-   top:1px;
-   right:5px;
+   top:-1px;
+   right:6px;
 }
 
 #simples-menu.active #burguer::after {
    background:black;
    transform:rotate(-131deg);
    width:23px;
-   top: -.80em;
-   right:5px;
+   top:-13px;
+   right:6px;
 }
 
 #simples-menu.active .lista {
    visibility:visible;
    overflow-y:auto;
-   height:80vh;
+   height:78vh;
 }
 
 .lista {
    background:#F2F2F2;
    border-radius:3px;
    position:absolute;
-   top:33px;
+   top:25px;
    right:0;
    width:28vw;
    height:auto;
    display:block;
    list-style:none;
-   gap:.5rem;
    z-index:1000;
    overflow-y:hidden;
    visibility:hidden;
@@ -111,7 +113,7 @@
    border-bottom:2px solid rgba(0,0,0,.05);
    display:block;
    padding:.1rem 0;
-   margin:1.8rem 1rem;
+   margin:1.7rem 1rem;
    letter-spacing:2px;
    font-size:15px;
 }
