@@ -91,7 +91,7 @@
 }
 
 #simples-menu.active .lista {
-   visibility:visible;
+   display:block;
    overflow-y:auto;
    height:94vh;
 }
@@ -104,11 +104,10 @@
    right:0;
    width:28vw;
    height:auto;
-   display:block;
+   display:none;
    list-style:none;
    z-index:1000;
    overflow-y:hidden;
-   visibility:hidden;
 }
 
 .lista a {
