@@ -10,6 +10,12 @@ evento.menu.addEventListener('click', () => {
    evento.fechaMenuPorFora.style.display = 'block'
 })
 
+evento.fechaMenuPorFora.addEventListener('click', () => {
+
+   evento.menu.classList.toggle('active')
+   evento.fechaMenuPorFora.style.display = 'none'
+})
+
 
 
 // function toggleMenu(event) {
