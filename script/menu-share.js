@@ -37,7 +37,60 @@ evento.fechaMenuPorFora.addEventListener('click', () => {
    evento.subtitle.style.display = 'flex'
 })
 
+var mexeNo = {
+   compartilha: document.querySelector('.share'),
+   container: document.querySelector('.container'),
 
+   copiarLink: document.querySelector('.copiarLink'),
+   linkDoSite: document.querySelector('#link'),
+   indicaQueCopiou: document.querySelector('#imagem'),
+
+   fechaPorFora: document.querySelector('.fechaContainer'),
+   fechaLinks: document.querySelector('.fecha')
+}
+
+mexeNo.compartilha.addEventListener('click', () => {
+   mexeNo.container.style.display = 'block'
+
+   mexeNo.fechaPorFora.style.display = 'block'
+})
+
+mexeNo.fechaLinks.addEventListener('click', () => {
+   mexeNo.container.style.display = 'none'
+
+   mexeNo.fechaPorFora.style.display = 'none'
+})
+
+mexeNo.fechaPorFora.addEventListener('click', () => {
+   mexeNo.container.style.display = 'none'
+   mexeNo.fechaPorFora.style.display = 'none'
+
+   mexeNo.indicaQueCopiou.src = 'media/copy.svg'
+})
+
+mexeNo.copiarLink.addEventListener('click', () => {
+
+   event.preventDefault()
+   mexeNo.linkDoSite.select()
+
+   mexeNo.linkDoSite.setSelectionRange(0, 9999)
+   document.execCommand("copy") //Não encontrei um substituto
+
+   mexeNo.indicaQueCopiou.src = 'media/check.svg'
+
+   var time = 1 * 60
+   setInterval(apagarIndicadorDeCopy, 1000)
+
+   function apagarIndicadorDeCopy() {
+      var segundos = time % 60
+
+      time--
+      if (segundos >= 59) {
+         mexeNo.indicaQueCopiou.src = 'media/copy.svg'
+      }
+
+   }
+})
 
 // function toggleMenu(event) {
 //    if (event.type === 'touchstart') event.preventDefault()
@@ -111,61 +164,6 @@ evento.fechaMenuPorFora.addEventListener('click', () => {
 //       time--
 //       if (segundos >= 59) {
 //          copiaMuda.imagem.src = 'media/copy.svg'
-//       }
-
-//    }
-// })
-
-// var mexeNo = {
-//    compartilha: document.querySelector('.share'),
-//    container: document.querySelector('.container'),
-
-//    copiarLink: document.querySelector('.copiarLink'),
-//    linkDoSite: document.querySelector('#link'),
-//    indicaQueCopiou: document.querySelector('#imagem'),
-
-//    fechaPorFora: document.querySelector('.fechaContainer'),
-//    fechaLinks: document.querySelector('.fecha')
-// }
-
-// mexeNo.compartilha.addEventListener('click', () => {
-//    mexeNo.container.style.display = 'block'
-
-//    mexeNo.fechaPorFora.style.display = 'block'
-// })
-
-// mexeNo.fechaLinks.addEventListener('click', () => {
-//    mexeNo.container.style.display = 'none'
-
-//    mexeNo.fechaPorFora.style.display = 'none'
-// })
-
-// mexeNo.fechaPorFora.addEventListener('click', () => {
-//    mexeNo.container.style.display = 'none'
-//    mexeNo.fechaPorFora.style.display = 'none'
-
-//    mexeNo.indicaQueCopiou.src = 'media/copy.svg'
-// })
-
-// mexeNo.copiarLink.addEventListener('click', () => {
-
-//    event.preventDefault()
-//    mexeNo.linkDoSite.select()
-
-//    mexeNo.linkDoSite.setSelectionRange(0, 9999)
-//    document.execCommand("copy") //Não encontrei um substituto
-
-//    mexeNo.indicaQueCopiou.src = 'media/check.svg'
-
-//    var time = 1 * 60
-//    setInterval(apagarIndicadorDeCopy, 1000)
-
-//    function apagarIndicadorDeCopy() {
-//       var segundos = time % 60
-
-//       time--
-//       if (segundos >= 59) {
-//          mexeNo.indicaQueCopiou.src = 'media/copy.svg'
 //       }
 
 //    }
