@@ -1,19 +1,40 @@
 var evento = {
-   menu: document.querySelector('#simples-menu'),
    burguer: document.querySelector('#btn-mobile'),
-   fechaMenuPorFora: document.querySelector('.fecha-menu')
+   menu: document.querySelector('#simples-menu'),
+   fechaMenuPorFora: document.querySelector('.fecha-menu'),
+
+   botaoShare: document.querySelector('.share'),
+   player: document.querySelector('.player-sound'),
+   subtitle: document.querySelector('.conteudo-legenda')
 }
 
-evento.menu.addEventListener('click', () => {
+evento.burguer.addEventListener('click', () => {
+   if (evento.menu.classList.contains('active')) {
+      evento.menu.classList.toggle('active')
+      evento.fechaMenuPorFora.style.display = 'none'
+      evento.botaoShare.style.display = 'flex'
 
-   evento.menu.classList.add('active')
-   evento.fechaMenuPorFora.style.display = 'block'
+      evento.player.style.display = 'flex'
+      evento.subtitle.style.display = 'flex'
+   }
+
+   else {
+      evento.menu.classList.add('active')
+      evento.fechaMenuPorFora.style.display = 'block'
+      evento.botaoShare.style.display = 'none'
+
+      evento.player.style.display = 'none'
+      evento.subtitle.style.display = 'none'
+   }
 })
 
 evento.fechaMenuPorFora.addEventListener('click', () => {
-
    evento.menu.classList.toggle('active')
    evento.fechaMenuPorFora.style.display = 'none'
+   evento.botaoShare.style.display = 'flex'
+
+   evento.player.style.display = 'flex'
+   evento.subtitle.style.display = 'flex'
 })
 
 
