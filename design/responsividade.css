@@ -17,7 +17,6 @@
 }
 
 @media (max-width:700px) {
-   /*Share ativado*/
    .container.active {
       width:280px;
       height:260px;
@@ -48,7 +47,6 @@
 }
 
 @media (max-width:590px) {
-
    h1 {
       width:250px;
       font-size:30px;
@@ -99,7 +97,6 @@
 }
 
 @media (max-height:450px) {
-   
    .container.active {
       top:1%;
    }

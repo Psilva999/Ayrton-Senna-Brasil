@@ -1,0 +1,294 @@
+@charset 'UTF-8';
+@import url('https://fonts.googleapis.com/css2?family=Basic&display=swap');
+
+* { 
+   box-sizing:border-box;
+   border:0;
+   margin:0;
+   padding:0;
+   color:#F2F2F2;
+   font-family:'Basic', sans-serif;
+   letter-spacing:4px;
+}
+
+body { 
+   background-color:black;
+   display:flex;
+   justify-content:center;
+}
+
+a {
+   text-decoration:none;
+}
+
+video {
+   position:absolute;
+   top:0;
+   left:0;
+   width:100%;
+   height:100%;
+   object-fit:cover;
+   opacity:0.5;
+}
+
+section {
+   position:absolute;
+   width:100%;
+   height:100%;
+   display:flex;
+   justify-content:space-between;
+}
+
+h1 {
+   margin-bottom:20px;
+   font-size:45px;
+}
+
+p {
+   letter-spacing:1px;
+   width:230px;
+   font-size:23px;
+}
+
+.share {
+   background-color:#F2F2F2;
+   border-radius:50%;
+   position:absolute;
+   bottom:150px;
+   right:5px;
+   padding:5px;
+   display:flex;
+   align-items:center;
+   opacity:.6;
+   cursor:pointer;
+   display:flex;
+}
+
+.share img {
+   position:relative;
+   right:1px;
+   width:20px;
+   height:20px;
+}
+
+.share:hover {
+   opacity:1;
+}
+
+.fecha-menu {
+   background-color:rgba(0,0,0,.6);
+   position:fixed;
+   height:100vh;
+   width:100vw;
+   display:none;
+}
+
+#simples-menu {
+   border-radius:3px;
+   position:absolute;
+   top:3px;
+   right:1px;
+   width:45px;
+   box-sizing:border-box;
+   display:flex;
+   align-items:center;
+   justify-content:center;
+}
+
+#btn-mobile {
+   border:none;
+   background:none;
+   cursor:pointer;
+   opacity:.9;
+}
+
+#burguer {
+   border-top:3px solid;
+   border-radius:2px;
+   position:relative;
+   display:block;
+   width:23px;
+   left:6px;
+}
+
+#burguer::before {
+   width:35px;
+   right:12px;
+}
+
+#burguer::after, #burguer::before {
+   position:relative;
+   border-radius:2px;
+   content:'';
+   display:block;
+   height:3px;
+   margin-top:9px;
+   background:currentColor;
+}
+
+#simples-menu.active {
+   background:#F2F2F2;
+   width:28vw;
+   height:37px;
+   right:3px;
+   padding-bottom:5px;
+}
+
+#simples-menu.active #btn-mobile {
+   position:absolute;
+   top:0.2px;
+   right:0.5px;
+   width:32px;
+   border-radius:5px;
+   opacity:.7;
+}
+
+#simples-menu.active #burguer {
+   border-top-color:transparent;
+}
+
+#simples-menu.active #burguer::before {
+   background:black;
+   transform:rotate(131deg);
+   width:23px;
+   height:2px;
+   top:-1px;
+   right:6px;
+}
+
+#simples-menu.active #burguer::after {
+   background:black;
+   transform:rotate(-131deg);
+   width:23px;
+   height:2px;
+   top:-12px;
+   right:6px;
+}
+
+#simples-menu.active .lista {
+   display:block;
+   overflow-y:auto;
+   height:94vh;
+}
+
+.lista {
+   background:#F2F2F2;
+   border-radius:3px;
+   position:absolute;
+   top:33px;
+   right:0;
+   width:28vw;
+   height:auto;
+   display:none;
+   list-style:none;
+   z-index:1000;
+   overflow-y:hidden;
+}
+
+.lista a {
+   border-bottom:2px solid rgba(0,0,0,.05);
+   display:block;
+   padding:.1rem 0;
+   margin:2.3rem 1rem;
+   letter-spacing:2px;
+   font-size:15px;
+}
+
+.container {
+   display:none;
+}
+
+.container.active {
+   background-color:#F2F2F2;
+   border-radius:5px;
+   box-shadow:0px 0px 0px 2px black;
+   position:absolute;
+   top:20%;
+   width:320px;
+   height:310px;
+   padding:15px;
+}
+
+.fechaContainer {
+   background-color:rgba(0,0,0,.3);
+   position:fixed;
+   height:100vh;
+   width:100vw;
+   display:none;
+}
+
+.container.active .fecha {
+   position:absolute;
+   right:0px;
+   top:-2px;
+   font-size:24px;
+   cursor:pointer;
+   color:black;
+   opacity:.6;
+   text-align:center;
+}
+
+.container.active .fecha:hover {
+   opacity:1;
+}
+
+.container.active h1 {
+   position:relative;
+   left:15px;
+   width:250px;
+   color:black;
+   font-size:16px;
+   text-align:center;
+   opacity:.6;
+   letter-spacing:2px;
+}
+
+.container.active #qrcode {
+   border:1px solid rgba(0,0,0,.8);
+   box-shadow:1px 1px 2px rgba(0,0,0,.7);
+   position:relative;
+   top:5px;
+   left:65px;
+   width:160px;
+   height:160px;
+}
+
+.container.active .copiarLink {
+   box-shadow:1px 1px 3px rgba(0,0,0,.7);
+   background-color:#F2F2F2;
+   border-radius:5px;
+   position:relative;
+   top:20px;
+   width:290px;
+   cursor:pointer;
+   padding:3px;
+   opacity:.9;
+}
+
+.container.active .copiarLink:hover {
+   opacity:1;
+}
+
+.container.active input, button {
+   padding:5px;
+   color:black;
+   font-size:12px;
+   cursor:pointer;
+   letter-spacing:1px;
+}
+
+.container.active input {
+   border:1px solid rgba(0,0,0,.4);
+   border-radius:5px;
+   resize:none;
+   width:250px;
+}
+
+input:focus {
+   outline:0;
+}
+
+.container.active button img {
+   width:15px;
+   height:15px;
+}
