@@ -1,95 +1,106 @@
-var evento = {
-   burguer: document.querySelector('#btn-mobile'),
-   menu: document.querySelector('#simples-menu'),
-   fechaMenuPorFora: document.querySelector('.fecha-menu'),
+var menu = document.querySelector('#simples-menu')
 
-   botaoShare: document.querySelector('.share'),
+var clicaNo = {
+   navbar: document.querySelector('#btn-mobile'),
+   
+   compartilha: document.querySelector('.share'),
+   copiarLink: document.querySelector('.copiarLink'),
+
+   linkDoSite: document.querySelector('#link'),
+   indicaQueCopiou: document.querySelector('#imagem')
+}
+
+var modifica = {
+   containerDoShare: document.querySelector('.container'),
+   share: document.querySelector('.share'),
+
    player: document.querySelector('.player-sound'),
    subtitle: document.querySelector('.conteudo-legenda')
 }
 
-evento.burguer.addEventListener('click', () => {
-   if (evento.menu.classList.contains('active')) {
-      evento.menu.classList.toggle('active')
-      evento.fechaMenuPorFora.style.display = 'none'
-      evento.botaoShare.style.display = 'flex'
+var fecha = {
+   menuPorFora: document.querySelector('.fecha-menu'),
 
-      evento.player.style.display = 'flex'
-      evento.subtitle.style.display = 'flex'
+   shareComX: document.querySelector('.fecha'),
+   sharePorFora: document.querySelector('.fechaContainer')
+}
+
+clicaNo.navbar.addEventListener('click', () => {
+
+   if (menu.classList.contains('active')) {
+      menu.classList.toggle('active')
+      fecha.menuPorFora.style.display = 'none'
+
+      modifica.share.style.display = 'flex'
+      modifica.player.style.display = 'flex'
+      
+      if (modifica.subtitle.classList.contains('active')) {
+         modifica.subtitle.style.display = 'flex'
+      }
    }
 
    else {
-      evento.menu.classList.add('active')
-      evento.fechaMenuPorFora.style.display = 'block'
-      evento.botaoShare.style.display = 'none'
+      menu.classList.toggle('active')
+      fecha.menuPorFora.style.display = 'block'
 
-      evento.player.style.display = 'none'
-      evento.subtitle.style.display = 'none'
+      modifica.share.style.display = 'none'
+      modifica.player.style.display = 'none'
+
+      if (modifica.subtitle.classList.contains('active')) {
+         modifica.subtitle.style.display = 'none'
+      }
    }
 })
 
-evento.fechaMenuPorFora.addEventListener('click', () => {
-   evento.menu.classList.toggle('active')
-   evento.fechaMenuPorFora.style.display = 'none'
-   evento.botaoShare.style.display = 'flex'
+fecha.menuPorFora.addEventListener('click', () => {
+   menu.classList.toggle('active')
+   fecha.menuPorFora.style.display = 'none'
 
-   evento.player.style.display = 'flex'
-   evento.subtitle.style.display = 'flex'
+   modifica.share.style.display = 'flex'
+   modifica.player.style.display = 'flex'
+
+   if (modifica.subtitle.classList.contains('active')) {
+      modifica.subtitle.style.display = 'flex'
+   }
 })
 
-var mexeNo = {
-   compartilha: document.querySelector('.share'),
-   container: document.querySelector('.container'),
-
-   copiarLink: document.querySelector('.copiarLink'),
-   linkDoSite: document.querySelector('#link'),
-   indicaQueCopiou: document.querySelector('#imagem'),
-
-   fechaPorFora: document.querySelector('.fechaContainer'),
-   fechaLinks: document.querySelector('.fecha')
-}
-
-mexeNo.compartilha.addEventListener('click', () => {
-   mexeNo.container.style.display = 'block'
-
-   mexeNo.fechaPorFora.style.display = 'block'
+clicaNo.compartilha.addEventListener('click', () => {
+   modifica.containerDoShare.style.display = 'block'
+   fecha.sharePorFora.style.display = 'block'
 })
 
-mexeNo.fechaLinks.addEventListener('click', () => {
-   mexeNo.container.style.display = 'none'
-
-   mexeNo.fechaPorFora.style.display = 'none'
-})
-
-mexeNo.fechaPorFora.addEventListener('click', () => {
-   mexeNo.container.style.display = 'none'
-   mexeNo.fechaPorFora.style.display = 'none'
-
-   mexeNo.indicaQueCopiou.src = 'media/copy.svg'
-})
-
-mexeNo.copiarLink.addEventListener('click', () => {
-
+clicaNo.copiarLink.addEventListener('click', () => {
    event.preventDefault()
-   mexeNo.linkDoSite.select()
+   clicaNo.linkDoSite.select()
 
-   mexeNo.linkDoSite.setSelectionRange(0, 9999)
+   clicaNo.linkDoSite.setSelectionRange(0, 9999)
    document.execCommand("copy") //Não encontrei um substituto
 
-   mexeNo.indicaQueCopiou.src = 'media/check.svg'
+   clicaNo.indicaQueCopiou.src = 'media/check.svg'
 
    var time = 1 * 60
-   setInterval(apagarIndicadorDeCopy, 1000)
+   setInterval(apagaIndicadorDeCopy, 1000)
 
-   function apagarIndicadorDeCopy() {
+   function apagaIndicadorDeCopy() {
       var segundos = time % 60
 
       time--
       if (segundos >= 59) {
-         mexeNo.indicaQueCopiou.src = 'media/copy.svg'
+         clicaNo.indicaQueCopiou.src = 'media/copy.svg'
       }
-
    }
+})
+
+fecha.shareComX.addEventListener('click', () => {
+   modifica.containerDoShare.style.display = 'none'
+   fecha.sharePorFora.style.display = 'none'
+})
+
+fecha.sharePorFora.addEventListener('click', () => {
+   modifica.containerDoShare.style.display = 'none'
+
+   fecha.sharePorFora.style.display = 'none'
+   clicaNo.indicaQueCopiou.src = 'media/copy.svg'
 })
 
 // function toggleMenu(event) {
@@ -109,62 +120,3 @@ mexeNo.copiarLink.addEventListener('click', () => {
 // }
 // mexeNo.burguer.addEventListener('click', toggleMenu)
 // mexeNo.burguer.addEventListener('touchstart', toggleMenu)
-
-// var compartilha = document.querySelector('.share')
-
-// mexeNo.burguer.addEventListener('click', () => {
-//    if (mexeNo.burguer.classList.contains('active')) {
-
-//       mexeNo.clicaFora.style.display = 'block'
-//       mexeNo.lista.style.display = 'flex'
-
-//       compartilha.style.display = 'none'
-//    }
-
-//    else {
-//       mexeNo.clicaFora.style.display = 'none'
-//       mexeNo.lista.style.display = 'none'
-
-//       compartilha.style.display = 'flex'
-//       mexeNo.imagemOriginal.src = 'media/copy.svg'
-//    }
-// })
-
-// mexeNo.clicaFora.addEventListener('click', () => {
-//    mexeNo.lista.style.display = 'none'
-//    mexeNo.clicaFora.style.display = 'none'
-
-//    mexeNo.burguer.classList.remove('active')
-//    compartilha.style.display = 'flex'
-//    mexeNo.imagemOriginal.src = 'media/copy.svg'
-// })
-
-// var copiarFrase = document.querySelector('.aprendendo')
-
-// copiarFrase.addEventListener('click', function (event) {
-//    var copiaMuda = {
-//       frase: document.querySelector('#fraseCopiada'),
-//       imagem: document.querySelector('#imagemIndicando')
-//    }
-
-//    event.preventDefault()
-
-//    copiaMuda.frase.select()
-//    copiaMuda.frase.setSelectionRange(0, 9999)
-//    document.execCommand("copy") //Não encontrei um substituto
-
-//    copiaMuda.imagem.src = 'media/check.svg'
-
-//    var time = 1 * 60
-//    setInterval(apagarIndicadorDeCopy, 1000)
-
-//    function apagarIndicadorDeCopy() {
-//       var segundos = time % 60
-
-//       time--
-//       if (segundos >= 59) {
-//          copiaMuda.imagem.src = 'media/copy.svg'
-//       }
-
-//    }
-// })

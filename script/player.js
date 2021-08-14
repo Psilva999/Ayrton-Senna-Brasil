@@ -1,132 +1,127 @@
-//Algoritmo do player
-var mudaPlayer = document.querySelector ('#player')
-var pause = document.querySelector ('.pause')
-var play = document.querySelector ('.play')
+var video = document.querySelector('#video')
 
-var mudaSom = document.querySelector ('#sound-muted')
-var sound = document.querySelector ('.sound')
-var muted = document.querySelector ('.muted')
+var setorDo = {
+   player: document.querySelector('#player'),
+   mudaSom: document.querySelector('#sound-muted'),
 
-var video = document.querySelector ('#video')
+   tempoTotalDoVideo: document.querySelector('.total'),
+   controleDaLegenda: document.querySelector('.legenda')
+}
 
-//Pause e play
-mudaPlayer.addEventListener('click', () => {
+var altera = {
+   pause: document.querySelector('.pause'),
+   play: document.querySelector('.play'),
 
-   if (play.classList.contains('active')) {
+   sound: document.querySelector('.sound'),
+   muted: document.querySelector('.muted'),
+}
+
+setorDo.player.addEventListener('click', () => {
+   if (altera.play.classList.contains('active')) {
       video.play()
 
-      play.classList.remove('active')
-      pause.classList.add('active')
+      altera.play.classList.remove('active')
+      altera.pause.classList.add('active')
    }
 
-   else if (pause.classList.contains('active')) {
-
+   else if (altera.pause.classList.contains('active')) {
       video.pause()
-      pause.classList.remove('active')
-      play.classList.add('active')
+      altera.pause.classList.remove('active')
+      altera.play.classList.add('active')
 
       video.muted = true
-      sound.classList.remove('active')
-      muted.classList.add('active')
+      altera.sound.classList.remove('active')
+      altera.muted.classList.add('active')
    }
 })
 
-//Áudio
-mudaSom.addEventListener('click', () => {
-
-   if (muted.classList.contains('active') & video.muted & pause.classList.contains('active')) {
-
+setorDo.mudaSom.addEventListener('click', () => {
+   if (altera.muted.classList.contains('active') && altera.pause.classList.contains('active') && video.muted) {
       video.muted = false
 
-      muted.classList.remove('active')
-      sound.classList.add('active')
+      altera.muted.classList.remove('active')
+      altera.sound.classList.add('active')
    }
 
    else {
       video.muted = true
 
-      sound.classList.remove('active')
-      muted.classList.add('active')
+      altera.sound.classList.remove('active')
+      altera.muted.classList.add('active')
    }
 })
 
-//Momento em que o vídeo está
-var mostraTempoDoVideo = document.querySelector('.contando')
-var mostraTempoTotalVideo = document.querySelector('.total')
+video.addEventListener('timeupdate', () => {
+   var mostra = {
+      tempoDoVideo: document.querySelector('.contando'),
 
-   video.addEventListener('timeupdate', function () {
+      mudaMinutos: Math.floor(video.currentTime / 60, 10),
+      mudaSegundos: Math.floor(video.currentTime % 60)
+   }
 
-      var mudaMinutos = Math.floor(video.currentTime / 60,10)
-      var mudaSegundos = Math.floor(video.currentTime % 60)
-      
-      if (mudaSegundos >= 0 && mudaSegundos < 10) {
-         mostraTempoDoVideo.innerHTML = `0${mudaMinutos}:0${mudaSegundos}`
-      }
+   if (mostra.mudaSegundos >= 0 && mostra.mudaSegundos < 10) {
+      mostra.tempoDoVideo.innerHTML = `0${mostra.mudaMinutos}:0${mostra.mudaSegundos}`
+   }
 
-      else {
-         mostraTempoDoVideo.innerHTML = `0${mudaMinutos}:${mudaSegundos}`
-      }
-   })
+   else {
+      mostra.tempoDoVideo.innerHTML = `0${mostra.mudaMinutos}:${mostra.mudaSegundos}`
+   }
+})
 
-//Duração total do vídeo
 var i = setInterval(function() {
    if (video.readyState > 0) {
-      var minutos = parseInt(video.duration / 60, 10)
-      var segundos = (video.duration % 60).toFixed(0)
+      var tempoEm = {
+         minutos: parseInt(video.duration / 60, 10),
+         segundos: (video.duration % 60).toFixed(0)
+      }
 
-      mostraTempoTotalVideo.innerHTML = `0${minutos}:${segundos}`
+      setorDo.tempoTotalDoVideo.innerHTML = `0${tempoEm.minutos}:${tempoEm.segundos}`
       clearInterval(i)
    }
 }, 200)
 
-var ligaDesligaLegenda = document.querySelector('.legenda')
+setorDo.controleDaLegenda.addEventListener('click', () => {
+   var ligaDesliga = document.querySelector('.legenda')
+   var conteudo = document.querySelector('.conteudo-legenda')
 
-ligaDesligaLegenda.addEventListener('click', () => {
-   var subtitle = document.querySelector('.conteudo-legenda')
+   if (conteudo.classList.contains('active')) {
+      ligaDesliga.style.borderBottom = '1px solid black'
 
-   //Retira a legenda
-   if (subtitle.classList.contains('active')) {
-      ligaDesligaLegenda.style.borderBottom = '1px solid black'
-
-      subtitle.classList.remove('active')
-      subtitle.style.display = 'none'
+      conteudo.classList.remove('active')
+      conteudo.style.display = 'none'
    }
 
-   //Ativa a legenda
    else {
-      ligaDesligaLegenda.style.borderBottom = '3px solid black'
+      ligaDesliga.style.borderBottom = '3px solid black'
 
-      subtitle.classList.add('active')
-      subtitle.style.display = 'flex'
+      conteudo.classList.add('active')
+      conteudo.style.display = 'flex'
    }
 })
 
-//Momento em que a legenda aparece
-var video = document.querySelector('#video')
-
-video.addEventListener('timeupdate', function () {
-   var tempoEm = {
+video.addEventListener('timeupdate', () => { 
+   var modifica = {
       minutos: Math.floor(video.currentTime / 60, 10),
       segundos: Math.floor(video.currentTime % 60)
    }
 
-   var alteraSubtitle = document.querySelector('.conteudo-legenda')
+   var alteraSubtitle= document.querySelector('.conteudo-legenda')
 
-   if (tempoEm.segundos > 20 && tempoEm.segundos <= 21 && tempoEm.minutos == 0) {
+   if (modifica.segundos > 20 && modifica.segundos <= 21 && modifica.minutos == 0) {
       alteraSubtitle.style.background = '#F2F2F2'
 
-      alteraSubtitle.innerHTML = `Eu corro destinado a vencer`
+      alteraSubtitle.innerHTML = 'Eu corro destinado a vencer'
    }
 
-   else if (tempoEm.segundos >= 24 && tempoEm.segundos <= 27) {
+   else if (modifica.segundos >= 24 && modifica.segundos <= 27) {
       alteraSubtitle.style.background = ''
 
       alteraSubtitle.innerHTML = ''
    }
 
-   else if (tempoEm.segundos >= 30) {
+   else if (modifica.segundos >= 30) {
       alteraSubtitle.style.background = '#F2F2F2'
 
-      alteraSubtitle.innerHTML = `Eu continuo dando o meu melhor`
+      alteraSubtitle.innerHTML = 'Eu continuo dando o meu melhor'
    }
 })
