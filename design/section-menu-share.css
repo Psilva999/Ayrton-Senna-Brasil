@@ -82,7 +82,7 @@ p {
 
 .switch-shadow + label:before {
    background:red;
-   background:url('../media/senna-brasil-bandeira-mini.jpg') no-repeat;
+   background:url('../media/senna-brasil-91-mini.jpg') no-repeat;
    box-shadow:2px 2px 3px rgba(0,0,0,.8);
    border-radius:50px;
    transition:all .5s;
@@ -99,8 +99,7 @@ p {
 }
 
 .switch-shadow:checked + label:before {
-   background:red;
-   background:url('../media/senna-brasil-91-mini.jpg') no-repeat;
+   background:url('../media/senna-brasil-bandeira-mini.jpg') no-repeat;
 }
 
 .switch-shadow:checked + label:after {

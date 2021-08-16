@@ -57,6 +57,28 @@
       font-size:18px;
    }
 
+   .switch-shadow + label {
+      width:45px;
+      height:20px;
+   }
+
+   .switch-shadow + label:before {
+      background:url('../media/senna-brasil-91-mini-500.jpg') no-repeat;
+   }
+
+   .switch-shadow:checked + label:before {
+      background:url('../media/senna-brasil-bandeira-mini-500.jpg') no-repeat;
+   }
+
+   .switch-shadow + label:after {
+      width:18px;
+      height:18px;
+   }
+
+   .switch-shadow:checked + label:after {
+      transform:translateX(25px);
+   }
+
    #simples-menu {
       right:3px;
       width:32px;
