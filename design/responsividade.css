@@ -57,6 +57,16 @@
       font-size:18px;
    }
 
+   .switch-shadow {
+      top:9.5px;
+      right:50px;
+   }
+
+   .switch-shadow + label {
+      top:9.5px;
+      right:50px;
+   }
+
    #simples-menu {
       right:3px;
       width:32px;
