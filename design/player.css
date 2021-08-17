@@ -1,9 +1,16 @@
 @charset 'UTF-8';
 
+.player-sound {
+   display:none;
+}
+
 .player-sound, #player, .pause, .play {
-   display:flex;
    justify-content:space-between;
    align-items:center;
+}
+
+#player, .pause, .play {
+   display:flex;
 }
 
 .player-sound {
@@ -124,14 +131,14 @@
 .conteudo-legenda.active {
    border-radius:5px;
    position:absolute;
-   bottom:60px;
+   bottom:85px;
    text-align:center;
    opacity:.7;
    font-size:15px;
    padding:5px;
    color:black;
    letter-spacing:2px;
-   display:flex;
+   display:none;
 }
 
 @media (max-width:390px) {

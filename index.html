@@ -14,19 +14,14 @@
 </head>
 
 <body>
-   <video id="video"
-      src="https://player.vimeo.com/external/587611654.sd.mp4?s=d9c6ed0702d50d23a47f2061077d0acecadc9e3f&profile_id=164&oauth2_token_id=57447761"
-      muted loop autoplay></video>
+   <video id="video" src="https://player.vimeo.com/external/587611654.sd.mp4?s=d9c6ed0702d50d23a47f2061077d0acecadc9e3f&profile_id=164&oauth2_token_id=57447761" muted loop autoplay></video>
+
+   <img src="media/senna-brasil-91.jpg" alt="Ayrton Senna na chuva" id="senna-chuva">
 
    <section>
       <header> <h1>AYRTON SENNA DO BRASIL</h1>
 
          <p>Homenagem ao melhor piloto da história da Formula 1</p>
-
-         <div class="switch-container">
-            <input type="checkbox" id="button" class="switch-shadow">
-            <label for="button"></label>
-         </div>
       </header>
 
       <div class="fecha-menu"></div>
@@ -74,6 +69,11 @@
          <img src="media/share.svg" alt="imagem indisponível">
       </button>
    </section>
+
+   <div class="switch-container active">
+      <input type="checkbox" class="switch-shadow" id="button">
+      <label for="button"></label>
+   </div>
 
    <div class="player-sound">
       <div id="player">
@@ -137,6 +137,6 @@
    </div>
 
    <script src="script/menu-share.js"></script>
-   <script src="script/player.js"></script>
+   <script src="script/player-switch.js"></script>
 </body>
 </html>

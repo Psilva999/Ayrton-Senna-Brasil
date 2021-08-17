@@ -15,7 +15,9 @@ var modifica = {
    share: document.querySelector('.share'),
 
    player: document.querySelector('.player-sound'),
-   subtitle: document.querySelector('.conteudo-legenda')
+   subtitle: document.querySelector('.conteudo-legenda'),
+
+   switchContainer: document.querySelector('.switch-container')
 }
 
 var fecha = {
@@ -26,16 +28,21 @@ var fecha = {
 }
 
 clicaNo.navbar.addEventListener('click', () => {
+   var checkbox = document.querySelector('input[type="checkbox"]')
 
    if (menu.classList.contains('active')) {
       menu.classList.toggle('active')
       fecha.menuPorFora.style.display = 'none'
 
       modifica.share.style.display = 'flex'
-      modifica.player.style.display = 'flex'
-      
-      if (modifica.subtitle.classList.contains('active')) {
-         modifica.subtitle.style.display = 'flex'
+      modifica.switchContainer.style.display = 'block'
+
+      if (checkbox.checked == true) {
+         modifica.player.style.display = 'flex'
+
+         if (modifica.subtitle.classList.contains('active')) {
+            modifica.subtitle.style.display = 'flex'
+         }
       }
    }
 
@@ -45,6 +52,7 @@ clicaNo.navbar.addEventListener('click', () => {
 
       modifica.share.style.display = 'none'
       modifica.player.style.display = 'none'
+      modifica.switchContainer.style.display = 'none'
 
       if (modifica.subtitle.classList.contains('active')) {
          modifica.subtitle.style.display = 'none'
@@ -53,14 +61,20 @@ clicaNo.navbar.addEventListener('click', () => {
 })
 
 fecha.menuPorFora.addEventListener('click', () => {
+   var checkbox = document.querySelector('input[type="checkbox"]')
+
    menu.classList.toggle('active')
    fecha.menuPorFora.style.display = 'none'
 
    modifica.share.style.display = 'flex'
-   modifica.player.style.display = 'flex'
+   modifica.switchContainer.style.display = 'block'
 
-   if (modifica.subtitle.classList.contains('active')) {
-      modifica.subtitle.style.display = 'flex'
+   if (checkbox.checked == true) {
+      modifica.player.style.display = 'flex'
+
+      if (modifica.subtitle.classList.contains('active')) {
+         modifica.subtitle.style.display = 'flex'
+      }
    }
 })
 

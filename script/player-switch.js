@@ -1,6 +1,8 @@
 var video = document.querySelector('#video')
 
 var setorDo = {
+   switchContainer: document.querySelector('.switch-container'),
+
    player: document.querySelector('#player'),
    mudaSom: document.querySelector('#sound-muted'),
 
@@ -9,12 +11,46 @@ var setorDo = {
 }
 
 var altera = {
+   imagemDeFundo: document.querySelector('#senna-chuva'),
+   comandosDoVideo: document.querySelector('.player-sound'),
+
    pause: document.querySelector('.pause'),
    play: document.querySelector('.play'),
 
    sound: document.querySelector('.sound'),
    muted: document.querySelector('.muted'),
+
+   subtitle: document.querySelector('.conteudo-legenda')
 }
+
+setorDo.switchContainer.addEventListener('click', () => {
+   var checkbox = document.querySelector('input[type="checkbox"]')
+
+   if (checkbox.checked) {
+      altera.imagemDeFundo.style.display = 'none'
+
+      altera.comandosDoVideo.style.display = 'flex'
+      video.style.display = 'block'
+
+      video.play()
+      altera.play.classList.remove('active')
+      altera.pause.classList.add('active')
+      
+      if (altera.subtitle.classList.contains('active')) {
+         altera.subtitle.style.display = 'flex'
+      }
+   }
+
+   else {
+      altera.imagemDeFundo.style.display = 'block'
+
+      altera.comandosDoVideo.style.display = 'none'
+      altera.subtitle.style.display = 'none'
+
+      video.style.display = 'none'
+      video.pause()
+   }
+})
 
 setorDo.player.addEventListener('click', () => {
    if (altera.play.classList.contains('active')) {
@@ -119,9 +155,15 @@ video.addEventListener('timeupdate', () => {
       alteraSubtitle.innerHTML = ''
    }
 
-   else if (modifica.segundos >= 30) {
+   else if (modifica.segundos >= 30 && modifica.segundos <= 34) {
       alteraSubtitle.style.background = '#F2F2F2'
 
       alteraSubtitle.innerHTML = 'Eu continuo dando o meu melhor'
+   }
+
+   else if (modifica.segundos >= 35) {
+      alteraSubtitle.style.background = ''
+
+      alteraSubtitle.innerHTML = ''
    }
 })

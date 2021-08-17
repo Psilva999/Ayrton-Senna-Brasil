@@ -6,11 +6,6 @@
       font-size:37px;
    }
 
-   article {
-      width:265px;
-      font-size:20px;
-   }
-
    #simples-menu.active, .lista {
       width:40vw;
    }
@@ -56,6 +51,11 @@
       width:200px;
       font-size:18px;
    }
+
+   .switch-container.active {
+      width:45px;
+      height:20px;
+   }  
 
    .switch-shadow + label {
       width:45px;
