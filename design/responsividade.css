@@ -63,11 +63,11 @@
    }
 
    .switch-shadow + label:before {
-      background:url('../media/senna-brasil-91-mini-500.jpg') no-repeat;
+      background:url('../media/senna-brasil-bandeira-mini-500.jpg') no-repeat;
    }
 
    .switch-shadow:checked + label:before {
-      background:url('../media/senna-brasil-bandeira-mini-500.jpg') no-repeat;
+      background:url('../media/senna-brasil-91-mini-500.jpg') no-repeat;
    }
 
    .switch-shadow + label:after {
