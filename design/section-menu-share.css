@@ -57,22 +57,17 @@ header {
 }
 
 header h1 {
-   margin-bottom:20px;
+   margin-bottom:0px;
    font-family: 'Swanky and Moo Moo', sans-serif;
    font-size:38px;
 }
 
-p {
-   width:220px;
-   font-size:20px;
-   letter-spacing:1px;
-}
-
 .switch-container.active {
    position:relative;
-   top:25px;
-   width:50px;
-   height:23px;
+   top:50px;
+   width:45px;
+   height:20px;
+   opacity:.9;
 }
 
 .switch-shadow {
@@ -84,8 +79,8 @@ p {
    user-select:none;
    outline:none;
    padding:3px;
-   width:50px;
-   height:23px;
+   width:45px;
+   height:20px;
    opacity:.8;
    cursor:pointer;
 }
@@ -100,8 +95,7 @@ p {
 }
 
 .switch-shadow + label:before {
-   background:red;
-   background:url('../media/senna-brasil-bandeira-mini.jpg') no-repeat;
+   background:url('../media/senna-brasil-bandeira-mini-500.jpg') no-repeat;
    box-shadow:2px 2px 3px rgba(0,0,0,.8);
    border-radius:50px;
    transition:all .5s;
@@ -112,17 +106,17 @@ p {
    box-shadow:0 3px 7px rgba(0,0,0,.5);
    background:#F2F2F2;
    border-radius:100%;
-   width:21px;
-   height:21px;
+   width:18px;
+   height:18px;
    transition:all .6s;
 }
 
 .switch-shadow:checked + label:before {
-   background:url('../media/senna-brasil-91-mini.jpg') no-repeat;
+   background:url('../media/senna-brasil-91-mini-500.jpg') no-repeat;
 }
 
 .switch-shadow:checked + label:after {
-   transform:translateX(28px);
+   transform:translateX(25px);
 }
 
 .fecha-menu {
