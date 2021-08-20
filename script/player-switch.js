@@ -143,27 +143,151 @@ video.addEventListener('timeupdate', () => {
 
    var alteraSubtitle= document.querySelector('.conteudo-legenda')
 
-   if (modifica.segundos > 20 && modifica.segundos <= 21 && modifica.minutos == 0) {
-      alteraSubtitle.style.background = '#F2F2F2'
+   if (modifica.minutos == 0) {
+      if (modifica.segundos <= 4) {
+         alteraSubtitle.style.background = '#F2F2F2'
 
-      alteraSubtitle.innerHTML = 'Eu corro destinado a vencer'
+         alteraSubtitle.innerHTML = 'Eu apenas amo correr, o desafio de vencer alguém.'
+      }
+
+      else if (modifica.segundos >= 5 && modifica.segundos <= 7) {
+         alteraSubtitle.style.background = '#F2F2F2'
+
+         alteraSubtitle.innerHTML = 'E em muitas ocasiões vencer a mim mesmo.'
+      }
+
+      else if (modifica.segundos >= 8 && modifica.segundos <= 10) {
+         alteraSubtitle.style.background = '#F2F2F2'
+
+         alteraSubtitle.innerHTML = 'O principal é ser você mesmo.'
+      }
+
+      else if (modifica.segundos >= 10 && modifica.segundos <= 12) {
+         alteraSubtitle.style.background = '#F2F2F2'
+
+         alteraSubtitle.innerHTML = 'É basicamente o aprendizado sobre si mesmo.'
+      }
+
+      else if (modifica.segundos >= 13 && modifica.segundos <= 14) {
+         alteraSubtitle.style.background = '#F2F2F2'
+
+         alteraSubtitle.innerHTML = 'Até mesmo se você tentar ser perfeito'
+      }
+
+      else if (modifica.segundos >= 15 && modifica.segundos <= 16) {
+         alteraSubtitle.style.background = '#F2F2F2'
+
+         alteraSubtitle.innerHTML = 'Ninguém é perfeito'
+      }
+
+      else if (modifica.segundos >= 17 && modifica.segundos <= 21) {
+         alteraSubtitle.style.background = '#F2F2F2'
+
+         alteraSubtitle.innerHTML = 'Então eu tento aprender com todos os erros que cometo.'
+      }
+
+      else if (modifica.segundos >= 22 && modifica.segundos <= 25) {
+         alteraSubtitle.style.background = '#F2F2F2'
+
+         alteraSubtitle.innerHTML = 'De cada decisão errada que eu tomo.'
+      }
+
+      else if (modifica.segundos >= 26 && modifica.segundos <= 29) {
+         alteraSubtitle.style.background = '#F2F2F2'
+
+         alteraSubtitle.innerHTML = 'Para que elas não ocorram novamente.'
+      }
+
+      else if (modifica.segundos >= 30 && modifica.segundos <= 31) {
+         alteraSubtitle.style.background = ''
+
+         alteraSubtitle.innerHTML = ''
+      }
+
+      else if (modifica.segundos >= 32 && modifica.segundos <= 35) {
+         alteraSubtitle.style.background = '#F2F2F2'
+
+         alteraSubtitle.innerHTML = 'Minha primeira corrida na pista molhada no Kart foi um desastre.'
+      }
+
+      else if (modifica.segundos >= 36 && modifica.segundos <= 38) {
+         alteraSubtitle.style.background = '#F2F2F2'
+
+         alteraSubtitle.innerHTML = 'Não passou de uma piada, eu não consegui fazer nada bom.'
+      }
+
+      else if (modifica.segundos >= 39 && modifica.segundos <= 41) {
+         alteraSubtitle.style.background = '#F2F2F2'
+
+         alteraSubtitle.innerHTML = 'E na pista seca eu era bom!'
+      }
+
+      else if (modifica.segundos >= 42 && modifica.segundos <= 47) {
+         alteraSubtitle.style.background = '#F2F2F2'
+
+         alteraSubtitle.innerHTML = 'E naquele dia eu aprendi que eu não sabia correr no molhado.'
+      }
+
+      else if (modifica.segundos >= 48 && modifica.segundos <= 50) {
+         alteraSubtitle.style.background = '#F2F2F2'
+
+         alteraSubtitle.innerHTML = 'A partir dali eu passei a testar e treinar na chuva.'
+      }
+
+      else if (modifica.segundos >= 51 && modifica.segundos <= 53) {
+         alteraSubtitle.style.background = '#F2F2F2'
+
+         alteraSubtitle.innerHTML = 'Sempre que chovia eu ia pro circuito treinar.'
+      }
+
+      else if (modifica.segundos >= 54 && modifica.segundos <= 55) {
+         alteraSubtitle.style.background = '#F2F2F2'
+
+         alteraSubtitle.innerHTML = 'E então eu aprendi.'
+      }
+
+      else if (modifica.segundos >= 56 && modifica.segundos <= 57) {
+         alteraSubtitle.style.background = '#F2F2F2'
+
+         alteraSubtitle.innerHTML = 'Eu acredito em algo'
+      }
+
+      else if (modifica.segundos >= 58) {
+         alteraSubtitle.style.background = '#F2F2F2'
+
+         alteraSubtitle.innerHTML = 'O homem é capaz de criar e desenvolver máquinas em uma vasta extensão.'
+      }
    }
 
-   else if (modifica.segundos >= 24 && modifica.segundos <= 27) {
-      alteraSubtitle.style.background = ''
+   else if (modifica.minutos == 1) {
+      if (modifica.segundos >= 6 && modifica.segundos <= 7) {
+         alteraSubtitle.style.background = '#F2F2F2'
 
-      alteraSubtitle.innerHTML = ''
-   }
+         alteraSubtitle.innerHTML = 'O homem é capaz de ir a lua.'
+      }
 
-   else if (modifica.segundos >= 30 && modifica.segundos <= 34) {
-      alteraSubtitle.style.background = '#F2F2F2'
+      else if (modifica.segundos >= 8 && modifica.segundos <= 10) {
+         alteraSubtitle.style.background = '#F2F2F2'
 
-      alteraSubtitle.innerHTML = 'Eu continuo dando o meu melhor'
-   }
+         alteraSubtitle.innerHTML = 'Isso leva tempo.'
+      }
 
-   else if (modifica.segundos >= 35) {
-      alteraSubtitle.style.background = ''
+      else if (modifica.segundos >= 11 && modifica.segundos <= 13) {
+         alteraSubtitle.style.background = '#F2F2F2'
 
-      alteraSubtitle.innerHTML = ''
+         alteraSubtitle.innerHTML = 'E bastante esforço.'
+      }
+
+      else if (modifica.segundos >= 14 && modifica.segundos <= 16) {
+         alteraSubtitle.style.background = '#F2F2F2'
+
+         alteraSubtitle.innerHTML = 'Bastante dedicação.'
+      }
+
+      else if (modifica.segundos >= 17) {
+         alteraSubtitle.style.background = '#F2F2F2'
+
+         alteraSubtitle.innerHTML = 'E muito poder.'
+      }
    }
 })
