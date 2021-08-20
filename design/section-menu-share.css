@@ -52,10 +52,14 @@ section {
    justify-content:space-between;
 }
 
-h1 {
+header {
+   margin-left:5px;
+}
+
+header h1 {
    margin-bottom:20px;
    font-family: 'Swanky and Moo Moo', cursive;
-   font-size:35px;
+   font-size:38px;
 }
 
 p {
@@ -311,6 +315,7 @@ p {
    text-align:center;
    opacity:.8;
    letter-spacing:2px;
+   margin-bottom:20px;
 }
 
 .container.active #qrcode {
