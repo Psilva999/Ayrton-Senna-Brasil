@@ -147,7 +147,7 @@ video.addEventListener('timeupdate', () => {
       if (modifica.segundos <= 4) {
          alteraSubtitle.style.background = ''
 
-         alteraSubtitle.innerHTML = 'Eu só amo correr, o desafio de vencer alguém.'
+         alteraSubtitle.innerHTML = 'Eu apenas amo correr, o desafio de vencer alguém.'
       }
 
       else if (modifica.segundos >= 5 && modifica.segundos <= 7) {

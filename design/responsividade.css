@@ -1,10 +1,6 @@
 @charset 'UTF-8';
 
 @media (max-width:1000px) {
-   h1 { 
-      width:290px; 
-      font-size:37px;
-   }
 
    #simples-menu.active, .lista {
       width:40vw;
@@ -43,13 +39,12 @@
 
 @media (max-width:590px) {
    h1 {
-      width:250px;
       font-size:30px;
    }
 
    p {
-      width:200px;
-      font-size:18px;
+      width:180px;
+      font-size:17px;
    }
 
    .switch-container.active {
@@ -116,10 +111,6 @@
       right:1px;   
       top:-9px;
    }
-}
-
-@media (max-width:520px) {
-
 }
 
 @media (max-height:450px) {
