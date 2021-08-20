@@ -108,7 +108,7 @@ var i = setInterval(function() {
    if (video.readyState > 0) {
       var tempoEm = {
          minutos: parseInt(video.duration / 60, 10),
-         segundos: (video.duration % 60).toFixed(0)
+         segundos: ((video.duration % 60) - 1).toFixed(0)
       }
 
       setorDo.tempoTotalDoVideo.innerHTML = `0${tempoEm.minutos}:${tempoEm.segundos}`
