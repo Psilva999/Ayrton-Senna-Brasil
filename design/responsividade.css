@@ -119,9 +119,7 @@
 }
 
 @media (max-width:520px) {
-   .conteudo-legenda.active {
-      font-size:15px;
-   }
+
 }
 
 @media (max-height:450px) {
