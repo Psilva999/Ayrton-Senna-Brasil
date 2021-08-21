@@ -53,13 +53,13 @@ section {
 
 header {
    position:relative;
-   left:10px;
+   left:5px;
    bottom:3px;
 }
 
 header h1 {
    font-size:43px;
-   letter-spacing:6px;
+   letter-spacing:5px;
    text-transform:uppercase;
 }
 
