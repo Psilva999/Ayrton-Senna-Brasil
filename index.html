@@ -16,7 +16,7 @@
 <body>
    <video id="video" src="media/senna-quotes.mp4" muted loop autoplay></video>
 
-   <img src="media/senna-brasil-91.jpg" alt="Ayrton Senna na chuva" id="senna-chuva">
+   <img src="media/senna.jpg" alt="Ayrton Senna na chuva" id="senna-chuva">
 
    <section>
       <header> <h1>Ayrton Senna</h1>
@@ -32,34 +32,36 @@
          <button id="btn-mobile" aria-label="Abrir Menu" aria-haspopup="true" aria-controls="lista" aria-expanded="false">
             <span id="burguer"></span>
          </button>
-
+      
          <ul class="lista" role="menu">
-            <li class="selecionado">Home</li>
-
+            <li class="selecionado">Home
+               <img src="media/senna.png" alt="Senna no volante">
+            </li>
+      
             <li>
                <a href="index/historia.html">História</a>
             </li>
-
+      
             <li>
                <a href="index/videos.html">Vídeos</a>
             </li>
-
+      
             <li>
                <a href="index/imagens.html">Imagens</a>
             </li>
-
+      
             <li>
                <a href="index/doc-livros.html">Livros e documentários</a>
             </li>
-
+      
             <li>
                <a href="index/estatisticas.html">Estatísticas</a>
             </li>
-
+      
             <li>
                <a href="index/desafio.html">Desafio</a>
             </li>
-
+      
             <li>
                <a href="index/bastidores.html">Bastidores</a>
             </li>
@@ -71,20 +73,30 @@
       </button>
    </section>
 
+   <div class="senna-numeros">
+      <p>Uma pequena homenagem ao nosso herói nacional</p>
+
+      <ul>
+         <li class="titulos">3 títulos mundiais</li>
+         <li class="poles">65 pole positions</li>
+         <li class="vitorias">41 Vitórias</li>
+      </ul>
+   </div>
+
    <div class="player-sound">
       <div id="player">
          <div class="pause active">
             <div class="line line_1"></div>
             <div class="line line_2"></div>
          </div>
-
+   
          <div class="play">
             <div class="line line_1"></div>
             <div class="line line_2"></div>
             <div class="line line_3"></div>
          </div>
       </div>
-
+   
       <div id='sound-muted'>
          <div class="sound">
             <div></div>
@@ -92,7 +104,7 @@
             <div></div>
             <div></div>
          </div>
-
+   
          <div class="muted active">
             <div></div>
             <div></div>
@@ -101,31 +113,31 @@
             <div class="corte"></div>
          </div>
       </div>
-
+   
       <div id="tempo">
          <div class="contando"></div>
          <div class="separa">/</div>
          <div class="total"></div>
       </div>
-
+   
       <a href="https://www.youtube.com/watch?v=n9qZu7h5ys0">Lap of Life
          <img src="media/external-link.svg"> </a>
-
+   
       <div class="legenda">AbC</div>
    </div>
    <div class="conteudo-legenda active"></div>
-
+   
    <div class="fechaContainer"></div>
    <div class="container active">
-
+   
       <div class="fecha">X</div>
       <h1>Aponte sua câmera para o QR Code ou copie o link</h1>
-
+   
       <img src="media/qrcode_psilva999.github.io.png" id="qrcode" alt="Imagem Indisponível">
-
+   
       <div class="copiarLink">
          <input type="text" id="link" value="https://psilva999.github.io/Ayrton-Senna-Brasil/" readonly>
-
+   
          <button>
             <img src="media/copy.svg" id="imagem" alt="Imagem indisponível">
          </button>

@@ -15,6 +15,9 @@ body {
    background:black;
    display:flex;
    justify-content:center;
+   align-items:center;
+   width:100vw;
+   height:100vh;
 }
 
 a {
@@ -36,10 +39,10 @@ video {
    position:absolute;
    top:0;
    left:0;
-   width:100%;
-   height:100%;
+   width:100vw;
+   height:100vh;
    object-fit:cover;
-   opacity:.7;
+   opacity:.5;
    display:block;
 }
 
@@ -48,13 +51,10 @@ section {
    width:100%;
    height:100%;
    display:flex;
-   justify-content:space-between;
 }
 
 header {
-   position:relative;
-   left:5px;
-   bottom:3px;
+   height:55px;
 }
 
 header h1 {
@@ -121,17 +121,17 @@ header h1 {
 
 .fecha-menu {
    background-color:rgba(0,0,0,.6);
-   position:fixed;
+   position:absolute;
    height:100vh;
    width:100vw;
    display:none;
 }
 
 #simples-menu {
-   border-radius:3px;
    position:absolute;
-   top:3px;
-   right:1px;
+   top:5px;
+   right:0;
+   border-radius:3px;
    width:45px;
    box-sizing:border-box;
    display:flex;
@@ -174,6 +174,7 @@ header h1 {
    background:#F2F2F2;
    width:28vw;
    height:37px;
+   top:0;
    right:3px;
    padding-bottom:5px;
 }
@@ -212,7 +213,7 @@ header h1 {
 #simples-menu.active .lista {
    display:block;
    overflow-y:auto;
-   height:94vh;
+   height:93.5vh;
 }
 
 .lista {
@@ -227,6 +228,7 @@ header h1 {
    list-style:none;
    z-index:1000;
    overflow-y:hidden;
+   text-align:left;
 }
 
 .selecionado {
@@ -240,6 +242,52 @@ header h1 {
    margin:2.3rem 1rem;
    letter-spacing:2px;
    font-size:15px;
+}
+
+.senna-numeros {
+   position:absolute;
+   width:340px;
+   letter-spacing:2px;
+   opacity:.8;
+}
+
+.senna-numeros p {
+   font-size:22px;
+}
+
+.senna-numeros p, li {
+   margin-bottom:25px;
+}
+
+.senna-numeros p, ul {
+   text-align:center;
+}
+
+.senna-numeros ul {
+   margin-left:58px;
+   display:block;
+   list-style:none;
+}
+
+.senna-numeros li {
+   border-radius:3px;
+   padding:2px;
+   width:223px;
+   text-align:center;
+   font-size:17px;
+}
+
+.titulos {
+   background:#066E31;
+}
+
+.poles {
+   background:#090B18;
+}
+
+.vitorias {
+   background:#FDE602;
+   color:black;
 }
 
 .share {
@@ -275,7 +323,6 @@ header h1 {
    background-color:#F2F2F2;
    border-radius:5px;
    position:absolute;
-   top:20%;
    width:320px;
    height:310px;
    padding:15px;

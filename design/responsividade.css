@@ -9,15 +9,32 @@
    #simples-menu.active, .lista {
       width:40vw;
    }
+
+   .senna-numeros {
+      width:310px;
+   }
+
+   .senna-numeros p {
+      font-size:19px;
+   }
+
+   .senna-numeros ul {
+      margin-left:48px;
+   }
+
+   .senna-numeros li {
+      font-size:15px;
+   }
 }
 
 @media (max-width:700px) {
    header {
       bottom:0;
+      height:30px;
    }
 
    header h1 {
-      font-size:25px;
+      font-size:23px;
    }
 
    #simples-menu {
@@ -86,20 +103,35 @@
       width:220px;
       font-size:12px;
    }
-}
 
-@media (max-width:590px) {
-   header h1 {
-      font-size:23px;
+   #simples-menu.active, .lista {
+      width:40vw;
+   }
+
+   .senna-numeros {
+      width:280px;
+   }
+
+   .senna-numeros p {
+      font-size:17px;
+   }
+
+   .senna-numeros ul {
+      margin-left:47px;
+   }
+
+   .senna-numeros li {
+      width:190px;
+      font-size:14px;
    }
 }
 
-@media (max-height:450px) {
+@media (max-height:500px) {
    .container.active {
       top:1%;
    }
    
    #simples-menu.active .lista {
-      height:82vh;
+      height:72vh;
    }
 }
