@@ -17,6 +17,7 @@ var modifica = {
    player: document.querySelector('.player-sound'),
    subtitle: document.querySelector('.conteudo-legenda'),
 
+   homenagemSenna: document.querySelector('.homenagem'), 
    switchContainer: document.querySelector('.switch-container')
 }
 

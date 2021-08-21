@@ -126,8 +126,29 @@
    .container.active {
       top:1%;
    }
+
+   #simples-menu.active, .lista {
+      width:60vw;
+   }
    
    #simples-menu.active .lista {
-      height:72vh;
+      height:75vh;
+   }
+
+   .senna-numeros {
+      width:250px;
+   }
+
+   .senna-numeros p {
+      font-size:14px;
+   }
+
+   .senna-numeros ul {
+      margin-left:42px;
+   }
+
+   .senna-numeros li {
+      width:165px;
+      font-size:11px;
    }
 }
