@@ -61,10 +61,6 @@
       margin-top:6px;
    }
 
-   #simples-menu.active, .lista {
-      width:75vw;
-   }
-
    #simples-menu.active #burguer::before {
       transform:rotate(131deg);
       right:1px;
@@ -105,7 +101,7 @@
    }
 
    #simples-menu.active, .lista {
-      width:40vw;
+      width:75vw;
    }
 
    .senna-numeros {
