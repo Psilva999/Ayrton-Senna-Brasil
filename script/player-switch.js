@@ -10,7 +10,9 @@ var setorDo = {
    controleDaLegenda: document.querySelector('.legenda')
 }
 
-var altera = {
+var altera = { 
+   homenagem: document.querySelector('.senna-numeros'),
+
    imagemDeFundo: document.querySelector('#senna-chuva'),
    comandosDoVideo: document.querySelector('.player-sound'),
 
@@ -28,6 +30,7 @@ setorDo.switchContainer.addEventListener('click', () => {
 
    if (checkbox.checked) {
       altera.imagemDeFundo.style.display = 'none'
+      altera.homenagem.style.display = 'none'
 
       altera.comandosDoVideo.style.display = 'flex'
       video.style.display = 'block'
@@ -43,6 +46,7 @@ setorDo.switchContainer.addEventListener('click', () => {
 
    else {
       altera.imagemDeFundo.style.display = 'block'
+      altera.homenagem.style.display = 'block'
 
       altera.comandosDoVideo.style.display = 'none'
       altera.subtitle.style.display = 'none'
@@ -147,7 +151,7 @@ video.addEventListener('timeupdate', () => {
       if (modifica.segundos <= 4) {
          alteraSubtitle.style.background = ''
 
-         alteraSubtitle.innerHTML = 'Eu apenas amo correr, o desafio de vencer alguém.'
+         alteraSubtitle.innerHTML = 'Eu apenas amo correr, amo o desafio de vencer alguém.'
       }
 
       else if (modifica.segundos >= 5 && modifica.segundos <= 7) {
@@ -162,7 +166,7 @@ video.addEventListener('timeupdate', () => {
 
       else if (modifica.segundos >= 10 && modifica.segundos <= 12) {
 
-         alteraSubtitle.innerHTML = 'É basicamente o aprendizado sobre si mesmo.'
+         alteraSubtitle.innerHTML = 'É basicamente aprender sobre si mesmo.'
       }
 
       else if (modifica.segundos >= 13 && modifica.segundos <= 14) {
@@ -237,7 +241,7 @@ video.addEventListener('timeupdate', () => {
 
       else if (modifica.segundos >= 58) {
 
-         alteraSubtitle.innerHTML = 'O homem é capaz de criar e desenvolver máquinas em uma vasta extensão.'
+         alteraSubtitle.innerHTML = 'O homem é capaz de criar e desenvolver máquinas em uma grande extensão.'
       }
    }
 

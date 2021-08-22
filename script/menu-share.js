@@ -10,14 +10,15 @@ var clicaNo = {
    indicaQueCopiou: document.querySelector('#imagem')
 }
 
-var modifica = {
+var modifica = { 
+   homenagemSenna: document.querySelector('.senna-numeros'),
+
    containerDoShare: document.querySelector('.container'),
    share: document.querySelector('.share'),
 
    player: document.querySelector('.player-sound'),
    subtitle: document.querySelector('.conteudo-legenda'),
-
-   homenagemSenna: document.querySelector('.homenagem'), 
+ 
    switchContainer: document.querySelector('.switch-container')
 }
 
@@ -37,6 +38,7 @@ clicaNo.navbar.addEventListener('click', () => {
 
       modifica.share.style.display = 'flex'
       modifica.switchContainer.style.display = 'block'
+      modifica.homenagemSenna.style.display = 'block'
 
       if (checkbox.checked == true) {
          modifica.player.style.display = 'flex'
@@ -53,6 +55,7 @@ clicaNo.navbar.addEventListener('click', () => {
 
       modifica.share.style.display = 'none'
       modifica.player.style.display = 'none'
+      modifica.homenagemSenna.style.display = 'none'
 
       if (modifica.subtitle.classList.contains('active')) {
          modifica.subtitle.style.display = 'none'
@@ -65,7 +68,9 @@ fecha.menuPorFora.addEventListener('click', () => {
 
    menu.classList.toggle('active')
    fecha.menuPorFora.style.display = 'none'
+
    modifica.share.style.display = 'flex'
+   modifica.homenagemSenna.style.display = 'block'
 
    if (checkbox.checked == true) {
       modifica.player.style.display = 'flex'

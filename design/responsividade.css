@@ -23,6 +23,7 @@
    }
 
    .senna-numeros li {
+      width:210px;
       font-size:15px;
    }
 }
@@ -117,7 +118,7 @@
    }
 
    .senna-numeros li {
-      width:190px;
+      width:187px;
       font-size:14px;
    }
 }
@@ -144,7 +145,7 @@
    }
 
    .senna-numeros ul {
-      margin-left:42px;
+      margin-left:40px;
    }
 
    .senna-numeros li {
