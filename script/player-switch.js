@@ -171,7 +171,7 @@ video.addEventListener('timeupdate', () => {
 
       else if (modifica.segundos >= 13 && modifica.segundos <= 14) {
 
-         alteraSubtitle.innerHTML = 'Até mesmo se você tentar ser perfeito'
+         alteraSubtitle.innerHTML = 'Mesmo se você tentar ser perfeito'
       }
 
       else if (modifica.segundos >= 15 && modifica.segundos <= 16) {
