@@ -309,7 +309,7 @@ header h1 {
 
 .container.active {
    background-color:#F2F2F2;
-   border-radius:25px;
+   border-radius:20px;
    position:absolute;
    width:320px;
    height:310px;
@@ -326,9 +326,9 @@ header h1 {
 
 .container.active .fecha {
    position:absolute;
-   right:7px;
-   top:5px;
-   font-size:24px;
+   right:3px;
+   top:1px;
+   font-size:22px;
    cursor:pointer;
    color:black;
    opacity:.6;
@@ -394,6 +394,10 @@ header h1 {
 
 input:focus {
    outline:0;
+}
+
+.container.active button {
+   border-radius:20px;
 }
 
 .container.active button img {
