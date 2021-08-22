@@ -42,6 +42,7 @@ clicaNo.navbar.addEventListener('click', () => {
 
       if (checkbox.checked == true) {
          modifica.player.style.display = 'flex'
+         modifica.homenagemSenna.style.display = 'none'
 
          if (modifica.subtitle.classList.contains('active')) {
             modifica.subtitle.style.display = 'flex'
@@ -68,12 +69,12 @@ fecha.menuPorFora.addEventListener('click', () => {
 
    menu.classList.toggle('active')
    fecha.menuPorFora.style.display = 'none'
-
    modifica.share.style.display = 'flex'
    modifica.homenagemSenna.style.display = 'block'
 
    if (checkbox.checked == true) {
       modifica.player.style.display = 'flex'
+      modifica.homenagemSenna.style.display = 'none'
 
       if (modifica.subtitle.classList.contains('active')) {
          modifica.subtitle.style.display = 'flex'
