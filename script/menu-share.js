@@ -1,7 +1,8 @@
 var menu = document.querySelector('#simples-menu')
 
 var clicaNo = {
-   navbar: document.querySelector('#btn-mobile'),
+   abreNavbar: document.querySelector('#abre-btn-mobile'),
+   fechaNavbar: document.querySelector('#fecha-btn-mobile'),
    
    compartilha: document.querySelector('.share'),
    copiarLink: document.querySelector('.copiarLink'),
@@ -11,15 +12,8 @@ var clicaNo = {
 }
 
 var modifica = { 
-   homenagemSenna: document.querySelector('.senna-numeros'),
-
    containerDoShare: document.querySelector('.container'),
    share: document.querySelector('.share'),
-
-   player: document.querySelector('.player-sound'),
-   subtitle: document.querySelector('.conteudo-legenda'),
- 
-   switchContainer: document.querySelector('.switch-container')
 }
 
 var fecha = {
@@ -29,57 +23,19 @@ var fecha = {
    sharePorFora: document.querySelector('.fechaContainer')
 }
 
-clicaNo.navbar.addEventListener('click', () => {
-   var checkbox = document.querySelector('input[type="checkbox"]')
+clicaNo.abreNavbar.addEventListener('click', () => {
+   menu.classList.toggle('active')
+   fecha.menuPorFora.style.display = 'block'
+})
 
-   if (menu.classList.contains('active')) {
-      menu.classList.toggle('active')
-      fecha.menuPorFora.style.display = 'none'
-
-      modifica.share.style.display = 'flex'
-      modifica.switchContainer.style.display = 'block'
-      modifica.homenagemSenna.style.display = 'block'
-
-      if (checkbox.checked == true) {
-         modifica.player.style.display = 'flex'
-         modifica.homenagemSenna.style.display = 'none'
-
-         if (modifica.subtitle.classList.contains('active')) {
-            modifica.subtitle.style.display = 'flex'
-         }
-      }
-   }
-
-   else {
-      menu.classList.toggle('active')
-      fecha.menuPorFora.style.display = 'block'
-
-      modifica.share.style.display = 'none'
-      modifica.player.style.display = 'none'
-      modifica.homenagemSenna.style.display = 'none'
-
-      if (modifica.subtitle.classList.contains('active')) {
-         modifica.subtitle.style.display = 'none'
-      }
-   }
+clicaNo.fechaNavbar.addEventListener('click', () => {
+   menu.classList.toggle('active')
+   fecha.menuPorFora.style.display = 'none'
 })
 
 fecha.menuPorFora.addEventListener('click', () => {
-   var checkbox = document.querySelector('input[type="checkbox"]')
-
    menu.classList.toggle('active')
    fecha.menuPorFora.style.display = 'none'
-   modifica.share.style.display = 'flex'
-   modifica.homenagemSenna.style.display = 'block'
-
-   if (checkbox.checked == true) {
-      modifica.player.style.display = 'flex'
-      modifica.homenagemSenna.style.display = 'none'
-
-      if (modifica.subtitle.classList.contains('active')) {
-         modifica.subtitle.style.display = 'flex'
-      }
-   }
 })
 
 clicaNo.compartilha.addEventListener('click', () => {

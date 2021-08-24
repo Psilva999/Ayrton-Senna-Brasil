@@ -1,0 +1,264 @@
+@charset 'UTF-8';
+@import url('https://fonts.googleapis.com/css2?family=Basic&display=swap');
+
+* { 
+   box-sizing:border-box;
+   border:0;
+   margin:0;
+   padding:0;
+   color:#F2F2F2;
+   font-family:'Basic', sans-serif;
+   letter-spacing:4px;
+}
+
+body {
+   background:black;
+   width:100vw;
+   height:100vh;
+   display:flex;
+   justify-content:center;
+   align-items:center;
+}
+
+section {
+   position:absolute;
+   bottom:0;
+   width:100vw;
+   height:100vh;
+   display:flex;
+   justify-content:center;
+   align-items:center;
+}
+
+#senna-chuva {
+   position:absolute;
+   top:0;
+   left:0;
+   width:100vw;
+   height:100vh;
+   object-fit:cover;
+   opacity:.5;
+   display:block;
+}
+
+a {
+   text-decoration:none;
+}
+
+header {
+   position:absolute;
+   top:0;
+   width:100vw;
+   padding:1px;
+   display:flex;
+   justify-content:space-between;
+   align-items:center;
+}
+
+header h1 {
+   font-size:35px;
+   text-transform:uppercase;
+}
+
+.fecha-menu {
+   background-color:rgba(0,0,0,.6);
+   position:absolute;
+   height:100vh;
+   width:100vw;
+   display:none;
+}
+
+#simples-menu {
+   position:absolute;
+   right:3px;
+   border-radius:3px;
+   width:35px;
+   box-sizing:border-box;
+   display:flex;
+}
+
+#abre-btn-mobile {
+   border:none;
+   background:none;
+   cursor:pointer;
+   opacity:.9;
+}
+
+#burguer {
+   border-top:3px solid;
+   border-radius:2px;
+   position:relative;
+   display:block;
+   width:23px;
+   left:6px;
+}
+
+#burguer::before {
+   width:35px;
+   right:12px;
+}
+
+#burguer::after, #burguer::before {
+   position:relative;
+   border-radius:2px;
+   content:'';
+   display:block;
+   height:3px;
+   margin-top:9px;
+   background:currentColor;
+}
+
+#simples-menu.active {
+   top:0px;
+   right:0px;
+}
+
+#simples-menu.active #fecha-btn-mobile {
+   position:absolute;
+   top:5px;
+   right:4px;
+   width:30px;
+   border-radius:5px;
+   opacity:.7;
+   display:flex;
+}
+
+#simples-menu.active #fecha-btn-mobile:hover {
+   opacity:1;
+}
+
+#simples-menu.active #burguer {
+   border-top-color:transparent;
+}
+
+#simples-menu.active #burguer::before {
+   background:black;
+   transform:rotate(131deg);
+   width:23px;
+   height:2px;
+   top:-1px;
+   right:6px;
+}
+
+#simples-menu.active #burguer::after {
+   background:black;
+   transform:rotate(-131deg);
+   width:23px;
+   height:2px;
+   top:-12px;
+   right:6px;
+}
+
+#simples-menu.active .lista {
+   display:block;
+   overflow-y:auto;
+   height:100vh;
+}
+
+.lista {
+   background:#F2F2F2;
+   border-radius:3px;
+   position:absolute;
+   top:0;
+   right:0;
+   width:28vw;
+   height:auto;
+   display:none;
+   justify-content:center;
+   align-items:center;
+   list-style:none;
+   z-index:1000;
+   overflow-y:hidden;
+   text-align:left;
+}
+
+.lista .selecionado, a {
+   border-bottom:2px solid rgba(0,0,0,.05);
+   position:relative;
+   top:7vh;
+   display:block;
+   color:black;
+   padding:.1rem 0;
+   margin:2.3rem 1rem;
+   letter-spacing:2px;
+   font-size:15px;
+}
+
+.lista a:hover {
+   opacity:.8;
+}
+
+@media (max-width:1000px) {
+   header h1 {
+      font-size:30px;
+   }
+
+   .lista {
+      width:40vw;
+   }
+
+   .senna-numeros {
+      width:310px;
+   }
+
+   .senna-numeros p {
+      font-size:19px;
+   }
+
+   .senna-numeros ul {
+      margin-left:48px;
+   }
+
+   .senna-numeros li {
+      width:210px;
+      font-size:15px;
+   }
+}
+
+@media (max-width:700px) {
+   header h1 {
+      font-size:25px;
+   }
+
+   #simples-menu {
+      width:32px;
+      right:0px;
+   }
+
+   .lista .selecionado, a {
+      font-size:14px;
+   }
+
+   #burguer {
+      width:21px;
+      left:3px;
+   }
+
+   #simples-menu.active #fecha-btn-mobile {
+      top:3px;
+   }
+
+   #burguer::before {
+      width:28px;
+      right:7px;
+   }
+
+   #burguer::after, #burguer::before {
+      margin-top:6px;
+   }
+
+    #simples-menu.active, .lista {
+      width:75vw;
+   }
+
+   #simples-menu.active #burguer::before {
+      transform:rotate(131deg);
+      right:1px;
+   }
+
+   #simples-menu.active #burguer::after {
+      transform:rotate(-132deg);
+      right:1px;   
+      top:-9px;
+   }
+}

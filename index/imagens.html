@@ -5,21 +5,89 @@
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <meta charset="UTF-8">
 
-   <link rel="shortcut icon" type="image/x-icon" href="">
-   <link rel="stylesheet" href="">
+   <link rel="stylesheet" href="..design/section.css">
+   <link rel="stylesheet" href="..design/menu-share.css">
+   
+   <link rel="stylesheet" href="..design/responsividade.css">
 
-   <style>
-
-   </style>
-
-   <script src="">
-
-   </script>
-   <title>Zona de testes</title>
+   <title></title>
 </head>
 
 <body>
+   <img src="..media/senna.jpg" alt="Ayrton Senna na chuva" id="senna-chuva">
    
+   <section>
+      <header>
+         <h1>Ayrton Senna</h1>
+   
+         <div class="switch-container active">
+            <input type="checkbox" class="switch-shadow" id="button">
+            <label for="button"></label>
+         </div>
+      </header>
+   
+      <div class="fecha-menu"></div>
+      <nav id="simples-menu">
+         <button id="btn-mobile" aria-label="Abrir Menu" aria-haspopup="true" aria-controls="lista" aria-expanded="false">
+            <span id="burguer"></span>
+         </button>
+   
+         <ul class="lista" role="menu">
+            <li class="selecionado">
+               <a href="..index.html">Home</a>
+            </li>
+   
+            <li>
+               <a href="historia.html">História</a>
+            </li>
+   
+            <li>
+               <a href="videos.html">Vídeos</a>
+            </li>
+   
+            <li class="selecionado"> Imagens
+               <img src="..media/senna.png" alt="Senna no volante">
+            </li>
+   
+            <li>
+               <a href="doc-livros.html">Livros e documentários</a>
+            </li>
+   
+            <li>
+               <a href="index/estatisticas.html">Estatísticas</a>
+            </li>
+   
+            <li>
+               <a href="index/desafio.html">Desafio</a>
+            </li>
+   
+            <li>
+               <a href="index/bastidores.html">Bastidores</a>
+            </li>
+         </ul>
+      </nav>
+   
+      <button type="button" class="share">
+         <img src="media/share.svg" alt="imagem indisponível">
+      </button>
+   </section>
+
+   <div class="fechaContainer"></div>
+   <div class="container active">
+   
+      <div class="fecha">X</div>
+      <h1>Aponte sua câmera para o QR Code ou copie o link</h1>
+   
+      <img src="media/qrcode_psilva999.github.io.png" id="qrcode" alt="Imagem Indisponível">
+   
+      <div class="copiarLink">
+         <input type="text" id="link" value="https://psilva999.github.io/Ayrton-Senna-Brasil/" readonly>
+   
+         <button>
+            <img src="media/copy.svg" id="imagem" alt="Imagem indisponível">
+         </button>
+      </div>
+   </div>
 
 </body>
 </html>

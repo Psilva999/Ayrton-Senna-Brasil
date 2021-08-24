@@ -5,9 +5,9 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta charset="UTF-8">
 
-   <link rel="stylesheet" href="design/section-menu-share.css">
+   <link rel="stylesheet" href="design/body-section-header-menu.css">
+   <link rel="stylesheet" href="design/switch-homenagem-share.css">
    <link rel="stylesheet" href="design/player.css">
-   <link rel="stylesheet" href="design/responsividade.css">
 
    <link rel="shortcut icon" type="image/x-icon" href="media/senna.ico">
    <title>Ayrton Senna</title>
@@ -15,122 +15,127 @@
 
 <body>
    <video id="video" src="media/senna-quotes.mp4" muted loop autoplay></video>
-
    <img src="media/senna.jpg" alt="Ayrton Senna na chuva" id="senna-chuva">
 
    <section>
-      <header> <h1>Ayrton Senna</h1>
-
-         <div class="switch-container active">
-            <input type="checkbox" class="switch-shadow" id="button">
-            <label for="button"></label>
-         </div>
+      <header>
+         <h1>Ayrton Senna</h1>
+      
+         <nav id="simples-menu">
+            <button id="abre-btn-mobile" aria-label="Abrir Menu" aria-haspopup="true" aria-controls="lista"
+               aria-expanded="false">
+               <span id="burguer"></span>
+            </button>
+      
+            <ul class="lista" role="menu">
+               <button id="fecha-btn-mobile">
+                  <span id="burguer"></span>
+               </button>
+      
+               <li class="selecionado">Home
+                  <img src="media/senna.png" class="indicador-aba" alt="Senna no volante">
+               </li>
+      
+               <li>
+                  <a href="index/historia.html">História</a>
+               </li>
+      
+               <li>
+                  <a href="index/videos.html">Vídeos</a>
+               </li>
+      
+               <li>
+                  <a href="index/imagens.html">Imagens</a>
+               </li>
+      
+               <li>
+                  <a href="index/doc-livros.html">Livros e documentários</a>
+               </li>
+      
+               <li>
+                  <a href="index/estatisticas.html">Estatísticas</a>
+               </li>
+      
+               <li>
+                  <a href="index/desafio.html">Desafio</a>
+               </li>
+      
+               <li>
+                  <a href="index/bastidores.html">Bastidores</a>
+               </li>
+            </ul>
+      
+         </nav>
       </header>
 
-      <div class="fecha-menu"></div>
-      <nav id="simples-menu">
-         <button id="btn-mobile" aria-label="Abrir Menu" aria-haspopup="true" aria-controls="lista" aria-expanded="false">
-            <span id="burguer"></span>
-         </button>
+      <div class="switch-container active">
+         <input type="checkbox" class="switch-shadow" id="button">
+         <label for="button"></label>
+      </div>
+
+      <div class="senna-numeros">
+         <p class="homenagem">Uma pequena homenagem ao nosso herói nacional</p>
       
-         <ul class="lista" role="menu">
-            <li class="selecionado">Home
-               <img src="media/senna.png" alt="Senna no volante">
-            </li>
-      
-            <li>
-               <a href="index/historia.html">História</a>
-            </li>
-      
-            <li>
-               <a href="index/videos.html">Vídeos</a>
-            </li>
-      
-            <li>
-               <a href="index/imagens.html">Imagens</a>
-            </li>
-      
-            <li>
-               <a href="index/doc-livros.html">Livros e documentários</a>
-            </li>
-      
-            <li>
-               <a href="index/estatisticas.html">Estatísticas</a>
-            </li>
-      
-            <li>
-               <a href="index/desafio.html">Desafio</a>
-            </li>
-      
-            <li>
-               <a href="index/bastidores.html">Bastidores</a>
-            </li>
+         <ul id="estatisticas">
+            <li class="titulos"></li>
+            <li class="poles"></li>
+            <li class="vitorias"></li>
          </ul>
-      </nav>
+      </div>
 
       <button type="button" class="share">
          <img src="media/share.svg" alt="imagem indisponível">
       </button>
+      
+      <div class="player-sound">
+         <div id="player">
+            <div class="pause active">
+               <div class="line line_1"></div>
+               <div class="line line_2"></div>
+            </div>
+      
+            <div class="play">
+               <div class="line line_1"></div>
+               <div class="line line_2"></div>
+               <div class="line line_3"></div>
+            </div>
+         </div>
+      
+         <div id='sound-muted'>
+            <div class="sound">
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+            </div>
+      
+            <div class="muted active">
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+               <div class="corte"></div>
+            </div>
+         </div>
+      
+         <div id="tempo">
+            <div class="contando"></div>
+            <div class="separa">/</div>
+            <div class="total"></div>
+         </div>
+      
+         <a id="video-original" href="https://www.youtube.com/watch?v=n9qZu7h5ys0">Lap of Life
+            <img src="media/external-link.svg"> </a>
+      
+         <div class="legenda">AbC</div>
+      </div>
+      <div class="conteudo-legenda active"></div>
    </section>
+   <div class="fecha-menu"></div>
 
-   <div class="senna-numeros">
-      <p class="homenagem">Uma pequena homenagem ao nosso herói nacional</p>
-
-      <ul id="estatisticas">
-         <li class="titulos"></li>
-         <li class="poles"></li>
-         <li class="vitorias"></li>
-      </ul>
-   </div>
-
-   <div class="player-sound">
-      <div id="player">
-         <div class="pause active">
-            <div class="line line_1"></div>
-            <div class="line line_2"></div>
-         </div>
-   
-         <div class="play">
-            <div class="line line_1"></div>
-            <div class="line line_2"></div>
-            <div class="line line_3"></div>
-         </div>
-      </div>
-   
-      <div id='sound-muted'>
-         <div class="sound">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-         </div>
-   
-         <div class="muted active">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div class="corte"></div>
-         </div>
-      </div>
-   
-      <div id="tempo">
-         <div class="contando"></div>
-         <div class="separa">/</div>
-         <div class="total"></div>
-      </div>
-   
-      <a href="https://www.youtube.com/watch?v=n9qZu7h5ys0">Lap of Life
-         <img src="media/external-link.svg"> </a>
-   
-      <div class="legenda">AbC</div>
-   </div>
-   <div class="conteudo-legenda active"></div>
-   
    <div class="fechaContainer"></div>
    <div class="container active">
-   
-      <div class="fecha">X</div>
+      <div class="fecha">&times;</div>
       <h1>Aponte sua câmera para o QR Code ou copie o link</h1>
    
       <img src="media/qrcode_psilva999.github.io.png" id="qrcode" alt="Imagem Indisponível">
