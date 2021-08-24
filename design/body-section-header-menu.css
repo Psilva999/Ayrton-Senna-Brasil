@@ -225,6 +225,7 @@ header h1 {
 
    .lista .selecionado, a {
       font-size:14px;
+      margin:2.5rem 1rem;
    }
 
    #burguer {
@@ -245,7 +246,7 @@ header h1 {
       margin-top:6px;
    }
 
-    #simples-menu.active, .lista {
+   #simples-menu.active, .lista {
       width:75vw;
    }
 
@@ -258,5 +259,12 @@ header h1 {
       transform:rotate(-132deg);
       right:1px;   
       top:-9px;
+   }
+}
+
+@media (max-height:450px) {
+   #simples-menu.active, .lista {
+      width:60vw;
+      height:80vh;
    }
 }
