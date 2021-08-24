@@ -174,12 +174,10 @@ header h1 {
 
 .lista .selecionado, a {
    border-bottom:2px solid rgba(0,0,0,.05);
-   position:relative;
-   top:7vh;
    display:block;
    color:black;
    padding:.1rem 0;
-   margin:2.3rem 1rem;
+   margin:2.9rem 1rem;
    letter-spacing:2px;
    font-size:15px;
 }
