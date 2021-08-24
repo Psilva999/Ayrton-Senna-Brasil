@@ -182,8 +182,12 @@ header h1 {
    font-size:15px;
 }
 
-.lista a:hover {
+.lista a {
    opacity:.8;
+}
+
+.lista a:hover {
+   opacity:1;
 }
 
 @media (max-width:1000px) {
@@ -224,7 +228,7 @@ header h1 {
    }
 
    .lista .selecionado, a {
-      font-size:14px;
+      font-size:13px;
       margin:2.5rem 1rem;
    }
 
