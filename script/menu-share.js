@@ -62,8 +62,6 @@ clicaNo.copiarLink.addEventListener('click', () => {
       time--
       if (segundos >= 59) {
          clicaNo.indicaQueCopiou.src = 'media/copy.svg'
-
-         clicaNo.indicaQueCopiou.src = '../../media/copy.svg'
       }
    }
 })
@@ -73,7 +71,6 @@ fecha.shareComX.addEventListener('click', () => {
    fecha.sharePorFora.style.display = 'none'
 
    clicaNo.indicaQueCopiou.src = 'media/copy.svg'
-   clicaNo.indicaQueCopiou.src = '../../media/copy.svg'
 })
 
 fecha.sharePorFora.addEventListener('click', () => {
@@ -81,7 +78,6 @@ fecha.sharePorFora.addEventListener('click', () => {
    fecha.sharePorFora.style.display = 'none'
 
    clicaNo.indicaQueCopiou.src = 'media/copy.svg'
-   clicaNo.indicaQueCopiou.src = '../../media/copy.svg'
 })
 
 // function toggleMenu(event) {
