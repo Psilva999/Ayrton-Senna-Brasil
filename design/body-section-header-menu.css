@@ -49,14 +49,14 @@ header {
    position:absolute;
    top:0;
    width:100vw;
-   padding:1px;
+   padding:5px;
    display:flex;
    justify-content:space-between;
    align-items:center;
 }
 
 header h1 {
-   font-size:35px;
+   font-size:30px;
    text-transform:uppercase;
 }
 
@@ -192,7 +192,7 @@ header h1 {
 
 @media (max-width:1000px) {
    header h1 {
-      font-size:30px;
+      font-size:25px;
    }
 
    .lista {
@@ -202,7 +202,7 @@ header h1 {
 
 @media (max-width:700px) {
    header h1 {
-      font-size:25px;
+      font-size:18px;
    }
 
    #simples-menu {
@@ -221,7 +221,7 @@ header h1 {
    }
 
    #simples-menu.active #fecha-btn-mobile {
-      top:3px;
+      top:2px;
    }
 
    #burguer::before {
