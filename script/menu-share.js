@@ -51,6 +51,7 @@ clicaNo.copiarLink.addEventListener('click', () => {
    document.execCommand("copy") //Não encontrei um substituto
 
    clicaNo.indicaQueCopiou.src = 'media/check.svg'
+   clicaNo.indicaQueCopiou.src = '../../media/check.svg'
 
    var time = 1 * 60
    setInterval(apagaIndicadorDeCopy, 1000)
@@ -61,6 +62,8 @@ clicaNo.copiarLink.addEventListener('click', () => {
       time--
       if (segundos >= 59) {
          clicaNo.indicaQueCopiou.src = 'media/copy.svg'
+
+         clicaNo.indicaQueCopiou.src = '../../media/copy.svg'
       }
    }
 })
@@ -68,13 +71,17 @@ clicaNo.copiarLink.addEventListener('click', () => {
 fecha.shareComX.addEventListener('click', () => {
    modifica.containerDoShare.style.display = 'none'
    fecha.sharePorFora.style.display = 'none'
+
+   clicaNo.indicaQueCopiou.src = 'media/copy.svg'
+   clicaNo.indicaQueCopiou.src = '../../media/copy.svg'
 })
 
 fecha.sharePorFora.addEventListener('click', () => {
    modifica.containerDoShare.style.display = 'none'
-
    fecha.sharePorFora.style.display = 'none'
+
    clicaNo.indicaQueCopiou.src = 'media/copy.svg'
+   clicaNo.indicaQueCopiou.src = '../../media/copy.svg'
 })
 
 // function toggleMenu(event) {

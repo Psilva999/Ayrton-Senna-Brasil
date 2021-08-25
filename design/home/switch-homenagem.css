@@ -34,7 +34,7 @@
 }
 
 .switch-shadow + label:before {
-   background:url('/media/senna-brasil-bandeira-mini.jpg') no-repeat;
+   background:url('../../media/senna-brasil-bandeira-mini.jpg') no-repeat;
    box-shadow:2px 2px 3px rgba(0,0,0,.8);
    border-radius:50px;
    transition:all .5s;
@@ -51,7 +51,7 @@
 }
 
 .switch-shadow:checked + label:before {
-   background:url('/media/senna-brasil-mini.jpg') no-repeat;
+   background:url('../../media/senna-brasil-mini.jpg') no-repeat;
 }
 
 .switch-shadow:checked + label:after {
@@ -79,7 +79,7 @@
 }
 
 .senna-numeros ul {
-   margin-left:58px;
+   margin-left:55px;
    display:block;
    list-style:none;
 }
@@ -92,13 +92,18 @@
    text-align:center;
 }
 
-@media (max-width:700px) {
+@media (max-width:1000px) {
+   .senna-numeros {
+      width:300px;
+   }
+
    .senna-numeros p {
+      width:300px;
       font-size:17px;
    }
 
    .senna-numeros ul {
-      margin-left:47px;
+      margin-left:58px;
    }
 
    .senna-numeros li {
@@ -109,15 +114,16 @@
 
 @media (max-height:500px) {
    .senna-numeros {
-      width:250px;
+      width:245px;
    }
 
    .senna-numeros p {
+      width:250px;
       font-size:14px;
    }
 
    .senna-numeros ul {
-      margin-left:40px;
+      margin-left:42px;
    }
 
    .senna-numeros li {

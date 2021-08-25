@@ -206,7 +206,7 @@ input:focus {
    }
 }
 
-@media (max-width:180px) {
+@media (max-height:180px) {
    .share {
       bottom:60px;
    }
