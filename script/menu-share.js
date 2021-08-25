@@ -51,7 +51,6 @@ clicaNo.copiarLink.addEventListener('click', () => {
    document.execCommand("copy") //Não encontrei um substituto
 
    clicaNo.indicaQueCopiou.src = 'media/check.svg'
-   clicaNo.indicaQueCopiou.src = '../../media/check.svg'
 
    var time = 1 * 60
    setInterval(apagaIndicadorDeCopy, 1000)
